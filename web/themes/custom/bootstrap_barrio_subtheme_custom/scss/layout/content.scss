@@ -23,39 +23,41 @@ h1 {
   @include st.margin();
 }
 h2 {
-	display: block;
-  @include st.margin($b: 5.0rem);
-  @include st.padding($r: 1.0rem, $l: 1.0rem);
-  @include st.border-bottom($w: 2px);
-	@include st.font($s: 2.0rem, $w: st.$font-weight-bold);
-  @include st.color($c: st.$font-color-default, $b: st.$font-background-color-default);
+  @include st.pos($d: inline-block);
+  @include st.padding($t: 0.45em, $b: 0.45em, $l: 0.95em, $r: 0.95em);
+  @include st.font($s: 1.36rem);
+  @include st.color($b: #d9e8cc);
+  @include st.border($rtl: 100vh, $rtr: 100vh, $rbl: 1.0rem, $rbr: 100vh);
+  box-shadow: 0 4px 0 #bfd2aa;
 }
 
 h3 {
-	display: block;
-  @include st.margin($b: 2.5rem);
-  @include st.padding($r: 1.0rem, $l: 1.0rem);
-  @include st.border-bottom($w: 2px);
-	@include st.font($s: 1.5rem, $w: st.$font-weight-bold);
-  @include st.color($c: st.$font-color-default, $b: st.$font-background-color-default);
+  @include st.pos($d: inline-block);
+  @include st.padding($t: 0.33em, $b: 0.33em, $l: 0.72em, $r: 0.72em);
+  @include st.font($s: 1.14rem);
+  @include st.color($b: #f4e3af);
+  @include st.border($rtl: 100vh, $rtr: 100vh, $rbl: 100vh, $rbr: 100vh);
 }
 
 h4 {
-	display: block;
-  @include st.margin($b: 1.25rem);
-  @include st.padding($r: 1.0rem, $l: 1.0rem);
-  @include st.border-bottom($w: 2px);
-	@include st.font($s: 1.25rem, $w: st.$font-weight-bold);
-  @include st.color($c: st.$font-color-default, $b: st.$font-background-color-default);
+  @include st.pos($d: inline-flex, $a: center);
+  @include st.font($s: 0.98rem);
+  gap: 0.45em;
+  &::before {
+    content: "";
+    @include st.size($w: 1.0rem, $h: 1.0rem);
+    @include st.color($b: #d7eaf5);
+    @include st.border($rtl: 50%, $rtr: 50%, $rbl: 50%, $rbr: 0, $o: hidden);
+    @include st.pos($d: inline, $p: static, $tr: rotate(-45deg));
+    flex: 0 0 auto;
+  }
 }
 
 h5 {
-	display: block;
-  @include st.margin($b: 1.0rem);
-  @include st.padding($r: 1.0rem, $l: 1.0rem);
-  @include st.border-bottom($w: 1px);
-	@include st.font($s: 1.0rem, $w: st.$font-weight-bold);
-  @include st.color($c: st.$font-color-default, $b: st.$font-background-color-default);
+  @include st.pos($d: inline-block);
+  @include st.padding($t: 0.2em, $b: 0.2em, $l: 0.6em, $r: 0.6em);
+  @include st.color($b: #f3d7d9);
+  @include st.border($rtl: 100vh, $rtr: 100vh, $rbl: 100vh, $rbr: 100vh, $o: hidden);
 }
 
 /*
