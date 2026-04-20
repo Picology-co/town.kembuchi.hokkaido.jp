@@ -51,7 +51,7 @@ h4 {
     content: "";
     flex: 0 0 auto;
     @include st.size($w: 1.0rem, $h: 1.0rem);
-    @include st.pos($d: inline-block, $p: static, $tr: rotate(-8deg));
+    @include st.pos($d: inline-block, $p: static, $tr: rotate(-8deg) translateY(50%));
 
     background-repeat: no-repeat;
     background-position: center;
@@ -70,7 +70,7 @@ h5 {
     content: "";
     flex: 0 0 auto;
     @include st.size($w: 1.0rem, $h: 1.0rem);
-    @include st.pos($d: inline-block, $p: static);
+    @include st.pos($d: inline-block, $p: static, $tr: translateY(50%));
 
     background-repeat: no-repeat;
     background-position: center;

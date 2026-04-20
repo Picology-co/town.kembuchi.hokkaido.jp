@@ -358,7 +358,7 @@ h4::before {
   left: auto;
   bottom: auto;
   right: auto;
-  transform: rotate(-8deg);
+  transform: rotate(-8deg) translateY(50%);
   z-index: 0;
   text-align: left;
   vertical-align: auto;
@@ -416,7 +416,7 @@ h5::before {
   left: auto;
   bottom: auto;
   right: auto;
-  transform: none;
+  transform: translateY(50%);
   z-index: 0;
   text-align: left;
   vertical-align: auto;
