@@ -245,7 +245,7 @@ h2 {
 h2 {
   padding-top: 0;
   padding-right: 0;
-  padding-bottom: 0.35em;
+  padding-bottom: 1.5em;
   padding-left: 0;
 }
 h2 {
@@ -271,7 +271,7 @@ h2::after {
   opacity: 1;
 }
 h2::after {
-  width: 100%;
+  width: calc(100% + 0.5rem);
   max-width: none;
   min-width: none;
   height: 6px;
