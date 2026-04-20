@@ -23,12 +23,19 @@ h1 {
   @include st.margin();
 }
 h2 {
-  @include st.pos($d: inline-block);
-  @include st.padding($t: 0.45em, $b: 0.45em, $l: 0.95em, $r: 0.95em);
-  @include st.font($s: 1.36rem, $w: 700);
-  @include st.color($b: #d9e8cc);
-  @include st.border($rtl: 100vh, $rtr: 100vh, $rbl: 1.0rem, $rbr: 100vh);
-  box-shadow: 0 4px 0 #bfd2aa;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.35em;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    background: #8ecae6;
+    border-radius: 999px;
+  }
 }
 
 h3 {

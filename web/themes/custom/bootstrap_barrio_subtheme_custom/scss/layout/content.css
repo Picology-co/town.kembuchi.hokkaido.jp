@@ -219,49 +219,17 @@ h1 {
 h2 {
   position: relative;
   display: inline-block;
-  top: auto;
-  left: auto;
-  bottom: auto;
-  right: auto;
-  transform: none;
-  z-index: 0;
-  text-align: left;
-  vertical-align: auto;
-  opacity: 1;
+  padding-bottom: 0.35em;
 }
-h2 {
-  padding-top: 0.45em;
-  padding-right: 0.95em;
-  padding-bottom: 0.45em;
-  padding-left: 0.95em;
-}
-h2 {
-  font-size: 1.36rem;
-  font-weight: 700;
-  font-family: inherit;
-  font-style: normal;
-  font-feature-settings: "palt";
-  line-height: 2.448rem;
-  letter-spacing: 0.0136rem;
-}
-h2 {
-  color: #333333;
-  background-color: #d9e8cc;
-  mix-blend-mode: initial;
-  filter: none;
-}
-h2 {
-  border-width: 1px;
-  border-style: solid;
-  border-top-left-radius: 100vh;
-  border-top-right-radius: 100vh;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 100vh;
-  border-color: #333333;
-  overflow: none;
-}
-h2 {
-  box-shadow: 0 4px 0 #bfd2aa;
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 6px;
+  background: #8ecae6;
+  border-radius: 999px;
 }
 
 h3 {
