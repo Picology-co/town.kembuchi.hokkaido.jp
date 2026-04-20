@@ -236,6 +236,7 @@ div.field[class*=field--name-dynamic-twig-fieldtaxonomy-term-].field--type-ds di
   filter: none;
 }
 div.field[class*=field--name-dynamic-twig-fieldtaxonomy-term-].field--type-ds div.common-style > * div[class$=__detail] table * tr td {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;

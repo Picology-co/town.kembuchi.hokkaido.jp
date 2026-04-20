@@ -197,6 +197,7 @@ div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__heade
   padding-left: 1rem;
 }
 div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__header__meta__classifications {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -235,7 +236,8 @@ div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__heade
 }
 div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__header__meta__classifications a {
   text-decoration-line: none;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   text-decoration-color: currentColor;
   text-decoration-style: solid;
   text-decoration-thickness: 1px;
@@ -251,7 +253,8 @@ div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__heade
 }
 div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__header__meta__classifications a:hover {
   text-decoration-line: none;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   text-decoration-color: currentColor;
   text-decoration-style: solid;
   text-decoration-thickness: 1px;
@@ -272,6 +275,7 @@ div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__heade
   padding-left: 1rem;
 }
 div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__header__meta__post {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -370,7 +374,8 @@ div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__body 
   height: auto;
   max-height: none;
   min-height: none;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__body p img {
   position: static;
@@ -399,7 +404,8 @@ div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__body 
     height: auto;
     max-height: none;
     min-height: none;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__affiliates {
@@ -478,7 +484,8 @@ div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__affil
 }
 div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__affiliates__affiliate a:hover {
   text-decoration-line: none;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   text-decoration-color: currentColor;
   text-decoration-style: solid;
   text-decoration-thickness: 1px;
@@ -524,6 +531,7 @@ div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__affil
   letter-spacing: 0.01rem;
 }
 div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__affiliates__affiliate__product-name {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -566,7 +574,8 @@ div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__class
 }
 div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__classification-1 a {
   text-decoration-line: none;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   text-decoration-color: currentColor;
   text-decoration-style: solid;
   text-decoration-thickness: 1px;
@@ -582,7 +591,8 @@ div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__class
 }
 div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__classification-1 a:hover {
   text-decoration-line: none;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   text-decoration-color: currentColor;
   text-decoration-style: solid;
   text-decoration-thickness: 1px;
@@ -610,7 +620,8 @@ div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__class
   height: 30%;
   max-height: none;
   min-height: none;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__classification-1__meta {
   margin-top: 0;

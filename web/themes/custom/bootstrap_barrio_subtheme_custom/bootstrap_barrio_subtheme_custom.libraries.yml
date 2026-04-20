@@ -198,6 +198,7 @@ js-footer:
     #js/lib/swiper-bundle-11.2.10.min.js: {}
     js/lib/jquery.touchSwipe-1.6.18.min.js: {} #jqueryでスワイプを有効にする
     #js/lib/jquery.simplePagination-1.6.min.js: {} #ページャーを実装するときに使用
+    js/lib/gsap-3.15.0.min.js: {} #GSAPアニメーションライブラリ
     js/add-linktype.js: {}
     js/exec-swiper.js: {}
     js/get-filesize.js: {}

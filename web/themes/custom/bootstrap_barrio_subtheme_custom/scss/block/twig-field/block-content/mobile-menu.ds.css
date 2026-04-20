@@ -204,9 +204,11 @@ div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds
   opacity: 1;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds div.mobile-open-button {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
+  height: -moz-fit-content;
   height: fit-content;
   max-height: none;
   min-height: none;
@@ -453,6 +455,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: -moz-fit-content;
   width: fit-content;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds div.mobile-menu__user-menu a {
@@ -474,7 +477,8 @@ div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds
   height: auto;
   max-height: none;
   min-height: none;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds div.mobile-menu__user-menu a span {
   font-size: 0.75rem;
@@ -585,7 +589,8 @@ div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds
 }
 div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds div.mobile-menu__product-menu * ul li a {
   text-decoration-line: none;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   text-decoration-color: currentColor;
   text-decoration-style: solid;
   text-decoration-thickness: 1px;
@@ -656,7 +661,8 @@ div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds
   height: auto;
   max-height: none;
   min-height: none;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds div.mobile-menu__signature__logo__sns {
   margin-top: 1rem;
@@ -678,6 +684,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds
   opacity: 1;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds div.mobile-menu__signature__logo__sns a {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -705,9 +712,11 @@ div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds
   height: auto;
   max-height: none;
   min-height: none;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds div.mobile-menu__signature__contact {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -729,6 +738,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds
   margin-left: 0;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds div.mobile-menu__signature__contact * {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -744,7 +754,8 @@ div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds
   height: auto;
   max-height: none;
   min-height: none;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds div.mobile-menu__signature__contact * img {
   position: relative;
@@ -766,6 +777,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds
   margin-left: 0;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds div.mobile-menu__signature__contact * p {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -864,6 +876,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds
   letter-spacing: 0.02rem;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds div.mobile-menu__link {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -879,6 +892,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds
   margin-left: auto;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds div.mobile-menu__link__site-link {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -907,6 +921,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds
   opacity: 1;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds div.mobile-menu__link__site-link a {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -923,7 +938,8 @@ div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds
 }
 div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds div.mobile-menu__link__site-link a {
   text-decoration-line: none;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   text-decoration-color: currentColor;
   text-decoration-style: solid;
   text-decoration-thickness: 1px;
@@ -938,6 +954,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds
   filter: none;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds div.mobile-menu__link__laws {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -960,6 +977,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds
   opacity: 1;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds div.mobile-menu__link__laws a {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -976,7 +994,8 @@ div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds
 }
 div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds div.mobile-menu__link__laws a {
   text-decoration-line: none;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   text-decoration-color: currentColor;
   text-decoration-style: solid;
   text-decoration-thickness: 1px;
@@ -1019,6 +1038,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds
   filter: none;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-mobile-menu.field--type-ds div.mobile-menu__copyright {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;

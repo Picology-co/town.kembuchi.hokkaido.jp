@@ -191,6 +191,7 @@ pre[id^=sf-dump] samp {
  * 検索フォーム
  */
 form.custom-search-form {
+  width: -moz-fit-content;
   width: fit-content;
 }
 form.custom-search-form {

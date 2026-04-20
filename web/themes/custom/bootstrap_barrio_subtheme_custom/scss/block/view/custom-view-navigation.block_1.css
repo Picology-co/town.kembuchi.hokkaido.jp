@@ -227,7 +227,8 @@ div.view.view-custom-view-navigation.view-display-id-block_1 div.view-content di
 }
 div.view.view-custom-view-navigation.view-display-id-block_1 div.view-content div.item-list ul li a {
   text-decoration-line: none;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   text-decoration-color: currentColor;
   text-decoration-style: solid;
   text-decoration-thickness: 1px;

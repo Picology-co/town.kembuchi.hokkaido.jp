@@ -216,6 +216,7 @@ div.node.node--type-public-module.node--view-mode-period-control div.target-cms 
   opacity: 1;
 }
 div.node.node--type-public-module.node--view-mode-period-control div.target-cms div {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -330,5 +331,6 @@ div.node.node--type-public-module.node--view-mode-period-control div.field.field
   height: auto;
   max-height: none;
   min-height: none;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }

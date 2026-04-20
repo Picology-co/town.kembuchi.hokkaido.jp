@@ -218,6 +218,7 @@ div.field.field--name-dynamic-twig-fieldtaxonomy-term-custom-header-taxonomy.fie
   opacity: 1;
 }
 div.field.field--name-dynamic-twig-fieldtaxonomy-term-custom-header-taxonomy.field--type-ds div.header__logo {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -308,6 +309,7 @@ div.field.field--name-dynamic-twig-fieldtaxonomy-term-custom-header-taxonomy.fie
   opacity: 1;
 }
 div.field.field--name-dynamic-twig-fieldtaxonomy-term-custom-header-taxonomy.field--type-ds div.header__menu nav ul li {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -324,7 +326,8 @@ div.field.field--name-dynamic-twig-fieldtaxonomy-term-custom-header-taxonomy.fie
 }
 div.field.field--name-dynamic-twig-fieldtaxonomy-term-custom-header-taxonomy.field--type-ds div.header__menu nav ul li a {
   text-decoration-line: none;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   text-decoration-color: currentColor;
   text-decoration-style: solid;
   text-decoration-thickness: 1px;

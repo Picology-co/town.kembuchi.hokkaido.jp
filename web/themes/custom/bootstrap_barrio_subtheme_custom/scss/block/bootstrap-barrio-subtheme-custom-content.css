@@ -292,7 +292,8 @@ div#block-bootstrap-barrio-subtheme-custom-content--2 div.field.field--type-imag
   height: auto;
   max-height: none;
   min-height: none;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 div#block-bootstrap-barrio-subtheme-custom-content--2 div.field.field--type-file span {
   background-color: transparent;

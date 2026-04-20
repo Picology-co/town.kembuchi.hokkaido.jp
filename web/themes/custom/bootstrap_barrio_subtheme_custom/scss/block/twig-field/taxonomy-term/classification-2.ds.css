@@ -218,7 +218,8 @@ div.field.field--name-dynamic-twig-fieldtaxonomy-term-classification-2.field--ty
 }
 div.field.field--name-dynamic-twig-fieldtaxonomy-term-classification-2.field--type-ds div.classification-2 a {
   text-decoration-line: none;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   text-decoration-color: currentColor;
   text-decoration-style: solid;
   text-decoration-thickness: 1px;
@@ -234,7 +235,8 @@ div.field.field--name-dynamic-twig-fieldtaxonomy-term-classification-2.field--ty
 }
 div.field.field--name-dynamic-twig-fieldtaxonomy-term-classification-2.field--type-ds div.classification-2 a:hover {
   text-decoration-line: none;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   text-decoration-color: currentColor;
   text-decoration-style: solid;
   text-decoration-thickness: 1px;
@@ -249,7 +251,8 @@ div.field.field--name-dynamic-twig-fieldtaxonomy-term-classification-2.field--ty
   height: 30%;
   max-height: none;
   min-height: none;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 div.field.field--name-dynamic-twig-fieldtaxonomy-term-classification-2.field--type-ds div.classification-2 a img {
   margin-top: 0;

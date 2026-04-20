@@ -683,11 +683,6 @@ footer.site-footer div.container a {
   filter: none;
 }
 footer.site-footer div.container div.site-footer__bottom {
-  /*       section.region.region-footer-fifth {
-          @include st.padding($b: 2.0rem);
-        } */
-}
-footer.site-footer div.container div.site-footer__bottom {
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
@@ -723,4 +718,9 @@ footer.site-footer div.container div.site-footer__bottom section.region {
   margin-right: 0;
   margin-bottom: 0;
   margin-left: 0;
+}
+footer.site-footer div.container div.site-footer__bottom {
+  /*       section.region.region-footer-fifth {
+          @include st.padding($b: 2.0rem);
+        } */
 }

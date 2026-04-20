@@ -191,6 +191,7 @@ pre[id^=sf-dump] samp {
  * フロントページ
  */
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds p {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -239,7 +240,8 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   height: 100vh;
   max-height: 100rem;
   min-height: none;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media only screen and (min-width: 796px) and (max-width: 1016px) {
   div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.swiper-container div.swiper-wrapper div.swiper-slide div.slide-media img {
@@ -249,7 +251,8 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
     height: 100vh;
     max-height: none;
     min-height: none;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 @media only screen and (max-width: 796px) {
@@ -260,7 +263,8 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
     height: 100vh;
     max-height: none;
     min-height: none;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.swiper-container div.filter-image {
@@ -295,7 +299,8 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   height: 100%;
   max-height: none;
   min-height: none;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.swiper-container div.filter-image img.swiper-filter-pc {
   position: relative;
@@ -347,7 +352,8 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   height: 100%;
   max-height: none;
   min-height: none;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.swiper-container div.filter-image img.swiper-filter-mobile {
   position: relative;
@@ -481,6 +487,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   opacity: 1;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.frontpage-content__detail {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -502,6 +509,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   margin-left: auto;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.frontpage-content__detail__block {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -517,6 +525,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   margin-left: 0;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.frontpage-content__detail__block__section {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -527,7 +536,8 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
 }
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.frontpage-content__detail__block__section h2 {
   text-decoration-line: none;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   text-decoration-color: currentColor;
   text-decoration-style: solid;
   text-decoration-thickness: 1px;
@@ -611,7 +621,8 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
 }
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.frontpage-content__link a {
   text-decoration-line: none;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   text-decoration-color: currentColor;
   text-decoration-style: solid;
   text-decoration-thickness: 1px;

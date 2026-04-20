@@ -220,6 +220,7 @@ div.switch-darkmode {
   overflow: none;
 }
 div.switch-darkmode {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;

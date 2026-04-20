@@ -71,9 +71,6 @@ p {
     @include st.margin($b: 0); // 最後のp要素はマージンを消す
   }
 }
-h3 + p {
-  @include st.margin($b: 2.5rem);
-}
 
 div { // div要素直下にテキストが入ってることがあるので
   @include st.font($s: 1.0rem, $w: st.$font-weight-default, $ffs: inherit);

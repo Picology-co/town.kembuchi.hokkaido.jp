@@ -242,8 +242,8 @@ h2 {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: "palt";
-  line-height: 3.6rem;
-  letter-spacing: 0.02rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 h2 {
   color: #333333;
@@ -278,8 +278,8 @@ h3 {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: "palt";
-  line-height: 2.7rem;
-  letter-spacing: 0.015rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 h3 {
   color: #333333;
@@ -314,8 +314,8 @@ h4 {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: "palt";
-  line-height: 2.25rem;
-  letter-spacing: 0.0125rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 h4 {
   color: #333333;
@@ -350,8 +350,8 @@ h5 {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: "palt";
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 h5 {
   color: #333333;
@@ -397,8 +397,8 @@ p {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: "palt";
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 p {
   color: #333333;
@@ -419,8 +419,8 @@ div {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: inherit;
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 
 small {
@@ -429,8 +429,8 @@ small {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: inherit;
-  line-height: 1.35rem;
-  letter-spacing: 0.0075rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 small div {
   font-size: 0.75rem;
@@ -438,8 +438,8 @@ small div {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: inherit;
-  line-height: 1.35rem;
-  letter-spacing: 0.0075rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 small font {
   font-size: 0.75rem;
@@ -447,8 +447,8 @@ small font {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: inherit;
-  line-height: 1.35rem;
-  letter-spacing: 0.0075rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 
 font {
@@ -457,8 +457,8 @@ font {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: inherit;
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 
 em {
@@ -467,8 +467,8 @@ em {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: inherit;
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 
 b {
@@ -477,8 +477,8 @@ b {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: inherit;
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 
 strong {
@@ -627,8 +627,8 @@ a {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: inherit;
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 a {
   color: #228b22;
@@ -668,8 +668,8 @@ ul li {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: inherit;
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 ul li {
   color: #333333;
@@ -699,8 +699,8 @@ ol li {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: inherit;
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 ol li {
   color: #333333;
@@ -727,8 +727,8 @@ dl dt {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: inherit;
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 dl dt {
   color: #333333;
@@ -742,8 +742,8 @@ dl dd {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: inherit;
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 dl dd {
   color: #333333;
@@ -776,8 +776,7 @@ img {
   height: auto;
   max-height: none;
   min-height: none;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 img[src$=".svg"] {
   background-color: transparent;
@@ -844,26 +843,22 @@ table {
   table {
     table-layout: auto;
     -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    scrollbar-width: auto;
   }
   table::-webkit-scrollbar {
     display: auto;
-  }
-  table {
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    scrollbar-width: auto;
   }
 }
 @media only screen and (max-width: 796px) {
   table {
     table-layout: auto;
     -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    scrollbar-width: auto;
   }
   table::-webkit-scrollbar {
     display: auto;
-  }
-  table {
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    scrollbar-width: auto;
   }
 }
 table thead > tr {
@@ -942,8 +937,8 @@ table tr th {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: "palt";
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 table tr th {
   color: #333333;
@@ -1010,8 +1005,8 @@ table tr td {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: "palt";
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 table tr td {
   color: #333333;
@@ -1069,8 +1064,8 @@ blockquote p {
   font-family: inherit;
   font-style: italic;
   font-feature-settings: "palt";
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 
 q {
@@ -1091,8 +1086,8 @@ q {
   font-family: inherit;
   font-style: italic;
   font-feature-settings: "palt";
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 
 /*
@@ -1107,8 +1102,8 @@ pre {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: "palt";
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 pre {
   margin-top: 0;
@@ -1144,8 +1139,8 @@ pre code {
   font-family: "IBMPlexMono";
   font-style: normal;
   font-feature-settings: "palt";
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 pre code {
   margin-top: 0;
@@ -1175,14 +1170,12 @@ form {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: "palt";
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 
 input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   outline: none;
 }
 input {
@@ -1203,8 +1196,8 @@ input {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: "palt";
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 input:focus {
   outline: none;
@@ -1228,8 +1221,8 @@ button {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: "palt";
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 
 label {
@@ -1238,8 +1231,8 @@ label {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: "palt";
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 
 select {
@@ -1248,8 +1241,8 @@ select {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: "palt";
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 
 option {
@@ -1258,8 +1251,8 @@ option {
   font-family: inherit;
   font-style: normal;
   font-feature-settings: "palt";
-  line-height: 1.8rem;
-  letter-spacing: 0.01rem;
+  line-height: calc($s * 1.8);
+  letter-spacing: calc($s * 0.01);
 }
 
 /*

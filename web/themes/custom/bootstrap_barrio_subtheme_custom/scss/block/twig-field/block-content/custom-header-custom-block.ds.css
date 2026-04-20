@@ -233,6 +233,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-custom-header-custom-block
   margin-left: auto;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-custom-header-custom-block.field--type-ds div.header {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -248,6 +249,7 @@ body.path-frontpage div.field.field--name-dynamic-twig-fieldblock-content-custom
   margin-left: 0;
 }
 body.path-frontpage div.field.field--name-dynamic-twig-fieldblock-content-custom-header-custom-block.field--type-ds div.header {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -257,6 +259,7 @@ body.path-frontpage div.field.field--name-dynamic-twig-fieldblock-content-custom
   overflow: none;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-custom-header-custom-block.field--type-ds div.header h1 {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -286,6 +289,7 @@ body.path-frontpage div.field.field--name-dynamic-twig-fieldblock-content-custom
   margin-left: 1rem;
 }
 body.path-frontpage div.field.field--name-dynamic-twig-fieldblock-content-custom-header-custom-block.field--type-ds div.header h1 {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -378,6 +382,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-custom-header-custom-block
   opacity: 1;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-custom-header-custom-block.field--type-ds div.menu nav ul li {
+  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -394,7 +399,8 @@ div.field.field--name-dynamic-twig-fieldblock-content-custom-header-custom-block
 }
 div.field.field--name-dynamic-twig-fieldblock-content-custom-header-custom-block.field--type-ds div.menu nav ul li a {
   text-decoration-line: none;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   text-decoration-color: currentColor;
   text-decoration-style: solid;
   text-decoration-thickness: 1px;
