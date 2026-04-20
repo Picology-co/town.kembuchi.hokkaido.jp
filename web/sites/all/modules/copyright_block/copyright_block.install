@@ -1,0 +1,109 @@
+<?php
+/**
+ * Implements hook_schema().
+ */
+function copyright_block_schema() {
+  $schema['copyright_block__since'] = [
+    'description' => 'Since table created by copyright block.',
+    'fields' => [
+      'id' => [
+        'description' => 'Primary Key',
+        'type' => 'int',
+        'length' => 10,
+        'not null' => TRUE,
+        'unsigned' => TRUE,
+        'default' => 0,
+      ],
+      'since' => [
+        'description' => 'Year the website was launched',
+        'type' => 'varchar',
+        'length' => 4,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'created' => [
+        'description' => 'Created timestamp',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'changed' => [
+        'description' => 'Changed timestamp',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  $schema['copyright_block__format'] = [
+    'description' => 'Format table created by copyright block.',
+    'fields' => [
+      'id' => [
+        'description' => 'Primary Key',
+        'type' => 'int',
+        'length' => 10,
+        'not null' => TRUE,
+        'unsigned' => TRUE,
+        'default' => 0,
+      ],
+      'format' => [
+        'description' => 'Display format',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ],
+      'created' => [
+        'description' => 'Created timestamp',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'changed' => [
+        'description' => 'Changed timestamp',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+  return $schema;
+}
+
+/**
+ * Implements hook_install().
+ */
+function copyright_block_install() {
+
+  // copyright_block_since
+  $entries = [
+    [
+      'id' => '1',
+      'since' => date('Y'),
+      'created' => date('U'),
+      'changed' => date('U'),
+    ],
+  ];
+  $connection = \Drupal::database();
+  foreach ($entries as $entry) {
+    $connection->insert('copyright_block__since')->fields($entry)->execute();
+  }
+
+  // copyright_block_format
+  $entries = [
+    [
+      'id' => '1',
+      'format' => '&copy; @year @sitename',
+      'created' => date('U'),
+      'changed' => date('U'),
+    ],
+  ];
+  $connection = \Drupal::database();
+  foreach ($entries as $entry) {
+    $connection->insert('copyright_block__format')->fields($entry)->execute();
+  }
+
+}

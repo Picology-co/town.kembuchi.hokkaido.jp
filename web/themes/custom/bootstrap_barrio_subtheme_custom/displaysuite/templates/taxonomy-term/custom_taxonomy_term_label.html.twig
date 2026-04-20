@@ -1,0 +1,5 @@
+{# カスタムタクソノミータームラベル #}
+{% set label = convert_to_hankaku(taxonomy_term.label) %}
+
+<h2>{{ label|raw }}</h2>
+<div class="background"></div>

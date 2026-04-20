@@ -1,0 +1,365 @@
+@use "../style.scss" as st;
+
+/*----------コンテンツの基本レイアウト----------*/
+/*
+ * フォント
+ */
+/*  * { // リセットCSSで定義済みのためコメントアウト
+  font-family: 'NotoSansJP', sans-serif;
+} */
+
+/*
+ * フォントサイズ（基準）
+ */
+html {
+	font-size: 16px;
+	@include st.sp { font-size: 14px; }
+}
+
+/*
+ * 見出し
+ */
+h1 {
+  @include st.margin();
+}
+h2 {
+	display: block;
+  @include st.margin($b: 5.0rem);
+  @include st.padding($r: 1.0rem, $l: 1.0rem);
+  @include st.border-bottom($w: 2px);
+	@include st.font($s: 2.0rem, $w: st.$font-weight-bold);
+  @include st.color($c: st.$font-color-default, $b: st.$font-background-color-default);
+}
+
+h3 {
+	display: block;
+  @include st.margin($b: 2.5rem);
+  @include st.padding($r: 1.0rem, $l: 1.0rem);
+  @include st.border-bottom($w: 2px);
+	@include st.font($s: 1.5rem, $w: st.$font-weight-bold);
+  @include st.color($c: st.$font-color-default, $b: st.$font-background-color-default);
+}
+
+h4 {
+	display: block;
+  @include st.margin($b: 1.25rem);
+  @include st.padding($r: 1.0rem, $l: 1.0rem);
+  @include st.border-bottom($w: 2px);
+	@include st.font($s: 1.25rem, $w: st.$font-weight-bold);
+  @include st.color($c: st.$font-color-default, $b: st.$font-background-color-default);
+}
+
+h5 {
+	display: block;
+  @include st.margin($b: 1.0rem);
+  @include st.padding($r: 1.0rem, $l: 1.0rem);
+  @include st.border-bottom($w: 1px);
+	@include st.font($s: 1.0rem, $w: st.$font-weight-bold);
+  @include st.color($c: st.$font-color-default, $b: st.$font-background-color-default);
+}
+
+/*
+ * コンテンツ
+ */
+p {
+  @include st.pos($p: static);
+  @include st.size();
+  @include st.margin($b: 1.0rem);
+	@include st.font($s: 1.0rem, $w: st.$font-weight-default);
+  @include st.color($c: st.$font-color-default, $b: st.$font-background-color-default);
+  &:last-child {
+    @include st.margin($b: 0); // 最後のp要素はマージンを消す
+  }
+}
+h3 + p {
+  @include st.margin($b: 2.5rem);
+}
+
+div { // div要素直下にテキストが入ってることがあるので
+  @include st.font($s: 1.0rem, $w: st.$font-weight-default, $ffs: inherit);
+}
+
+small { // Webフォームに埋まっていることがある
+  @include st.font($s: 0.75rem, $w: st.$font-weight-default, $ffs: inherit);
+  div {
+    @include st.font($s: 0.75rem, $w: st.$font-weight-default, $ffs: inherit);
+  }
+  font {
+    @include st.font($s: 0.75rem, $w: st.$font-weight-default, $ffs: inherit);
+  }
+}
+
+font {
+  @include st.font($s: 1.0rem, $w: st.$font-weight-default, $ffs: inherit);
+}
+
+em {
+  @include st.font($s: 1.0rem, $w: st.$font-weight-default, $ffs: inherit);
+}
+
+b {
+  @include st.font($s: 1.0rem, $w: st.$font-weight-bold, $ffs: inherit);
+}
+strong {
+  @include st.font($s: inherit, $w: 700, $h: inherit, $l: inherit, $ffs: inherit);
+}
+u {
+  @include st.font($s: inherit, $w: inherit, $h: inherit, $l: inherit, $ffs: inherit);
+}
+time {
+  @include st.font($s: inherit, $w: inherit, $h: inherit, $l: inherit, $ffs: inherit);
+}
+mark {
+  @include st.font($s: inherit, $w: inherit, $h: inherit, $l: inherit, $ffs: inherit);
+  &.marker-pink {
+    @include st.color($b: st.$marker-pink);
+  }
+  &.marker-yellow {
+    @include st.color($b: st.$marker-yellow);
+  }
+  &.marker-blue {
+    @include st.color($b: st.$marker-blue);
+  }
+  &.marker-green {
+    @include st.color($b: st.$marker-green);
+  }
+  &.pen-red {
+    @include st.color($c: st.$pen-red);
+  }
+  &.pen-green {
+    @include st.color($c: st.$pen-green);
+  }
+}
+legend {
+  @include st.font($s: inherit, $w: inherit, $h: inherit, $l: inherit, $ffs: inherit);
+}
+fieldset{
+  @include st.font($s: inherit, $w: inherit, $h: inherit, $l: inherit, $ffs: inherit);
+}
+span {
+	display: inline;
+	@include st.font($s: inherit, $w: inherit, $h: inherit, $l: inherit, $y: inherit, $ffs: inherit);
+  @include st.color($c: inherit, $b: inherit);
+	&.bold {
+    @include st.font($s: inherit, $w: st.$font-weight-bold, $h: inherit, $l: inherit, $y: inherit, $ffs: inherit);
+	}
+	&.italic {
+    @include st.font($s: inherit, $w: inherit, $h: inherit, $l: inherit, $y: italic, $ffs: inherit);
+	}
+}
+
+/*
+ * リンク
+ */
+a {
+	display: inline-block;
+	text-decoration: underline; // 下線あり
+	@include st.font($s: 1.0rem, $w: st.$font-weight-bold, $ffs: inherit);
+  @include st.color($c: st.$font-color-link, $b: st.$font-background-color-default);
+	&:has(img) { // 画像にリンクがついている場合は下線なし
+		text-decoration: none;
+	}
+	&:not(:has(img)):hover {
+		filter: brightness(1.5); // ホバーしたら明るく
+    color: st.$font-color-link; // デフォルトを上書き
+	}
+}
+
+/*
+ * リスト
+ */
+ul { // 順序なしリスト
+  list-style-type: none; //ドットを消す
+  @include st.margin($b: 1.0rem, $l: 1.5rem);
+  @include st.padding();
+	li {
+		@include st.font($s: 1.0rem, $w: st.$font-weight-default, $ffs: inherit);
+    @include st.color($c: st.$font-color-default, $b: st.$font-background-color-default);
+	}
+}
+ol { // 順序付きリスト
+	list-style-type: none;
+  @include st.margin($b: 1.0rem, $l: 1.5rem);
+  @include st.padding();
+	li {
+		@include st.font($s: 1.0rem, $w: st.$font-weight-default, $ffs: inherit);
+    @include st.color($c: st.$font-color-default, $b: st.$font-background-color-default);
+	}
+}
+dl { // 説明リスト
+  @include st.margin();
+  @include st.padding();
+  dt {
+		@include st.font($s: 1.0rem, $w: st.$font-weight-bold, $ffs: inherit);
+    @include st.color($c: st.$font-color-default, $b: st.$font-background-color-default);
+  }
+  dd {
+    @include st.font($s: 1.0rem, $w: st.$font-weight-default, $ffs: inherit);
+    @include st.color($c: st.$font-color-default, $b: st.$font-background-color-default);
+  }
+}
+
+/*
+ * ボーダー
+ */
+* {
+  @include st.border($w: 0, $c: st.$border-color);
+}
+
+/*
+ * メディア
+ */
+img {
+	@include st.image($w: st.$image-width, $maxw: st.$image-maxwidth, $minw: st.$image-minwidth, $h: st.$image-height, $maxh: st.$image-maxheight, $minh: st.$image-minheight, $o: st.$image-objectfit);
+  &[src$=".svg"] {
+    background-color: transparent; // 背景の映り込みを消す
+  }
+  &[src$=".png"] {
+    background-color: transparent; // 背景の映り込みを消す
+  }
+}
+
+video {
+  @include st.margin($l: auto, $r: auto, $b: 1.0rem);
+  @include st.pos($p: static);
+}
+
+audio {
+  @include st.margin($l: auto, $r: auto, $b: 1.0rem);
+  @include st.pos($p: static);
+}
+
+/*
+ * テーブル
+ */
+table {
+  overflow-x: auto;
+  display: block;
+  white-space: nowrap;
+  @include st.margin();
+  @include st.tablet {
+    table-layout: auto;
+    -webkit-overflow-scrolling: touch;
+		// ↓↓↓オーバーフローテキストのスクロールバーを表示しない設定↓↓↓
+    &::-webkit-scrollbar{ display: auto; } // chrome, safari
+    -ms-overflow-style: -ms-autohiding-scrollbar; // edge
+    scrollbar-width: auto; // firefox
+  }
+  @include st.sp {
+    table-layout: auto;
+    -webkit-overflow-scrolling: touch;
+		// ↓↓↓オーバーフローテキストのスクロールバーを表示しない設定↓↓↓
+    &::-webkit-scrollbar{ display: auto; } // chrome, safari
+    -ms-overflow-style: -ms-autohiding-scrollbar; // edge
+    scrollbar-width: auto; // firefox
+  }
+  thead > tr { border-bottom: none; }
+  tbody, thead {
+    @include st.border();
+    @include st.pos($d: table-header-group, $p: static, $v: baseline);
+  }
+  tr {
+    @include st.color();
+    @include st.flex-container($w: nowrap);
+		th {
+      word-break: keep-all;
+      @include st.pos($d: inline-block, $p: static);
+      @include st.size($minw: st.$table-minwidth);
+      @include st.sp { word-break: break-all; }
+			@include st.font($s: 1.0rem, $w: st.$font-weight-bold);
+      @include st.color($c: st.$font-color-default, $b: st.$font-background-color-default);
+      @include st.border($c: st.$border-color);
+      @include st.scrollbar-hide();
+		}
+    td {
+      word-break: keep-all;
+      @include st.pos($d: inline-block, $p: static);
+      @include st.size($minw: st.$table-minwidth);
+      @include st.sp { word-break: break-all; }
+			@include st.font();
+      @include st.color($c: st.$font-color-default, $b: st.$font-background-color-default);
+      @include st.border($c: st.$border-color);
+      @include st.scrollbar-hide();
+    }
+  }
+}
+
+/*
+ * 引用
+ */
+blockquote {
+  @include st.border-left($w: 10px, $s: double);
+  @include st.padding($t: 1.0rem, $r: 1.0rem, $b: 1.0rem, $l: 1.0rem);
+  @include st.margin($b: 1.0rem);
+  p { @include st.font($y: italic); }
+}
+
+q {
+  @include st.padding($t: 1.0rem, $r: 1.0rem, $b: 1.0rem, $l: 1.0rem);
+  @include st.margin($b: 1.0rem);
+  @include st.font($y: italic);
+}
+
+/*
+ * 整形済みテキスト
+ */
+pre {
+  overflow-x: auto; // 必要に応じスクロールを表示する
+  @include st.font();
+  @include st.margin($b: 1.0rem);
+  @include st.padding($t: 0.5rem, $b: 0.5rem, $l: 0.5rem, $r: 0.5rem);
+  @include st.color($b: st.$pre-background-color);
+  @include st.border();
+  code {
+    @include st.font($f: 'IBMPlexMono');
+    @include st.margin();
+    @include st.padding();
+  }
+}
+
+/*
+ * フォーム要素
+ */
+form {
+  @include st.color($c: st.$font-color-default, $b: st.$form-background-color);
+  @include st.font();
+}
+input {
+  appearance: none;
+  outline: none;
+  @include st.padding();
+  @include st.color($c: st.$font-color-default, $b: st.$form-background-color);
+  @include st.font();
+  &:focus { // safari
+    outline: none;
+  }
+}
+
+button {
+  @include st.padding();
+  @include st.color($c: st.$font-color-default, $b: st.$form-background-color);
+  @include st.font();
+}
+
+label {
+  @include st.font($s: 1.0rem, $w: st.$font-weight-default);
+}
+
+select {
+  @include st.font($s: 1.0rem, $w: st.$font-weight-default);
+}
+
+option {
+  @include st.font($s: 1.0rem, $w: st.$font-weight-default);
+}
+
+/*
+ * Drupalが出力するシステム的な内容
+ */
+
+div[data-drupal-messages] { // システムメッセージ
+  h2 {
+    @include st.margin($b: 1.0rem);
+    @include st.border-bottom($w: 0);
+  }
+}

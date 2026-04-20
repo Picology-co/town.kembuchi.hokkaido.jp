@@ -1,0 +1,30 @@
+@use '../../style.scss' as st with (
+  $element-type: 'view',
+  $element-name: 'taxonomy-term', // カスタムブロックの名称
+  $element-display-id: 'page_1' // ディスプレイIDの名称
+);
+
+/*
+ * タクソノミーターム
+ */
+div.#{st.$element-type} {
+  &.#{st.$element-type}-#{st.$element-name} {
+    &.#{st.$element-type}-display-id-#{st.$element-display-id} {
+
+      div.view-content {
+        @include st.padding($l: 1.0rem, $r: 1.0rem);
+        div.item-list {
+          ul {
+            list-style-type: none!important;
+            li {
+              p {
+                @include st.margin();
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

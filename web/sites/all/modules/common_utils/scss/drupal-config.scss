@@ -1,0 +1,56 @@
+@use "../../../../../themes/custom/bootstrap_barrio_subtheme_custom/scss/style.scss" as st with (
+  $element-type: 'div',
+  $element-name: 'drupal-config' // twigフィールドの名称
+);
+
+#{st.$element-type}.#{st.$element-name} {
+  &__header {
+    a {
+      @include st.margin($r: 0.5rem);
+      @include st.padding($t: 0.5rem, $b: 0.5rem, $l: 1.0rem, $r: 1.0rem);
+      @include st.text();
+      @include st.border($rtl: 0.5rem, $rtr: 0.5rem, $rbl: 0.5rem, $rbr: 0.5rem);
+      @include st.color($b: #d3d3d3);
+      &:last-child {
+        @include st.margin();
+      }
+    }
+    p {
+      @include st.border();
+      @include st.padding($t: 0.5rem, $b: 0.5rem, $l: 0.5rem, $r: 0.5rem);
+    }
+  }
+  &__data {
+    table {
+      thead, tbody {
+        tr {
+          @include st.flex-container();
+          * {
+            @include st.scrollbar-hide();
+            &:first-child {
+              @include st.size($w: 25.0rem);
+            }
+            &:last-child {
+              @include st.size(calc(100% - 25.0rem));
+            }
+            span {
+              @include st.font($w: 700);
+              &.color-green {
+                @include st.color($c: #008000);
+              }
+              &.color-orange {
+                @include st.color($c: #ffa500);
+              }
+              &.color-blue {
+                @include st.color($c: #0000ff);
+              }
+              &.color-purple {
+                @include st.color($c: #800080);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+services:
+  common_utils.contents_twig:
+    class: Drupal\common_utils\Twig\ContentsTwig
+    tags:
+      - { name: twig.extension }
+
+  common_utils.user_twig:
+    class: Drupal\common_utils\Twig\UserTwig
+    tags:
+      - { name: twig.extension }
+
+  common_utils.drupal_fields_twig:
+    class: Drupal\common_utils\Twig\DrupalFieldsTwig
+    tags:
+      - { name: twig.extension }
+
+  common_utils.drupal_config_twig:
+    class: Drupal\common_utils\Twig\DrupalConfigTwig
+    tags:
+      - { name: twig.extension }

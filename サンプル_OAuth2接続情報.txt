@@ -1,0 +1,15 @@
+アクセストークンURL　https://www.d10-devel.jp/oauth/token
+
+クライアントID　t3IGLG4jX_kC_mRWkmL9BdPnzTbJv_QamBuwcxTw--A
+シークレット　w3xt/:v/WO0TH64~WUXAcHPmH|xk8K
+
+Grant Type　client credentials
+scope API
+
+-----
+データ取得例(JSON)
+http://www.d10-devel.jp/kanr1ro0m/furusato/api/export/donation_data/json
+メソッド：post
+
+エンドポイントをモジュールで設定して取得できる
+

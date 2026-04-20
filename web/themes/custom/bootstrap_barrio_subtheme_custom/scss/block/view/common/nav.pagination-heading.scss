@@ -1,0 +1,14 @@
+@use '../../../style.scss' as st with (
+  $element-type: 'view'
+);
+
+/*
+ * ビューのページャー(標準)
+ */
+div.#{st.$element-type} {
+  nav[aria-label="pagination-heading"] {
+    ul.pagination {
+      list-style-type: none!important;
+    }
+  }
+}

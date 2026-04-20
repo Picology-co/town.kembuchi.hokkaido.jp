@@ -1,0 +1,37 @@
+{# タクソノミーページのサイトタイトル #}
+{# custom_header_custom_block.html.twigを流用しても構わないが、SEOの観点から個別に設定したほうがよい。 #}
+{% set title = taxonomy_term.name.value %}
+<div class="header">
+  <div class="header__logo">
+    <h1>
+      <a href="/">
+        <p>ロゴやメニュー</p>
+        <p>カスタムヘッダー（タクソノミーターム）</p>
+        <p>displaysuite\templates\custom_header_taxonomy.html.twig</p>
+        {% if taxonomy_term.field_h1tag.value is empty %}
+          {# <img src="{{ 'public://image/logo.svg'|file_url }}" alt="{{ title }}"> #}
+        {% else %}
+          {# SEO対策(H1タグが個別に設定されていればそちらを使う) #}
+          {# <img src="{{ 'public://image/logo.svg'|file_url }}" alt="{{ taxonomy_term.field_h1tag.value }}"> #}
+        {% endif %}
+      </a>
+    </h1>
+  </div>
+
+{#   <div class="header__menu">
+    <nav>
+      <ul>
+        <li><a href="/">ホーム</a></li>
+        <li><a href="/company">会社概要</a></li>
+        <li><a href="/example">制作事例</a></li>
+        <li><a href="/service">サービス</a></li>
+        <li><a href="/contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div> #}
+</div>
+
+{# パンくずリストブロックを取り込む #}
+<div class="breadcrumbs">
+  {{ drupal_breadcrumb() }}
+</div>

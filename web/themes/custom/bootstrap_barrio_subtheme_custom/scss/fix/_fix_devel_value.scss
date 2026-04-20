@@ -1,0 +1,11 @@
+// Develモジュール(dumpを使う時)の設定の修正
+
+// spanの高さがリセッターによりリセットされている。
+pre[id^="sf-dump"] {
+  span {
+    line-height: 1.0rem;
+  }
+  samp {
+    line-height: normal;
+  }
+}

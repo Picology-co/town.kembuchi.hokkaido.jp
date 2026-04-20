@@ -1,0 +1,13 @@
+custom_variable:
+  version: 1.x
+  css:
+    theme:
+      scss/custom-variable.min.css: {}
+  js:
+    js/custom-variable.js: {}
+  dependencies:
+    - core/drupal
+
+#js-header:
+#  header: true
+#  js:

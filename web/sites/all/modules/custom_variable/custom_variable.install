@@ -1,0 +1,48 @@
+<?php
+/**
+ * Implements hook_schema().
+ */
+function custom_variable_schema() {
+  $schema['custom_variable'] = [
+    'description' => 'custom_variable table created by custom variable module.',
+    'fields' => [
+      'key' => [
+        'description' => 'Primary Key',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'value' => [
+        'description' => 'variable value',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'detail' => [
+        'description' => 'variable detail',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'created' => [
+        'description' => 'Created timestamp',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'changed' => [
+        'description' => 'Changed timestamp',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'primary key' => ['key'],
+  ];
+
+  return $schema;
+}
+

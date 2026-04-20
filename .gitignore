@@ -9,12 +9,26 @@
 /web/sites/*/*settings*.php
 /web/sites/*/*services*.yml
 
+# template custom module
+# /web/sites/all/modules/template* # 開発時はコメントを外す
+
 # Ignore paths that may contain user-generated content
-/web/sites/*/files
-/web/sites/*/public
-/web/sites/*/private
-/web/sites/*/files-public
-/web/sites/*/files-private
+/web/sites/default/files/config*/*
+/web/sites/default/files/css/*
+/web/sites/default/files/js/*
+/web/sites/default/files/languages/*
+/web/sites/default/files/media-icons/*
+/web/sites/default/files/notice/*
+/web/sites/default/files/php/*
+/web/sites/default/files/scss_compiler/*
+/web/sites/default/files/styles/*
+/web/sites/default/files/public/*
+/web/sites/default/files/private/*
+/web/sites/default/files/files-public/*
+/web/sites/default/files/files-private/*
+/web/sites/default/files/image/content/*
+/web/sites/default/files/media/*
+/web/sites/default/files/module/*
 
 # Ignore paths that may contain temporary files
 /web/sites/*/translations
@@ -24,22 +38,18 @@
 # Ignore drupal core (if not versioning drupal sources)
 /web/vendor
 /web/core
-/web/modules/README.txt
-/web/modules/contrib
-/web/profiles/README.txt
-/web/profiles/contrib
+/web/libraries
+/web/modules
+/web/profiles
 /web/sites/development.services.yml
 /web/sites/example.settings.local.php
 /web/sites/example.sites.php
 /web/sites/README.txt
 /web/themes/README.txt
-/web/themes/contrib
 /web/.csslintrc
-/web/.editorconfig
 /web/.eslintignore
 /web/.eslintrc.json
-/web/.gitattributes
-/web/.htaccess
+#/web/.htaccess
 /web/.ht.router.php
 /web/autoload.php
 /web/composer.json
@@ -52,6 +62,8 @@
 /web/robots.txt
 /web/update.php
 /web/web.config
+.gitattributes
+.editorconfig
 
 # Ignore vendor dependencies and scripts
 /vendor
@@ -63,3 +75,16 @@
 /drush
 /drupal.phar
 /drupal
+
+/web/themes/contrib
+/web/webfont
+/web/cloud
+/web/www2.picology-co.jp
+/web/www3.picology-co.jp
+/web/www4.picology-co.jp
+/web/www5.picology-co.jp
+/web/www6.picology-co.jp
+/web/www7.picology-co.jp
+/web/www8.picology-co.jp
+/web/www9.picology-co.jp
+

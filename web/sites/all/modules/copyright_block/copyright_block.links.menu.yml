@@ -1,0 +1,5 @@
+copyright_block.config:
+  route_name: copyright_block.config
+  title: 'Copyright Block'
+  parent: system.admin_config_ui
+  description: 'Configure the Copyright Block module settings.'

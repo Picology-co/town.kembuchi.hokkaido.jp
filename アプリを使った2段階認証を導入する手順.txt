@@ -1,0 +1,47 @@
+#1 tfaモジュールをインストールする。
+https://www.drupal.org/project/tfa
+composer require 'drupal/tfa:^1.9'
+
+real aesモジュールをインストールする。
+https://www.drupal.org/project/real_aes
+composer require 'drupal/real_aes:^2.6'
+
+#2 AES-128キーを生成する。
+https://wefreestar.com/toolbox/key-generator
+
+#3 プロジェクトのルートディレクトリに.aesディレクトリを作成して、#2で作成したキーを置く。
+わかりやすいよう、google_2fa.keyなどにする。
+
+例）
+$ echo '9ec063a90737e6030a4c280ce36d2265' > google_2fa.key1
+$ echo '9ec063a90737e603' > google_2fa.key1
+$ cat google_2fa.key1 | tr -d '\n\r' > google_2fa.key
+※↑末尾についている改行\n\rを削除する。
+
+#4 keysを追加する。
+環境設定>システム>Keys
+キー名: Google 2FA
+システム名: google_2fa
+タイプ: Encryption
+サイズ: 256
+プロバイダ: ファイル
+ファイルの場所: ../.aes/google_2fa.key
+以上の設定で保存する。
+
+#5 プロファイルを追加する。
+環境設定>システム>Encryption Profiles
+ラベル: Google 2FA
+メソッド: Real AES
+システム名: google_2fa
+注意：推奨されていない設定です。
+
+#6 TFAを有効にする。
+環境設定>ユーザー>TFAの設定
+TFAを有効にする、にチェックを入れる。
+TFAの設定に必要な役割二チェックを入れる。
+TFA 時間ベースのワンタイムパスワード (TOTP)にチェックを入れる。
+他はデフォルトで
+構成を保存をクリックする。
+
+#7 ユーザーのTFAを設定する。
+設定するユーザー>TFA

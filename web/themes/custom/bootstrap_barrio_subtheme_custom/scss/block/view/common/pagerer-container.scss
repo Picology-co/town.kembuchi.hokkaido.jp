@@ -1,0 +1,43 @@
+@use '../../../style.scss' as st with (
+  $element-type: 'view'
+);
+
+/*
+ * ビューのページャー(Pagerer module)
+ */
+div.#{st.$element-type} {
+  div.pagerer-container {
+    nav {
+      &.pager.pagerer-pager-basic[aria-labelledby="pagination-heading"] { // 基本
+        ul {
+          list-style-type: none!important;
+          @include st.flex-container($w: nowrap, $j: center);
+          li {
+            @include st.padding($t: 0, $r: 0.25rem, $b: 0, $l: 0.25rem);
+            a {
+              @include st.text();
+            }
+          }
+        }
+      }
+      &.pager.pagerer-pager-adaptive[aria-labelledby="pagination-heading"] { // Adaptive
+        ul {
+          list-style-type: none!important;
+          @include st.flex-container($w: nowrap, $j: center);
+          li {
+            @include st.padding($t: 0, $r: 0.25rem, $b: 0, $l: 0.25rem);
+          }
+        }
+      }
+      &.pager.pagerer-pager-progressive[aria-labelledby="pagination-heading"] {
+        ul {
+          list-style-type: none!important;
+          @include st.flex-container($w: nowrap, $j: center);
+          li {
+            @include st.padding($t: 0, $r: 0.25rem, $b: 0, $l: 0.25rem);
+          }
+        }
+      }
+    }
+  }
+}

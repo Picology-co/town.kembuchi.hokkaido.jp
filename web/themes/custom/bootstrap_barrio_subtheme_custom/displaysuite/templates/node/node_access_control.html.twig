@@ -1,0 +1,28 @@
+{# ノードのアクセス制御(管理者のみ権限を持たせたいノード) #}
+
+{% set login_en = false %} {# ログインできるかどうかを表すフラグ #}
+{% set username = username %}
+{% set roles = roles %}
+
+{% if username is not empty %}
+  {% if username == 'webmaster' %}
+    {% set login_en = true %}
+  {% endif %}
+  {% for j, role in roles %}
+    {% if (role == 'content_manager') or (role == 'administrator') %}
+      {% set login_en = true %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if login_en == false %}
+  {# リダイレクトで404に飛ばす #}
+  <script>
+    window.location.href = '/error/1';
+  </script>
+{% else %}
+  {# 管理ユーザーでログインしていれば確認画面にリダイレクトで飛ばす #}
+  {% set nid = node.id %}
+  {% set entity = drupal_entity('node', nid, 'confirmation') %}
+  {{ entity }}
+{% endif %}

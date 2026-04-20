@@ -1,0 +1,76 @@
+@use "../../../style.scss" as st with (
+  $element-type: 'field',
+  $element-name: 'custom-header-custom-block',
+  $element-field-type: 'ds' // フィールドタイプ
+);
+
+/*
+ * カスタムヘッダー（カスタムブロック用）
+ */
+div.#{st.$element-type} {
+  &.#{st.$element-type}--name-dynamic-twig-fieldblock-content-#{st.$element-name} {
+    &.#{st.$element-type}--type-#{st.$element-field-type} {
+
+      @include st.flex-container($w: nowrap, $j: space-between, $a: center);
+      @include st.size($maxw: st.$header-width);
+      @include st.margin($l: auto, $r: auto);
+      div.header {
+
+        @include st.pos();
+        @include st.margin($l: auto, $r: auto);
+        @include st.size($w: fit-content);
+        body.path-frontpage & { // フロントページの場合
+          @include st.margin();
+          @include st.size($w: fit-content);
+        }
+        h1 {
+          @include st.size($w: fit-content);
+          @include st.margin($t: 2.0rem);
+          @include st.sp {
+            @include st.margin($t: 4.0rem);
+          }
+          body.path-frontpage & {
+            @include st.margin($t: 1.0rem, $b: 1.0rem, $l: 1.0rem, $r: 1.0rem);
+            @include st.size($w: fit-content);
+            @include st.sp {
+              @include st.margin($t: 4.0rem, $b: 1.0rem, $r: 1.0rem);
+            }
+          }
+          a {
+            img {
+              @include st.size($minw: 8.0rem, $maxw: 8.0rem);
+              body.path-frontpage & {
+                @include st.size($maxw: 6.0rem, $minw: 6.0rem);
+              }
+            }
+          }
+        }
+      }
+      div.menu {
+        @include st.size();
+        @include st.sp {
+          @include st.pos($d: none);
+        }
+        nav {
+          @include st.margin($l: 1.0rem, $r: 1.0rem);
+          ul {
+            @include st.margin();
+            @include st.flex-container($w: nowrap, $j: right);
+            li {
+              @include st.pos($d: inline-block);
+              @include st.size($w: fit-content);
+              @include st.padding($l: 1.0rem , $r: 1.0rem);
+              a {
+                @include st.text();
+                @include st.color();
+                &:hover {
+                  @include st.color();
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

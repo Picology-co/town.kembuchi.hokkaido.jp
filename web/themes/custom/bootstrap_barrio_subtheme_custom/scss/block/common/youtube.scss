@@ -1,0 +1,26 @@
+@use "../../style.scss" as st with (
+  $element-tag: 'div', // エレメントのタグ
+  $element-name: 'youtube' // エレメントの名称
+);
+
+/**
+ * Youtube (レスポンシブ対応)
+ * (超重要)iframeだとtwigやckeditorで403エラーが出るのでobjectで対応する
+ */
+#{st.$element-tag}.#{st.$element-name} {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  transform: scale(0.9);
+  &:not(:has(object)){ // 空白の場合も高さを確保してしまうため
+    padding-bottom: 0;
+  }
+  object {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,8 @@
+name: 'Template Routing'
+type: module
+description: 'ルーティングを使用するカスタムモジュールのテンプレートです。'
+core_version_requirement: ^10 || ^11 || ^12
+package: 'Examples'
+version: '1.0.0'
+dependencies:
+  - drupal:system

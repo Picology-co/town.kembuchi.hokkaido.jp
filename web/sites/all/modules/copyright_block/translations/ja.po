@@ -1,0 +1,23 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Enter the year when the website was launched."
+msgstr "ウェブサイトを公開した年（西暦）を入力してください。"
+
+msgid "Website launch year:"
+msgstr "ウェブサイトを公開した年（西暦）"
+
+msgid "Copyright format:"
+msgstr "コピーライトの表示形式"
+
+msgid "Configure the Copyright Block module settings."
+msgstr "コピーライトブロックの設定を行います。"
+
+msgid "Use @year for the year(If the year the website was established is the same as the current year, the exact year will be displayed, otherwise a range will be displayed.) and @sitename for the site name.Also, &amp;copy; displays &copy; and &amp;nbsp; represents a half-width space.<br>Example: &amp;copy; @year @sitename => &copy; 2023-2025 SiteName"
+msgstr "@yearは年の西暦表示（ウェブサイトを公開した年が現在の年と同じ場合はウェブサイトを公開した年のみが表示され、そうでない場合は範囲​​が表示されます。）、@sitenameはサイト名を表示します。また、&amp;copy;は&copy;を表示します。<br>例：&amp;copy; @year @sitename => &copy; 2023-2025 SiteName"
+msgid "<h3>Usage</h3><p><b>Block</b></p><p>Go to Administration, Site Building, Block Layout and place it in your region.</p><p><b>Twig</b></p><p>You can embed it in any Twig. Just write {{ copyright }} where you want to embed it.</p>"
+msgstr "<h3>使用方法</h3><p><b>ブロック</b></p><p>「管理」→「サイト構築」→「ブロックレイアウト」からブロックを任意のリージョンに配置します。</p><p><b>Twig</b></p><p>任意のTwigに埋め込むことができます。埋め込む場所に {{ copyright }} と記述してください。</p>"

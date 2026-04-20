@@ -1,0 +1,6 @@
+name: 'Common Utils'
+type: module
+description: '汎用ユーティリティ'
+package: 'Custom'
+core_version_requirement: ^9 || ^10 || ^11 || ^12
+version: '1.0.0'

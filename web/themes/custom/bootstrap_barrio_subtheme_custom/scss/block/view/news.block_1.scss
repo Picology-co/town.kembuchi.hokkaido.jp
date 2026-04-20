@@ -1,0 +1,62 @@
+@use '../../style.scss' as st with (
+  $element-type: 'view',
+  $element-name: 'news', // カスタムブロックの名称
+  $element-display-id: 'block_1' // ディスプレイIDの名称
+);
+
+/*
+ * ビューの説明
+ */
+div.#{st.$element-type} {
+    &.#{st.$element-type}-#{st.$element-name} {
+      &.#{st.$element-type}-display-id-#{st.$element-display-id} {
+
+      div.view-content {
+        div.item-list {
+          ul {
+            li {
+              @include st.padding($l: 0.5rem, $r: 0.5rem, $b: 1.0rem, $t: 1.0rem);
+              @include st.border-bottom();
+              a {
+                @include st.size($w: 100%);
+                @include st.text();
+                @include st.color();
+                div.date-label {
+                  @include st.flex-container($w: nowrap);
+                  @include st.margin($b: 0.5rem);
+                  div.field.field--name-node-changed-date.field--type-ds {
+                    @include st.margin($r: 0.5rem);
+                    @include st.font($s: 0.75rem, $h: 1.25rem, $l: calc(0.75 * 0.01));
+                    @include st.pos($d: inline-block, $p: static, $v: top);
+                  }
+                }
+                div.field.field--name-node-title.field--type-ds {
+                  p {
+                    @include st.margin();
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      div.view-footer {
+        @include st.margin($t: 1.0rem);
+        @include st.pos($d: block, $p: static, $a: right);
+        p {
+          @include st.pos($d: inline-block, $p: static);
+          @include st.size($w: 12.5rem);
+          @include st.margin();
+          @include st.border($rtl: 100vh, $rtr: 100vh, $rbl: 100vh, $rbr: 100vh, $o: hidden);
+          a {
+            @include st.font($w: 700, $h: 3.0rem);
+            @include st.pos($d: inline-block, $a: center);
+            @include st.size();
+            @include st.text();
+          }
+        }
+      }
+    }
+  }
+
+}

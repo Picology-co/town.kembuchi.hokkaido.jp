@@ -1,0 +1,12 @@
+common_utils:
+  version: 1.x
+  css:
+    theme:
+      scss/drupal-config.min.css: {}
+  #js:
+  dependencies:
+    - core/drupal
+
+#js-header:
+#  header: true
+#  js:

@@ -1,0 +1,8 @@
+custom_variable.settings:
+  path: '/admin/config/development/custom-variable'
+  defaults:
+    _controller: '\Drupal\custom_variable\Controller\CustomVariableController::renderSettingForm'
+    _title: 'Custom Variable'
+  requirements:
+    _role: 'administrator' # アクセス制限
+    # _access: 'TRUE' # アクセス制限を無しにする場合

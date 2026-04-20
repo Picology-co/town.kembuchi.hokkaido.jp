@@ -1,0 +1,5 @@
+services:
+  copyright_block.twig_extension:
+    class: Drupal\copyright_block\Twig\CopyrightTwig
+    tags:
+      - { name: twig.extension }

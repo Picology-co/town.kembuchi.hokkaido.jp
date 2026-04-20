@@ -1,0 +1,10 @@
+template_routing.template_routing:
+  path: '/template_routing/template_routing'
+  defaults:
+    _controller: '\Drupal\template_routing\Controller\TemplateRoutingController::content'
+    _title: 'テンプレートHTML'
+    _format: 'html'
+  requirements:
+    _role: 'manager+administrator' # アクセス制限
+    # _access: 'TRUE' # アクセス制限を無しにする場合
+    _format: 'html'

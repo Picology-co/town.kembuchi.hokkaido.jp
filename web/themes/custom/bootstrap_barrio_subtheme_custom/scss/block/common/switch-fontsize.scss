@@ -1,0 +1,58 @@
+@use "../../style.scss" as st with (
+  $element-tag: 'div', // エレメントのタグ
+  $element-name: 'switch-fontsize' // エレメントの名称
+);
+/**
+ * 文字サイズコントローラー
+ */
+#{st.$element-tag}.#{st.$element-name} {
+  @include st.pos($l: 50%, $tr: translateX(-50%), $a: center);
+  @include st.padding($t: 0.5rem, $r: 1.5rem, $b: 0.5rem, $l: 1.5rem);
+  @include st.border();
+  @include st.size($w: fit-content);
+
+  label::after {
+    @include st.color($b: st.$switch-fontsize-check-background-color);
+  }
+
+  header {
+    @include st.border-bottom($s: dotted, $w: 2.5px);
+    p {
+      @include st.margin();
+      @include st.padding($t: 0, $b: 0, $r: 0.5rem, $l: 0.5rem);
+    }
+  }
+  section {
+    input#fontsize-controller {
+      cursor: pointer;
+      @include st.pos($p: absolute, $l: 0, $t: 0, $z: 5, $o: 0);
+      @include st.size($h: 100%);
+      &:checked {
+        + label.fontsize-label { // 拡大
+          &::after {
+            @include st.pos($d: inline-block, $p: absolute, $l: 50%, $z: -1, $a: center);
+          }
+        }
+      }
+    }
+    label.fontsize-label { // 標準
+      @include st.pos();
+      small {
+        @include st.pos($d: inline-block, $p: relative);
+        @include st.padding($t: 0, $r: 1.0rem, $b: 0, $l: 1.0rem);
+      }
+      &::after {
+        content: "";
+        transition: 0.4s;
+        @include st.pos($d: inline-block, $p: absolute, $l: 0, $z: -1, $a: center);
+        @include st.size($w: 3.0rem, $h: 1.5rem);
+        @include st.border($w: 0, $rtl: 100vh, $rtr: 100vh, $rbl: 100vh, $rbr: 100vh);
+        @include st.margin($t: 0.025rem, $r: 0.25rem, $b: 0.025rem, $l: 0.25rem);
+      }
+    }
+  }
+}
+
+html.largesize {
+  font-size: calc(16px * 1.2);
+}

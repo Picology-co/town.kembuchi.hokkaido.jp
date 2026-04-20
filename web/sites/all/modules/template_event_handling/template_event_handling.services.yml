@@ -1,0 +1,5 @@
+services:
+  template_event_handling.event_subscriber:
+    class: 'Drupal\\template_event_handling\\EventSubscriber\\TemplateEventSubscriber'
+    tags:
+      - { name: 'event_subscriber' }

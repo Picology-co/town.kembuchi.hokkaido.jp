@@ -1,0 +1,15 @@
+@use "../style.scss" as st with (
+  $element-type: 'block',
+  $element-name: 'custom-footer' // ブロックの名称
+);
+
+/*
+ * フッター描画部
+ */
+div##{st.$element-type}-#{st.$element-name} {
+
+  // 管理者でログインする場合に限り、contextual-regionクラスが自動的に付与されるため、これを上書きする。
+  // 内容はposition: relativeであり、ここではstaticであることが望ましいため。
+  @include st.pos($p: static);
+
+}

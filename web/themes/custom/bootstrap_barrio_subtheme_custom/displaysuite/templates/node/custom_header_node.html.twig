@@ -1,0 +1,40 @@
+{# カスタムヘッダー（ノードコンテンツ） #}
+{# custom_header_custom_block.html.twigを流用しても構わないが、SEOの観点から個別に設定したほうがよい。 #}
+{% set title = node.title.value %}
+{% set taxonomy_name = node.field_sitetree.entity.name.value %}
+{% set h1tag = node.field_h1tag.value %}
+
+<div class="header">
+  <div class="header__logo">
+    <h1>
+      <a href="/">
+        <p>ロゴやメニュー</p>
+        <p>カスタムヘッダー（ノード）</p>
+        <p>displaysuite\templates\custom_header_node.html.twig</p>
+        {% if h1tag is empty %}
+          {# <img src="{{ 'public://image/logo.svg'|file_url }}" alt="{{ title }}"> #}
+        {% else %}
+          {# SEO対策(H1タグが個別に設定されていればそちらを使う) #}
+          {# <img src="{{ 'public://image/logo.svg'|file_url }}" alt="{{ h1tag }}"> #}
+        {% endif %}
+      </a>
+    </h1>
+  </div>
+
+{#   <div class="header__menu">
+    <nav>
+      <ul>
+        <li><a href="/">ホーム</a></li>
+        <li><a href="/company">会社概要</a></li>
+        <li><a href="/example">制作事例</a></li>
+        <li><a href="/service">サービス</a></li>
+        <li><a href="/contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div> #}
+</div>
+
+{# パンくずリストブロックを取り込む #}
+<div class="breadcrumbs">
+  {{ drupal_breadcrumb() }}
+</div>

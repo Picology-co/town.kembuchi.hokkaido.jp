@@ -1,0 +1,8 @@
+common_utils.drupal_config:
+  path: '/admin/config/development/drupal-config'
+  defaults:
+    _controller: '\Drupal\common_utils\Controller\CommonUtilsController::renderDrupalConfig'
+    _title: 'Drupalの設定一覧'
+  requirements:
+    _role: 'administrator' # アクセス制限
+    # _access: 'TRUE' # アクセス制限を無しにする場合

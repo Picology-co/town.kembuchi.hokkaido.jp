@@ -1,0 +1,6 @@
+name: 'Copyright Block'
+type: module
+description: 'This module provides the functionality to display copyright.'
+core_version_requirement: ^10 || ^11
+package: Display
+version: '1.0.0'

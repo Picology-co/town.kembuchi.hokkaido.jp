@@ -1,0 +1,211 @@
+// flexコンテナ
+@mixin flex-container($w: wrap, $j: left, $a: stretch, $d: row, $wi: 100%) {
+  & {
+    display: flex;
+    flex-wrap: $w;
+    justify-content: $j;
+    align-items: $a;
+    flex-direction: $d;
+    width: $wi;
+  }
+}
+
+// フォント
+@mixin font($s: 1.0rem, $w: 500, $h: none, $l: none, $f: inherit, $y: normal, $ffs: 'palt') {
+  & {
+    font-size: $s;
+    font-weight: $w;
+    font-family: $f;
+    font-style: $y;
+    font-feature-settings: $ffs;
+    @if $h == none {
+      line-height: calc($s * 1.8);
+    } @else {
+      line-height: $h;
+    }
+    @if $l == none {
+      letter-spacing: calc($s * 0.01);
+    } @else {
+      letter-spacing: $l;
+    }
+  }
+}
+
+// テキスト
+@mixin text($d: none, $di: auto, $dc: currentColor, $dt: 1px, $ds: solid, $s: none, $uo: auto, $ws: normal) {
+  & {
+    text-decoration-line: $d;
+    text-decoration-skip-ink: $di;
+    text-decoration-color: $dc;
+    text-decoration-style: $ds;
+    text-decoration-thickness: $dt;
+    text-shadow: $s;
+    text-underline-offset: $uo;
+    white-space: $ws;
+  }
+}
+
+// サイズ
+@mixin size($w: 100%, $maxw: none, $minw: none, $h: auto, $maxh: none, $minh: none, $o: none) {
+  & {
+    width: $w;
+    max-width: $maxw;
+    min-width: $minw;
+    height: $h;
+    max-height: $maxh;
+    min-height: $minh;
+    overflow: $o;
+  }
+}
+
+// 画像
+@mixin image($w: 100%, $maxw: none, $minw: none, $h: auto, $maxh: none, $minh: none, $o: cover) {
+  & {
+    width: $w;
+    max-width: $maxw;
+    min-width: $minw;
+    height: $h;
+    max-height: $maxh;
+    min-height: $minh;
+    object-fit: $o;
+  }
+}
+
+// 背景
+@mixin background($c: transparent, $p: center, $r: no-repeat, $s: cover, $cl: border-box, $bm: unset, $mixbm: unset, $a: scroll, $o: border-box, $img: none) {
+  & {
+    background-color: $c;
+    background-position: $p;
+    background-repeat: $r;
+    background-size: $s;
+    background-clip: $cl;
+    background-blend-mode: $bm;
+    mix-blend-mode: $mixbm;
+    background-attachment: $a;
+    background-origin: $o;
+    background-image: if($img == none, none, url('#{$img}'));
+  }
+}
+
+// 配置
+@mixin pos($d: block, $p: relative, $t: auto, $l: auto, $b: auto, $r: auto, $tr: none, $z: 0, $a: left, $v: auto, $o: 1) {
+  & {
+    position: $p;
+    display: $d;
+    top: $t;
+    left: $l;
+    bottom: $b;
+    right: $r;
+    transform: $tr;
+    z-index: $z;
+    text-align: $a;
+    vertical-align: $v;
+    opacity: $o;
+  }
+}
+
+// Padding
+@mixin padding($t: 0, $r: 0, $b: 0, $l: 0) {
+  & {
+    padding-top: $t;
+    padding-right: $r;
+    padding-bottom: $b;
+    padding-left: $l;
+  }
+}
+
+// Margin
+@mixin margin($t: 0, $r: 0, $b: 0, $l: 0) {
+  & {
+    margin-top: $t;
+    margin-right: $r;
+    margin-bottom: $b;
+    margin-left: $l;
+  }
+}
+
+// ボーダー
+// overflowの値は、故意に無効な値を初期値に設定する。
+@mixin border($w: 1px, $s: solid, $rtl: 0, $rtr: 0, $rbl: 0, $rbr: 0, $c: #333333, $o: none) {
+  & {
+    border-width: $w;
+    border-style: $s;
+    border-top-left-radius: $rtl;
+    border-top-right-radius: $rtr;
+    border-bottom-left-radius: $rbl;
+    border-bottom-right-radius: $rbr;
+    border-color: $c;
+    overflow: $o;
+  }
+}
+
+@mixin border-top($w: 1px, $s: solid, $c: #333333) {
+  & {
+    border-top-width: $w;
+    border-top-style: $s;
+    border-top-color: $c;
+  }
+}
+
+@mixin border-right($w: 1px, $s: solid, $c: #333333) {
+  & {
+    border-right-width: $w;
+    border-right-style: $s;
+    border-right-color: $c;
+  }
+}
+
+@mixin border-bottom($w: 1px, $s: solid, $c: #333333) {
+  & {
+    border-bottom-width: $w;
+    border-bottom-style: $s;
+    border-bottom-color: $c;
+  }
+}
+
+@mixin border-left($w: 1px, $s: solid, $c: #333333) {
+  & {
+    border-left-width: $w;
+    border-left-style: $s;
+    border-left-color: $c;
+  }
+}
+
+// 色
+@mixin color($c: #333333, $b: transparent, $f: none, $m: initial) {
+  & {
+    color: $c;
+    background-color: $b;
+    mix-blend-mode: $m;
+    filter: $f;
+  }
+}
+
+// スクロールバーを消した状態でスクロール可能に設定する
+@mixin scrollbar-hide($x: scroll, $y: none) {
+  & {
+    /* スクロール */
+    overflow-x: $x;
+    overflow-y: $y;
+    /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+    -ms-overflow-style: none;
+    /*Firefoxへの対応*/
+    scrollbar-width: none;
+    /*Google Chrome、Safariへの対応*/
+    &::-webkit-scrollbar{
+      display: none;
+    }
+  }
+}
+
+// リスト
+@mixin list($t: none, $p: outside, $img: none) {
+  & {
+    list-style-type: $t;
+    list-style-position: $p;
+    list-style-image: if($img == none, none, url('#{$img}'));
+    li {
+      list-style-type: $t;
+    }
+  }
+}

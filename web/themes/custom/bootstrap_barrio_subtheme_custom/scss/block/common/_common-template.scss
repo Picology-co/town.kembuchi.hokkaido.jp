@@ -1,0 +1,11 @@
+@use "../../style.scss" as st with (
+  $element-tag: 'div', // エレメントのタグ
+  $element-name: 'template' // エレメントの名称
+);
+
+/*
+ * 汎用機能の説明
+ */
+#{st.$element-tag}.#{st.$element-name} {
+
+}

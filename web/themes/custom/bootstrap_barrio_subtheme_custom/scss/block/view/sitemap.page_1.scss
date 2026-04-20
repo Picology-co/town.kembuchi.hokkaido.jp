@@ -1,0 +1,42 @@
+@use '../../style.scss' as st with (
+  $element-type: 'view',
+  $element-name: 'sitemap', // カスタムブロックの名称
+  $element-display-id: 'page_1' // ディスプレイIDの名称
+);
+
+/*
+ * ビューの説明
+ */
+div.#{st.$element-type} {
+  &.#{st.$element-type}-#{st.$element-name} {
+    &.#{st.$element-type}-display-id-#{st.$element-display-id} {
+
+      div.view-content {
+        //リスト
+        ul {
+          list-style-type: none!important;
+          @include st.margin($l: 1.0rem);
+          &:first-child {
+            @include st.flex-container($j: center);
+            > li {
+              @include st.size($w: calc(100% / 3 - 1.0rem));
+            }
+          }
+          li {
+            @include st.margin($r: 0.5rem, $l: 0.5rem);
+            @include st.size();
+            div.views-field.views-field-name {
+              span.field-content {
+                a {
+                  @include st.font($h: 2.0rem!important, $l: calc(1.0rem * 0.01));
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+}

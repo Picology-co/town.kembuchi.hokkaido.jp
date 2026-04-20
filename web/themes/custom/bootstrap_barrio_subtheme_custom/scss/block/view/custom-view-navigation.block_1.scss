@@ -1,0 +1,38 @@
+@use '../../style.scss' as st with (
+  $element-type: 'view',
+  $element-name: 'custom-view-navigation', // ビューの名称
+  $element-display-id: 'block_1' // ディスプレイIDの名称
+);
+
+/*
+ * ビューの説明
+ */
+div.#{st.$element-type} {
+  &.#{st.$element-type}-#{st.$element-name} {
+    &.#{st.$element-type}-display-id-#{st.$element-display-id} {
+
+      div.view-content {
+        div.item-list {
+          ul {
+            @include st.flex-container($w: nowrap);
+            li {
+              @include st.margin($r: 0.5rem, $l: 0.5rem);
+              &:first-child {
+                @include st.margin($r: 0.5rem);
+              }
+              &:last-child {
+                @include st.margin($l: 0.5rem);
+              }
+              a {
+                @include st.font($s: 1.25rem, $w: st.$font-weight-bold, $h: calc(1.5rem * 1.5), $l: calc(1.5rem * 0.01));
+                @include st.text($s: 0px 0px 8px #ffffff);
+                @include st.color();
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

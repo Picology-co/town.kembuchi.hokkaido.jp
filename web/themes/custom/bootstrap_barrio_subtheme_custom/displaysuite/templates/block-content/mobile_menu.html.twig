@@ -1,0 +1,32 @@
+{% set logo = 'public://image/logo.svg'|file_url %}
+{% set examples = 'public://image/footer/link/examples.avif'|file_url %}
+{% set company = 'public://image/footer/link/company.avif'|file_url %}
+{% set techlog = 'public://image/footer/link/techlog.avif'|file_url %}
+
+<div class="mobile-open-button">
+  <span></span>
+  <span></span>
+  <span></span>
+  <div class="mobile-open-button__box"></div>
+</div>
+
+<div class="mobile-menu">
+  <div class="mobile-menu__signature">
+    <div class="mobile-menu__signature__logo">
+      <img src={{ logo }} alt={{ '[site:name]'|token_replace }}>
+      <p>displaysuite\templates\block_content\mobile_menu.html.twig</p>
+    </div>
+    <div class="mobile-menu__signature__contact">
+      <div class="mobile-menu__signature__contact__office"><p><span>{{ '[site:name]'|token_replace }}
+      <div class="mobile-menu__signature__contact__address"><p>〒{{ custom_variable('postcode') }}<br>{{ custom_variable('address') }}</p></div>
+    </div>
+  </div>
+  <div class="mobile-menu__link">
+    <div class="mobile-menu__link__site-link">
+      <p>サイト内リンクなど</p>
+    </div>
+  </div>
+  <div class="mobile-menu__copyright">
+    <span>{{ copyright }}</span>
+  </div>
+</div>

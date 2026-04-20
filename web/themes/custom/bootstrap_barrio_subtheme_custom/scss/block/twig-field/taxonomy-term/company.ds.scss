@@ -1,0 +1,51 @@
+@use "../../../style.scss" as st with (
+  $element-type: 'field',
+  $element-name: 'company', // twigフィールドの名称
+  $element-field-type: 'ds' // フィールドタイプ
+);
+
+/*
+ * 会社概要
+ */
+div.#{st.$element-type} {
+  &.#{st.$element-type}--name-dynamic-twig-fieldtaxonomy-term-#{st.$element-name} {
+    &.#{st.$element-type}--type-#{st.$element-field-type} {
+
+      div.company {
+
+        // 交通アクセス
+        &__access {
+          &__detail {
+            &__traffic {
+              @include st.flex-container($w: nowrap);
+              @include st.tablet {
+                @include st.pos();
+              }
+              @include st.sp {
+                @include st.pos();
+              }
+              &__map {
+                @include st.margin($r: 1.0rem);
+                @include st.tablet {
+                  @include st.margin();
+                }
+                @include st.sp {
+                  @include st.margin();
+                }
+              }
+              &__nearest {
+                @include st.margin($l: 1.0rem);
+                @include st.tablet {
+                  @include st.margin();
+                }
+                @include st.sp {
+                  @include st.margin();
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

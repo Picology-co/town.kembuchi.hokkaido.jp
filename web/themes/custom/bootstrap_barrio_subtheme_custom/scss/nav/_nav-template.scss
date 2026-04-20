@@ -1,0 +1,11 @@
+@use "../style.scss" as st with (
+  $element-type: 'nav',
+  $element-name: 'template' // ナビゲーションの名称
+);
+
+/*
+ * ナビゲーションの説明
+ */
+#{st.$element-type}.#{st.$element-name} {
+
+}

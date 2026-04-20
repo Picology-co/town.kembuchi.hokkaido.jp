@@ -1,0 +1,44 @@
+@use "../style.scss" as st with (
+  $element-type: 'div',
+  $element-name: 'pagination-container'
+);
+
+/*
+ * jquery.simplePagination用
+ */
+// ページャー
+#{st.$element-type}##{st.$element-name} {
+
+  ul {
+    list-style-type: none;
+    @include st.flex-container($w: nowrap, $j: center);
+    @include st.margin();
+    li {
+      list-style-type: none;
+      @include st.margin($l: 0.25rem, $r: 0.25rem);
+      &.active {
+        a, span {
+          @include st.color($c: #ffffff, $b: #8b0000);
+          &.prev, &.next {
+            @include st.color($c: #ffffff, $b: #ff8c00);
+          }
+        }
+      }
+      span, a {
+        @include st.border($w: 0, $rtl: 100vh, $rtr: 100vh, $rbl: 100vh, $rbr: 100vh, $o: hidden);
+        @include st.color($b: #ff8c00, $c: #ffffff);
+        @include st.pos($d: inline-block, $p: static);
+        @include st.padding($t: 0.5rem, $b: 0.5rem, $r: 1.0rem, $l: 1.0rem);
+        &.prev {
+          @include st.border($w: 0, $rtl: 0.5rem, $rtr: 0.5rem, $rbl: 0.5rem, $rbr: 0.5rem, $o: hidden);
+          @include st.padding($t: 0.5rem, $b: 0.5rem, $r: 0.5rem, $l: 0.5rem);
+        }
+        &.next {
+          @include st.border($w: 0, $rtl: 0.5rem, $rtr: 0.5rem, $rbl: 0.5rem, $rbr: 0.5rem, $o: hidden);
+          @include st.padding($t: 0.5rem, $b: 0.5rem, $r: 0.5rem, $l: 0.5rem);
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #333;
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" width="64" height="64"/>
+    </clipPath>
+  </defs>
+  <g class="cls-3">
+    <path class="cls-2" d="M64,32C64,14.27,49.73,0,32,0S0,14.27,0,32c0,16,11.73,29.2,26.93,31.6v-22.4h-8.13v-9.2h8.13v-7.07c0-8,4.8-12.4,12.13-12.4,3.47,0,7.2.67,7.2.67v7.87h-4c-4,0-5.2,2.53-5.2,4.93v6h8.93l-1.47,9.2h-7.47v22.4c15.2-2.4,26.93-15.6,26.93-31.6Z"/>
+  </g>
+</svg>

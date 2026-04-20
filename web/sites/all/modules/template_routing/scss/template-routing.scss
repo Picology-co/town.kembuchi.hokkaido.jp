@@ -1,0 +1,8 @@
+@use "../../../../../themes/custom/bootstrap_barrio_subtheme_custom/scss/style.scss" as st with (
+  $element-type: 'div',
+  $element-name: 'template' // twigフィールドの名称
+);
+
+#{st.$element-type}.#{st.$element-name} {
+  padding: 0 1.0rem;
+}

@@ -1,0 +1,58 @@
+# 1. OAuth2認証を使用するために、PHPのsodium extensionが必要である。
+#    要求するモジュール:drupal/simple_oauth
+sodium extensionのインストール方法(参考)
+https://zenn.dev/nakamura196/articles/e4ce978db12227
+https://qiita.com/tomcat0090/items/2564baa9179747b4d855
+
+
+# さくらのレンタルサーバーにsodium extensionをインストールする。
+# 1.1. Create Working Directories
+mkdir -p {~/usr/local/src,~/usr/local/php/extension}
+
+# 1.2. Download and Compile libsodium
+cd ~/usr/local/src
+## libsodiumの最新版に合わせる。
+wget https://download.libsodium.org/libsodium/releases/libsodium-1.0.20.tar.gz
+tar xzvf libsodium-1.0.20.tar.gz
+cd libsodium-1.0.20
+./configure --prefix=$HOME/usr/local
+make && make check
+make install
+
+# 1.3. Download and Compile PHP Extension
+cd ~/usr/local/src
+php -v
+## 現在インストールされているPHPのバージョンに合わせる。
+wget https://www.php.net/distributions/php-8.2.20.tar.bz2
+tar -xjf php-8.2.20.tar.bz2
+cd php-8.2.20/ext/sodium
+## 現在インストールされているPHPバイナリのバージョンに合わせる。
+/usr/local/php/8.2/bin/phpize
+./configure --with-php-config=/usr/local/php/8.2/bin/php-config --with-sodium PKG_CONFIG_PATH=$HOME/usr/local/lib/pkgconfig/ LDFLAGS=-L$HOME/usr/local/lib/
+make
+gmake test
+
+# 1.4. Install the PHP Extension
+cp modules/sodium.so ~/usr/local/php/extension/
+cat <<EOF >> $HOME/www/php.ini
+extension=$HOME/usr/local/php/extension/sodium.so
+EOF
+
+# 1.5. Verify Installation
+## ウェブサイトでsodiumが読み込まれていることを確認する。(sodiumと表示されればOK)
+php -c ~/www/php.ini -m | grep sodium
+## php.iniの内容を確認する。
+cat ~/www/php.ini
+
+# 1.6. コンソールで~/www/php.iniを読み込む設定
+cat <<EOF >> $HOME/.bash_profile
+export PHP_INI_SCAN_DIR="$HOME/www/"
+EOF
+source ~/.bash_profile
+## 読み込まれたかを確認する。(sodiumと表示されればOK)
+php -m | grep sodium
+
+# 1.7 Simple OAuth2をインストールする。
+https://www.drupal.org/project/simple_oauth
+composer require 'drupal/simple_oauth:^5.2'
+※sodiumをインストールしていない場合、Simple OAuth2のインストールに失敗するので注意する。

@@ -1,0 +1,33 @@
+@use "../../../style.scss" as st with (
+  $element-type: 'field',
+  $element-name: 'custom-footer-mobile', // twigフィールドの名称
+  $element-field-type: 'ds' // フィールドタイプ
+);
+
+/*
+ * モバイル用カスタムフッター
+ */
+div.#{st.$element-type} {
+  &.#{st.$element-type}--name-dynamic-twig-fieldblock-content-#{st.$element-name} {
+    &.#{st.$element-type}--type-#{st.$element-field-type} {
+
+
+      div.custom-footer-mobile {
+        @include st.pos();
+        @include st.padding($t: 12.0rem);
+        &__background {
+/*           @include st.pos($p: absolute, $t: 100%, $l: 50%, $tr: translate(-50%, -80%), $z: -1);
+          background: linear-gradient(0deg, #87cefa 50%, transparent 80%);
+          img {
+            @include st.pos($tr: scale(1.02));
+            @include st.image($w: 100vw);
+            filter: blur(1px);
+          } */
+          @include st.pos($p: absolute, $t: 50%, $l: 50%, $tr: translate(-50%, -50%));
+          @include st.size($w: 100vw, $h: 100%);
+          @include st.background($img: '/sites/default/files/image/footer/background.avif', $r: no-repeat, $s: cover, $p: center);
+        }
+      }
+    }
+  }
+}

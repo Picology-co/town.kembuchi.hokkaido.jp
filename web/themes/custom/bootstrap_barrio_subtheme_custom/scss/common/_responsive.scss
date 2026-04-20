@@ -1,0 +1,62 @@
+/*
+ * レスポンシブによる切り替えの幅の定義
+ */
+ @mixin pc($width-media: 1016px) { // pc用(デフォルト) *984px+32px
+  @media only screen and (min-width: $width-media) {
+    @content;
+  }
+}
+@mixin pc-featured($width-media: 1312px) { // pc用(Featuredリージョン) *1280px+32px
+  @media only screen and (min-width: $width-media) {
+    @content;
+  }
+}
+@mixin tablet($width-media-min: 796px, $width-media-max: 1016px) { // タブレット用 *984px+32px
+  @media only screen and (min-width: $width-media-min) and (max-width: $width-media-max) {
+    @content;
+  }
+}
+@mixin sp($width-media: 796px){ // スマホ用 *768px+28px
+  @media only screen and (max-width: $width-media) {
+    @content;
+  }
+}
+
+/*
+ * ウィンドウの幅による表示・非表示の切り替え（明記されたレスポンシブ）
+ */
+div {
+  &.pc {
+    @include pc { display: block; }
+    @include tablet { display: none; }
+    @include sp { display: none; }
+  }
+  &.tablet {
+    @include pc { display: none; }
+    @include tablet { display: block; }
+    @include sp { display: none; }
+  }
+  &.sp {
+    @include pc { display: none; }
+    @include tablet { display: none; }
+    @include sp { display: block; }
+  }
+}
+
+span {
+  &.pc {
+    @include pc { display: inline; }
+    @include tablet { display: none; }
+    @include sp { display: none; }
+  }
+  &.tablet {
+    @include pc { display: none; }
+    @include tablet { display: inline; }
+    @include sp { display: none; }
+  }
+  &.sp {
+    @include pc { display: none; }
+    @include tablet { display: none; }
+    @include sp { display: inline; }
+  }
+}

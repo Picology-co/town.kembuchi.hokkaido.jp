@@ -1,0 +1,113 @@
+@use "../../../style.scss" as st with (
+  $element-type: 'field',
+  $element-name: 'custom-footer', // twigフィールドの名称
+  $element-field-type: 'ds' // フィールドタイプ
+);
+
+/*
+ * カスタムフッター
+ */
+div.#{st.$element-type} {
+  &.#{st.$element-type}--name-dynamic-twig-fieldblock-content-#{st.$element-name} {
+    &.#{st.$element-type}--type-#{st.$element-field-type} {
+
+      // 共通
+      span {
+        @include st.color($c: st.$footer-color);
+      }
+
+      div.custom-footer {
+        @include st.pos();
+        @include st.padding($b: 1.0rem);
+        &__link {
+          @include st.flex-container($w: nowrap);
+          @include st.margin($b: 3.0rem);
+          @include st.pos($d: flex, $z: 1);
+          @include st.size($h: 100%);
+          a {
+            @include st.pos($d: block, $z: 1);
+            @include st.size($w: calc(100% / 3));
+            span {
+              @include st.pos($d: inline-block, $p: absolute, $t: 50%, $l: 50%, $tr: translate(-50%, -50%));
+              @include st.color($c: st.$footer-color);
+              @include st.font($s: 2.0rem, $w: 700);
+              @include st.text($ws: nowrap);
+            }
+          }
+          &__background {
+            background: linear-gradient(360deg, transparent, #ffffff);
+            @include st.pos($p: absolute, $t: 0, $l: 50%, $tr: translateX(-50%), $z: 0);
+            @include st.size($w: 100vw, $h: 100%);
+          }
+        }
+        &__logo {
+          @include st.margin($l: auto, $r: auto, $b: 3.0rem);
+          @include st.size($w: fit-content);
+          @include st.pos($z: 1);
+          span {
+            @include st.color($c: st.$footer-color);
+            @include st.font($s: 1.5rem, $w: 700);
+            @include st.pos($d: inline-block, $v: middle);
+            &:first-child {
+              @include st.margin($r: 1.5rem);
+            }
+            &:last-child {
+              @include st.margin($l: 1.5rem);
+            }
+          }
+          img {
+            filter: invert(1);
+            @include st.pos($d: inline-block);
+            @include st.size($w: 12.5rem, $h: 12.5rem);
+          }
+        }
+        &__company {
+          @include st.margin($b: 3.0rem);
+          @include st.pos($z: 1);
+          &__name {
+            @include st.pos($a: center);
+            @include st.margin($b: 1.0rem);
+            @include st.font($s: 1.5rem, $w: 700);
+          }
+          &__address {
+            @include st.size($w: fit-content);
+            @include st.margin($l: auto, $r: auto);
+            span {
+              @include st.pos($b:inline-block);
+              @include st.size();
+            }
+          }
+        }
+        &__contact {
+          @include st.margin($b: 5.0rem);
+          @include st.pos($a: center, $z: 1);
+          a {
+            @include st.padding($t: 0.5rem, $b: 0.5rem , $l: 1.5rem, $r: 1.5rem);
+            @include st.color($b: st.$footer-contact-background-color);
+            @include st.text();
+            @include st.size($w: fit-content);
+            @include st.border($w: 2px, $rtl: 100vh, $rtr: 100vh, $rbl: 100vh, $rbr: 100vh, $o: hidden);
+            span {
+              @include st.font($s: 1.5rem, $w: 700);
+              @include st.color($c: st.$footer-contact-color);
+            }
+            &:hover {
+              span {
+              @include st.color($c: st.$footer-contact-color);
+              }
+            }
+          }
+        }
+        &__copyright { // コピーライト
+          @include st.pos($a: center, $z: 1);
+          @include st.color($c: st.$footer-color);
+        }
+        &__background {
+          @include st.pos($p: absolute, $t: 50%, $l: 50%, $tr: translate(-50%, -50%));
+          @include st.size($w: 100vw, $h: 100%);
+          @include st.background($img: '/sites/default/files/image/footer/background.avif', $r: no-repeat, $s: cover, $p: center);
+        }
+      }
+    }
+  }
+}

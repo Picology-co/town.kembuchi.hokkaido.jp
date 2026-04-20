@@ -1,0 +1,24 @@
+template_links_menu.settings: # routing.ymlの対象の識別子と同じものを記述
+  route_name: template_links_menu.settings # リンクに対する一意の内部名称
+  title: 'Custom Variable' # メニューに表示するリンクタイトル
+  parent: system.admin_config_development # メニューのどこに表示するか
+  description: 'Set the Custom Variable module values.' # 説明文
+  weight: 10 # 管理メニューに表示する順番
+
+# parent一覧
+# 管理メニュー -> 環境設定
+# system.admin_config_system -> システム
+# system.admin_config_content -> コンテンツ作成
+# system.admin_config_media -> メディア
+# system.admin_config_development -> 開発
+# system.admin_config_services -> ウェブサービス
+# user.admin_index -> ユーザー
+# system.admin_config_ui -> ユーザーインターフェイス
+# system.admin_config_search -> 検索とメタデータ
+# system.admin_config_regional -> 地域と言語
+# system.admin_config_workflow -> ワークフロー
+
+# 管理メニューのツールバーに表示する
+# parent: system.admin
+# weight: 順番(必須) 例:-8
+# タイトル左のアイコンは、モジュールルート直下にimageフォルダを作成し。toolbar-icon.svgというファイル名で作成する

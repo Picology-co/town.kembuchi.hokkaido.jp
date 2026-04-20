@@ -1,0 +1,8 @@
+template_links_menu.settings: # 一意の識別子
+  path: '/admin/config/development/template-links-menu' # メニューのパス
+  defaults:
+    _controller: '\Drupal\custom_variable\Controller\CustomVariableController::renderSettingForm' #コントローラー
+    _title: 'Custom Variable'
+  requirements:
+    _role: 'administrator' # アクセス制限
+    # _access: 'TRUE' # アクセス制限を無しにする場合

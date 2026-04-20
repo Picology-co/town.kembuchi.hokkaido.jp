@@ -1,0 +1,65 @@
+@use "../../../style.scss" as st with (
+  $element-type: 'field',
+  $element-name: 'custom-header-node',
+  $element-field-type: 'ds' // フィールドタイプ
+);
+
+/*
+ * カスタムヘッダー（ノード用）
+ */
+div.#{st.$element-type} {
+  &.#{st.$element-type}--name-dynamic-twig-fieldnode-#{st.$element-name} {
+    &.#{st.$element-type}--type-#{st.$element-field-type} {
+
+      div.header {
+        @include st.flex-container($w: nowrap, $j: space-between, $a: center);
+        @include st.margin($b: 5.0rem);
+        &__logo {
+          @include st.pos();
+          @include st.size($w: fit-content);
+          h1 {
+            @include st.size();
+            @include st.margin($l: 1.0rem, $r: 1.0rem);
+            img {
+              @include st.size($w: 8.0rem, $h: 8.0rem);
+            }
+          }
+        }
+        &__menu {
+          @include st.size();
+          @include st.sp {
+            @include st.pos($d: none);
+          }
+          nav {
+            @include st.margin($l: 1.0rem, $r: 1.0rem);
+            ul {
+              @include st.margin();
+              @include st.flex-container($w: nowrap, $j: right);
+              li {
+                @include st.pos($d: inline-block);
+                @include st.size($w: fit-content);
+                @include st.padding($l: 1.0rem , $r: 1.0rem);
+                a {
+                  @include st.text();
+                  @include st.color();
+                  @include st.font($w: 700!important);
+                  &:hover {
+                    @include st.color();
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      div.breadcrumbs {
+        nav {
+          ol.breadcrumb {
+            @include st.margin();
+            @include st.list();
+          }
+        }
+      }
+    }
+  }
+}

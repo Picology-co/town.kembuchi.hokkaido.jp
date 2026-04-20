@@ -1,0 +1,66 @@
+<?php
+
+use Drupal\common_utils\Cache\CacheController;
+
+/**
+ * Implements hook_entity_insert() for node entities.
+ * ノードを新規作成した後
+ */
+function common_utils_entity_insert(\Drupal\Core\Entity\EntityInterface $entity) {
+
+  if ($entity->getEntityTypeId() === 'node') {
+    $cache_controller = new CacheController;
+    $cache_controller->clearTwigCache();
+  }
+}
+
+/**
+ * Implements hook_entity_update() for node entities.
+ * ノードを更新した後
+ */
+function common_utils_entity_update(\Drupal\Core\Entity\EntityInterface $entity) {
+
+  if ($entity->getEntityTypeId() === 'node') {
+    $cache_controller = new CacheController;
+    $cache_controller->clearTwigCache();
+  }
+}
+
+/**
+ * Implements hook_entity_delete() for node entities.
+ * ノードを削除した後
+ */
+function common_utils_clear_entity_delete(\Drupal\Core\Entity\EntityInterface $entity) {
+
+  if ($entity->getEntityTypeId() === 'node') {
+    $cache_controller = new CacheController;
+    $cache_controller->clearTwigCache();
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function common_utils_theme($existing, $type, $theme, $path) {
+  return [
+    'drupal_config' => [ # 一意の識別子
+      'variables' => [
+        'form' => NULL,
+        'data' => NULL, # Twigテンプレートに渡す変数
+        'style' => NULL,
+        'filter_text' => NULL,
+      ],
+      'template' => 'drupal-config', # Twigテンプレートファイル名
+    ],
+  ];
+}
+
+// libraries.ymlを読み込む
+function common_utils_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'common_utils/common_utils';
+}
+
+// js-headerセクション
+function common_utils_preprocess_html(&$variables) {
+  $variables['#attached']['library'][''] = 'common_utils/js-header';
+}

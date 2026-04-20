@@ -1,0 +1,13 @@
+template_routing:
+  version: 1.x
+  css:
+    theme:
+      scss/template-routing.min.css: {}
+  js:
+    js/template-routing.js: {}
+  dependencies:
+    - core/drupal
+
+#js-header:
+#  header: true
+#  js:

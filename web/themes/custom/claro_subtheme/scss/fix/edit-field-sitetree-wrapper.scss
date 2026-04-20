@@ -1,0 +1,41 @@
+// サイトツリーフィルタービュー
+// メインコンテンツ
+#edit-field-sitetree-wrapper {
+  #edit-field-sitetree--wrapper {
+    .fieldset__wrapper {
+      #edit-field-sitetree {
+        div.form-item--field-sitetree {
+          label {
+            display: inline-block;
+            span {
+              &:is([data-mid="00"][data-lid="00"]){
+                font-weight: 700;
+                &:not([data-reg="1"]){
+                  &::after {
+                    display: inline-block;
+                    content: '（注：こちらにはコンテンツを登録できません）';
+                  }
+                }
+              }
+              &[data-lid="00"]:not([data-tid="00"]):not([data-mid="00"]){
+                padding-left: 2.0rem;
+                &:not([data-reg="1"]){
+                  &::after {
+                    display: inline-block;
+                    content: '（注：こちらにはコンテンツを登録できません）';
+                  }
+                }
+              }
+              &:not([data-tid="00"]):not([data-mid="00"]):not([data-lid="00"]){
+                padding-left: 4.0rem;
+              }
+            }
+            &:has(span[data-reg="0"]){
+              color: #666666;
+            }
+          }
+        }
+      }
+    }
+  }
+}

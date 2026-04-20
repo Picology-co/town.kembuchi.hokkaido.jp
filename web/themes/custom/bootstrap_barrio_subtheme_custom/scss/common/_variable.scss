@@ -1,0 +1,123 @@
+/*
+ * 幅
+ * paddingを含めた値を設定する。
+ */
+$header-width: 984px + 32px; // ヘッダーの幅
+$header-maxwidth: 984px + 32px;
+$content-frontpage-width: 984px + 32px; // コンテンツ(フロントページ)の幅
+$content-frontpage-maxwidth: 984px + 32px;
+$content-node-width: 984px + 32px; // ノードコンテンツの幅
+$content-node-maxwidth: 984px + 32px;
+$sidebar-width: 30%; // サイドバーリージョンの幅
+$sidebar-maxwidth: 295px + 16px;
+$featured-width: 1280px + 32px; // Featuredリージョンの幅
+$featured-maxwidth: 1280px + 32px;
+$featured-frontpage-width: 1280px + 32px; // Featuredリージョン(フロントページ)の幅
+$featured-frontpage-maxwidth: 1280px + 32px;
+$footer-width: 984px + 32px; // フッターの幅
+$footer-maxwidth: 984px + 32px;
+
+/*
+ * 全体的な色
+ */
+$background-header-color: transparent;
+$background-body-color: transparent;
+
+/*
+ * 余白
+ */
+$common-padding: 1.0rem; // 共通の余白
+
+/*
+ * フォント
+ */
+$font-weight-bold: 700; // 太字
+$font-weight-default: 500; // 標準
+$font-color-default: #333333;
+$font-color-link: #228b22;
+$font-background-color-default: transparent;
+$default-font: 'NotoSansJP', sans-serif;
+
+/*
+ * フッター
+ */
+$footer-color: #ffffff;
+$footer-color-link: #c0c0c0;
+$footer-contact-color: #333333;
+$footer-background-color: #333333;
+$footer-contact-background-color: #ffffff;
+
+/*
+  * ボーダー
+  */
+$border-width: 1px;
+$border-style: solid;
+$border-top-left-radius: 0;
+$border-top-right-radius: 0;
+$border-bottom-left-radius: 0;
+$border-bottom-right-radius: 0;
+$border-color: #333333;
+
+/*
+ * 画像
+ */
+$image-width: 100%;
+$image-maxwidth: none;
+$image-minwidth: none;
+$image-height: auto;
+$image-maxheight: none;
+$image-minheight: none;
+$image-objectfit: cover;
+
+/*
+ * テーブル
+ */
+$table-minwidth: 100px;
+
+/*
+  * 整形済みテキスト
+  */
+$pre-background-color: #d0d0d0;
+
+/*
+ * フォーム
+ */
+$form-background-color: transparent;
+
+/*
+ * フォントサイズコントローラー
+ */
+$switch-fontsize-check-background-color: #a0a0a0;
+
+/*
+ * ダークモードコントローラー
+ */
+$switch-darkmode-check-background-color: #a0a0a0;
+
+/*
+ * 新着更新ラベル
+ */
+$updatelabel-new-background-color: rgb(238, 255, 0);
+$updatelabel-update-background-color: rgb(109, 231, 250);
+
+/*
+ * エレメントの名称
+ */
+$element-type: 'type'!default; // 全てで使う
+$element-name: 'name'!default; // 全てで使う
+$element-view-mode: 'view-mode'!default; // block-content, node, taxonomyで使う
+$element-display-id: 'display-id'!default; // viewで使う
+$element-view-type: 'view-type'!default; // viewで使う
+$element-tag: 'tag'!default; // commonで使う
+$element-field-type: 'field-type'!default; // twig-fieldnodeで使う
+$style-group-name: 'style'!default; // データグループの名称
+
+/*
+ * マーカー
+ */
+$marker-pink: #ff69b4; // ピンク
+$marker-blue: #00d8e6; // ブルー
+$marker-yellow: #ffff00; // イエロー
+$marker-green: #90ee90; // グリーン
+$pen-red: #ff6347; // レッド
+$pen-green: #32cd32; // グリーン

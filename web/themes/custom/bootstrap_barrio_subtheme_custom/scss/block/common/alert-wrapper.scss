@@ -1,0 +1,13 @@
+@use "../../style.scss" as st with (
+  $element-tag: 'div', // エレメントのタグ
+  $element-name: 'alert-wrapper' // エレメントの名称
+);
+
+/*
+ * ウェブフォームのメッセージ
+ */
+#{st.$element-tag}.#{st.$element-name} {
+
+  z-index: 4!important;
+  
+}

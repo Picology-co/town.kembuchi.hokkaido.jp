@@ -1,0 +1,35 @@
+{# フロントページ #}
+{% set swiper_filter_pc = 'public://image/frontpage/swiper-filter-pc.webp'|file_url %}
+{% set swiper_filter_mobile = 'public://image/frontpage/swiper-filter-mobile.avif'|file_url %}
+
+{# swiper.jsを利用したスライダー #}
+<div id="p1" class="swiper-container">
+  <div class="swiper-wrapper">
+    {# スライド一覧を取得する #}
+    {% set slide = drupal_view_result('swiper_slide', 'default') %}
+    {% if slide|length > 0 %} {# スライドを取得できた場合 #}
+      {% for i, arr in slide %}
+        {% set title = arr._entity.title.value %}
+        {% set image = file_url(arr._entity.field_image.entity.fileuri | image_style('slide_1920_1080')) %}
+        {% set body = arr._entity.body.value|render|striptags|trim|lower %}
+        {% set url = arr._entity.field_url.uri %}
+        <div class="swiper-slide">
+          <div class="slide-media"> {# 出力する内容はここで調整する #}
+            <img src="{{ image }}" alt="">
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+{#   {% if slide|length > 0 %}
+    <div class="swiper-pagination">●</div>
+  {% endif %} #}
+  {# スライドの上に画像を載せる場合はこちら #}
+{#   <div class="filter-image">
+    <img class="swiper-filter-pc" src="{{ swiper_filter_pc }}" alt="">
+    <img class="swiper-filter-mobile" src="{{ swiper_filter_mobile }}" alt="">
+  </div> #}
+</div>
+
+<p>フロントページ</p>
+<p>displaysuite\templates\block_content\frontpage.html.twig</p>

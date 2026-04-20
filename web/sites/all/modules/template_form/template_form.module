@@ -1,0 +1,25 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function template_form_theme($existing, $type, $theme, $path) {
+  return [
+    'template_form' => [ # 一意の識別子
+      'variables' => [
+        'form' => NULL, # フォームも渡す
+        'data' => NULL, # Twigテンプレートに渡す変数
+      ],
+      'template' => 'template-form', # Twigテンプレートファイル名
+    ],
+  ];
+}
+
+// libraries.ymlを読み込む
+function template_form_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'template_form/template_form';
+}
+
+// js-headerセクション
+function template_form_preprocess_html(&$variables) {
+  $variables['#attached']['library'][''] = 'template_form/js-header';
+}

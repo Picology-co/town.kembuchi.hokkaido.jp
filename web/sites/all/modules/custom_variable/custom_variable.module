@@ -1,0 +1,24 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function custom_variable_theme($existing, $type, $theme, $path) {
+  return [
+    'custom_variable_form' => [ # 一意の識別子
+      'variables' => [
+        'form' => NULL, # フォームも渡す
+      ],
+      'template' => 'custom-variable-form', # Twigテンプレートファイル名
+    ],
+  ];
+}
+
+// libraries.ymlを読み込む
+function template_form_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'custom_variable/custom_variable';
+}
+
+// js-headerセクション
+function template_form_preprocess_html(&$variables) {
+  $variables['#attached']['library'][''] = 'custom_variable/js-header';
+}

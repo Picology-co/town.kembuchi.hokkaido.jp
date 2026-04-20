@@ -1,0 +1,31 @@
+@use "../../../style.scss" as st with (
+  $element-type: 'field',
+  $element-name: 'custom-taxonomy-term-label', // twigフィールドの名称
+  $element-field-type: 'ds' // フィールドタイプ
+);
+
+/*
+ * カスタムタクソノミータームラベル
+ */
+div.#{st.$element-type} {
+  &.#{st.$element-type}--name-dynamic-twig-fieldtaxonomy-term-#{st.$element-name} {
+    &.#{st.$element-type}--type-#{st.$element-field-type} {
+
+      @include st.pos();
+      @include st.size($h: 10.0rem);
+      @include st.margin($b: 5.0rem);
+      h2 {
+        @include st.pos($a: center, $z: 1);
+        @include st.margin();
+        @include st.border($w: 0);
+        @include st.color($c: #ffffff);
+        @include st.font($s: 2.0rem, $w: 700, $h: 10.0rem);
+      }
+      div.background {
+        @include st.pos($p: absolute, $t: 50%, $l: 50%, $tr: translate(-50%, -50%));
+        @include st.size($w: 100vw, $h: 10.0rem);
+        @include st.background($img: '/sites/default/files/image/general/title-background.avif');
+      }
+    }
+  }
+}

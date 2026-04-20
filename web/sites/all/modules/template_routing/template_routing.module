@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function template_routing_theme($existing, $type, $theme, $path) {
+  return [
+    'template_routing' => [ # 一意の識別子
+      'variables' => [
+        'data' => NULL, # Twigテンプレートに渡す変数の配列(指定がない場合はNULLを渡す)
+        'data1' => NULL,
+        'data2' => NULL,
+      ],
+      'template' => 'template-routing', # Twigテンプレートファイル名
+    ],
+  ];
+}
+
+// libraries.ymlを読み込む
+function template_routing_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'template_routing/template_routing';
+}
+
+// js-headerセクション
+function template_routing_preprocess_html(&$variables) {
+  $variables['#attached']['library'][''] = 'template_routing/js-header';
+}

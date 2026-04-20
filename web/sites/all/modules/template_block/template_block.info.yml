@@ -1,0 +1,6 @@
+name: 'Template Block'
+type: module
+description: 'ブロックを使用するカスタムモジュールのテンプレートです。'
+core_version_requirement: ^10 || ^11 || ^12
+package: 'Examples'
+version: '1.0.0'

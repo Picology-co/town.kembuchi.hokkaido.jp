@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/*
+ * システム内部名称がデフォルトで表示されない場合があるので
+ * どうやらjsで動的にdisplay: none;が追加されているようだが・・・
+ * ※以下、問題が発生している機能一覧
+ * 管理> 環境設定> 地域と言語> 日付と時間のフォーマット> 日時のフォーマットを追加
+ */
+small#edit-label-machine-name-suffix {
+  display: inline-block !important;
+}

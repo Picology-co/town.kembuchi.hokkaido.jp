@@ -1,0 +1,59 @@
+<div class="drupal-config">
+  <div class="drupal-config__header">
+{#     <a href="?style=array">配列で表示</a>
+    <a href="?style=json">JSONで表示</a>
+    <p><span>use Drupal\common_utils\Config\DrupalConfig;</span><br>
+    <span>$setting = new DrupalConfig($name);</span><br>
+    <span>$value = $setting->getConfig($key);</span><br>
+    で個別に設定を取得できます。</p> #}
+    {{ form }}
+  </div>
+  <div class="drupal-config__data">
+    <table>
+      <thead>
+        <tr>
+          <th>名称(name)</th>
+          <th>値(key => value)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% if data|length > 0 %}
+          {% for i, data_row in data %}
+            {% if style == 'json' %}
+              <tr>
+                <td>{{ data_row.name }}</td>
+                <td>{{ data_row.data }}</td>
+              </tr>
+            {% else %}
+              <tr>
+                <td>{{ data_row.name }}</td>
+                <td>
+                  {% set keys = data_row.data|keys %}
+                  {% for key, value in data_row.data %}
+                    {% if value is not iterable %}
+                      {% if value is same as(true) %}
+                        <span class="color-green">{{ key }}</span> => <span class="color-orange">true</span><br>
+                      {% elseif value is same as(false) %}
+                        <span class="color-green">{{ key }}</span> => <span class="color-orange">false</span><br>
+                      {% elseif value is same as("") %}
+                        <span class="color-green">{{ key }}</span> => <span class="color-purple">EMPTY</span><br>
+                      {% elseif value is same as(null) %}
+                        <span class="color-green">{{ key }}</span> => <span class="color-purple">NULL</span><br>
+                      {% else %}
+                        <span class="color-green">{{ key }}</span> => <span class="color-blue">{{ value }}</span><br>
+                      {% endif %}
+                    {% else %}
+                      <span class="color-green">{{ key }}</span> => {{ value|json_encode }}<br>
+                    {% endif %}
+                  {% endfor %}
+                </td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          <tr><td>表示する設定はありません。</td></tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+</div>

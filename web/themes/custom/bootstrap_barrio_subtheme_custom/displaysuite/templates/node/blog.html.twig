@@ -1,0 +1,120 @@
+{# ブログ #}
+{% set title = convert_to_hankaku(node.title.value) %}
+{% set body = convert_to_hankaku(node.body.processed) %}
+{% set header_image = node.field_image.entity.fileuri|image_style('rectangle_960_540') %}
+{% set affiliates = node.field_affiliates %}
+{% set classification_1 = node.field_classification_1.entity %}
+{% set classification_2 = node.field_classification_2.entity %}
+{% set created = node.created.value|date('Y年m月d日') %}
+{% set changed = node.changed.value|date('Y年m月d日') %}
+{% set nid = node.id %}
+{% set classification_1_tid = node.field_classification_1.entity.tid.value %}
+
+<div class="blog">
+  <div class="blog__header">
+    <h2>{{ title }}</h2>
+    <div class="blog__header__meta">
+      <div class="blog__header__meta__classifications">
+        {% if classification_1 %}
+          {% set url_classification_1 = path('entity.taxonomy_term.canonical', {'taxonomy_term': classification_1.id}) %}
+          <a href="{{ url_classification_1 }}">
+            <span>{{ classification_1.label }}</span>
+          </a>
+        {% endif %}
+        {% if classification_2 %}
+          {% set url_classification_2 = path('entity.taxonomy_term.canonical', {'taxonomy_term': classification_2.id}) %}
+          <a href="{{ url_classification_2 }}">
+            <span>{{ classification_2.label }}</span>
+          </a>
+        {% endif %}
+      </div>
+      <div class="blog__header__meta__post">
+        <span>投稿日: {{ created }}</span>
+        {% if created != changed %}
+          <span>更新日: {{ changed }}</span>
+        {% endif %}
+      </div>
+    </div>
+    <div class="blog__header__header-image">
+      <img src="{{ header_image }}" alt="{{ title }}">
+    </div>
+  </div>
+  <div class="blog__body">
+    {{ body|raw }}
+  </div>
+  {# アフィリエイトリンク #}
+  {% if affiliates|length %}
+    <div class="blog__affiliates">
+      {% for i, affiliate in affiliates %}
+        {% set url = affiliate.entity.field_link.uri %}
+        {% set product_name = affiliate.entity.field_product_name.value %}
+        {% set image = affiliate.entity.field_image.entity.fileuri|image_style('square_256_256') %}
+        {% set shop_name = select_list_label(affiliate.entity.field_shop_name) %}
+        <div class="blog__affiliates__affiliate">
+          <a href="{{ url }}" target="_blank" rel="nofollow">
+            <div class="blog__affiliates__affiliate__shop-name">
+              {{ shop_name }}
+            </div>
+            <div class="blog__affiliates__affiliate__image">
+              <img src="{{ image }}" alt="{{ product_name }}">
+            </div>
+            {% if product_name is not empty %}
+              <div class="blog__affiliates__affiliate__product-name">
+                {{ product_name|length > 14 ? product_name|slice(0, 14) ~ '…' : product_name }}
+              </div>
+            {% endif %}
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+  {# 現在アクセスしているノードIDと分類1のタームID #}
+  {# ノードIDは自身を関連リストから除外するために使う #}
+  {% set techlog_list = drupal_view_result('techlog_list', 'block_4', classification_1_tid, nid) %}
+  {% if techlog_list|length > 0 %}
+    <div class="blog__classification-1">
+      {% for i, techlog_row in techlog_list %}
+        {% set id = techlog_row._entity.nid.value %}
+        {% set title = techlog_row._entity.title.value %}
+        {% set image = techlog_row._entity.field_image.entity.fileuri|image_style('square_300_300') %}
+        {% set url = path('entity.node.canonical', {'node': id}) %}
+        {% set show_contents_list  = techlog_row._entity.field_show_contents_list.value %}
+        {% set post_period = techlog_row._entity.field_post_period.value %}
+        {% set post_period_end = techlog_row._entity.field_post_period.end_value %}
+        {% set techlog_created = techlog_row._entity.created.value|date('Y年m月d日') %}
+        {% set techlog_changed = techlog_row._entity.changed.value|date('Y年m月d日') %}
+        {% set current_date = now|date('U') %}
+        {% if post_period is not empty %}
+          {% set post_period_value = post_period|date_modify('+9 hours')|date('U')  %}
+        {% else %}
+          {% set post_period_value = null  %}
+        {% endif %}
+        {% if post_period_end is not empty %}
+          {% set post_period_end_value = post_period_end|date_modify('+9 hours')|date('U')  %}
+        {% else %}
+          {% set post_period_end_value = null  %}
+        {% endif %}
+        {# 掲載対象(掲載期間と表示チェックボックス)の判定 #}
+        {% if ((post_period_value <= current_date and post_period_end_value >= current_date) or (post_period_value is empty and post_period_end_value is empty)) and show_contents_list == 1 %}
+          {# 現在時間が掲載期間の範囲に入っている または 両方null #}
+          {# コンテンツを表示するチェックボックスにチェックが入っている #}
+          <a href="{{ url }}">
+            <img src="{{ image }}" alt="">
+            <div class="blog__classification-1__meta">
+              <div class="blog__classification-1__meta__title">
+                <span>{{ title }}</span>
+              </div>
+              <div class="blog__classification-1__meta__date">
+                <span class="created">投稿日：{{ techlog_created }}</span>
+                {% if techlog_created != techlog_changed %}
+                  <span class="changed">更新日：{{ techlog_changed }}</span>
+                {% endif %}
+              </div>
+            </div>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+</div>

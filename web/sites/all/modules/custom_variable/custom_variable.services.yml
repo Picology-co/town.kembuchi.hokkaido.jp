@@ -1,0 +1,5 @@
+services:
+  custom_variable.twig_extension:
+    class: Drupal\custom_variable\Twig\Parameter
+    tags:
+      - { name: twig.extension }

@@ -1,0 +1,207 @@
+@charset "UTF-8";
+/*
+ * レスポンシブによる切り替えの幅の定義
+ */
+/*
+ * ウィンドウの幅による表示・非表示の切り替え（明記されたレスポンシブ）
+ */
+@media only screen and (min-width: 1016px) {
+  div.pc {
+    display: block;
+  }
+}
+@media only screen and (min-width: 796px) and (max-width: 1016px) {
+  div.pc {
+    display: none;
+  }
+}
+@media only screen and (max-width: 796px) {
+  div.pc {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1016px) {
+  div.tablet {
+    display: none;
+  }
+}
+@media only screen and (min-width: 796px) and (max-width: 1016px) {
+  div.tablet {
+    display: block;
+  }
+}
+@media only screen and (max-width: 796px) {
+  div.tablet {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1016px) {
+  div.sp {
+    display: none;
+  }
+}
+@media only screen and (min-width: 796px) and (max-width: 1016px) {
+  div.sp {
+    display: none;
+  }
+}
+@media only screen and (max-width: 796px) {
+  div.sp {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1016px) {
+  span.pc {
+    display: inline;
+  }
+}
+@media only screen and (min-width: 796px) and (max-width: 1016px) {
+  span.pc {
+    display: none;
+  }
+}
+@media only screen and (max-width: 796px) {
+  span.pc {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1016px) {
+  span.tablet {
+    display: none;
+  }
+}
+@media only screen and (min-width: 796px) and (max-width: 1016px) {
+  span.tablet {
+    display: inline;
+  }
+}
+@media only screen and (max-width: 796px) {
+  span.tablet {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1016px) {
+  span.sp {
+    display: none;
+  }
+}
+@media only screen and (min-width: 796px) and (max-width: 1016px) {
+  span.sp {
+    display: none;
+  }
+}
+@media only screen and (max-width: 796px) {
+  span.sp {
+    display: inline;
+  }
+}
+
+/*
+ * 幅
+ * paddingを含めた値を設定する。
+ */
+/*
+ * 全体的な色
+ */
+/*
+ * 余白
+ */
+/*
+ * フォント
+ */
+/*
+ * フッター
+ */
+/*
+  * ボーダー
+  */
+/*
+ * 画像
+ */
+/*
+ * テーブル
+ */
+/*
+  * 整形済みテキスト
+  */
+/*
+ * フォーム
+ */
+/*
+ * フォントサイズコントローラー
+ */
+/*
+ * ダークモードコントローラー
+ */
+/*
+ * 新着更新ラベル
+ */
+/*
+ * エレメントの名称
+ */
+/*
+ * マーカー
+ */
+/*
+ * システムやテーマの設定を上書きする(mediaクエリー関連)
+ */
+@media (min-width: 576px) {
+  .container {
+    max-width: 100vw;
+  }
+}
+@media (min-width: 560px) {
+  .node .field--type-image {
+    float: none;
+    margin: 0;
+  }
+}
+/*
+ * システムやテーマの設定を上書きする
+ */
+.field--type-image img,
+.field--name-field-user-picture img {
+  margin: 0;
+}
+
+.item-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.item-list ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer .content {
+  color: transparent;
+  font-size: 1rem;
+}
+
+pre[id^=sf-dump] span {
+  line-height: 1rem;
+}
+pre[id^=sf-dump] samp {
+  line-height: normal;
+}
+
+/*
+ * タクソノミーターム
+ */
+div.view.view-taxonomy-term.view-display-id-page_1 div.view-content {
+  padding-top: 0;
+  padding-right: 1rem;
+  padding-bottom: 0;
+  padding-left: 1rem;
+}
+div.view.view-taxonomy-term.view-display-id-page_1 div.view-content div.item-list ul {
+  list-style-type: none !important;
+}
+div.view.view-taxonomy-term.view-display-id-page_1 div.view-content div.item-list ul li p {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}

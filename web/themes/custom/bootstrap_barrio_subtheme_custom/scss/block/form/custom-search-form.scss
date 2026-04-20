@@ -1,0 +1,31 @@
+@use "../../style.scss" as st with (
+  $element-type: 'form', // エレメントのタグ
+  $element-name: 'custom-search-form' // エレメントの名称
+);
+
+/*
+ * 検索フォーム
+ */
+#{st.$element-type}.#{st.$element-name} {
+  width: fit-content;
+  @include st.pos($l: calc(100% - 2.0rem), $tr: translateX(-100%));
+  @include st.border($w: 1px, $rtl: 100vh, $rtr: 100vh, $rbr: 100vh, $rbl: 100vh, $o: hidden);
+  div.search-wrapper {
+    @include st.flex-container($w: nowrap, $j:center, $a: center);
+    @include st.padding($t: 1.0rem, $r: 3.5rem, $b: 1.0rem, $l: 2.0rem);
+    @include st.pos($d: flex, $l: 50%, $tr: translateX(-50%));
+    input.search-keyword {
+      @include st.margin($r: 1.0rem);
+      @include st.pos($d: inline-block, $p: static);
+    }
+    button.seach-button {
+      width: 0;
+      @include st.pos($d: inline-block, $p: static);
+      &:after {
+        content: url(../../../image/icon/common/search.svg);
+        @include st.pos($d: inline-block, $p: static, $tr: translateY(2.25px));
+        @include st.size($w: 2.0rem, $h: 2.0rem);
+      }
+    }
+  }
+}

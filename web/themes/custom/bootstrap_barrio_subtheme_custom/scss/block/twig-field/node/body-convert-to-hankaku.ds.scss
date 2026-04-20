@@ -1,0 +1,18 @@
+@use "../../../style.scss" as st with (
+  $element-type: 'field',
+  $element-name: 'body-convert-to-hankaku', // twigフィールドの名称
+  $element-field-type: 'ds' // フィールドタイプ
+);
+
+/*
+ * 本文（記号数字半角変換後）
+ */
+div.#{st.$element-type} {
+  &.#{st.$element-type}--name-dynamic-twig-fieldnode-#{st.$element-name} {
+    &.#{st.$element-type}--type-#{st.$element-field-type} {
+
+      @include st.padding($l: 1.0rem, $r: 1.0rem);
+
+    }
+  }
+}

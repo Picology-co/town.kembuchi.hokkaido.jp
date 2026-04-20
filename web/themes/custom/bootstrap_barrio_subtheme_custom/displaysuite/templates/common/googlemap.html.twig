@@ -1,0 +1,5 @@
+{# Google MapのURLテキストからマップ表示に変換する #}
+{# リッチテキスト(HTML編集)にすればこんなことをしなくても良いが、利用者にわかりやすいようにするため #}
+{# ノードコンテンツのfield_googlemap_embedの値を使用する #}
+{% set code = node.field_googlemap_embed.value %}
+<div class="googlemap">{{ code|raw }}</div>

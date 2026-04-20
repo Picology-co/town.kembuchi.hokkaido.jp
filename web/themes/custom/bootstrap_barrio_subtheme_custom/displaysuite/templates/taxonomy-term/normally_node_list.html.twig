@@ -1,0 +1,201 @@
+{# 通常表示をするノード一覧 #}
+{# 所属するタクソノミーを特定できるものから記述する #}
+
+{# 表示を除外するタクソノミータームID #}
+{# 静的ページなどを除外する #}
+{% set exclusion_str = custom_variable('exclusion_tid_list') %}
+{% set exclusion = exclusion_str|replace({' ': ''})|split(',') %}
+
+{# コンテンツがあるかどうか確認するフラグ #}
+{% set j = 0 %} {# コンテンツがあり、掲載対象のカウント #}
+{% set k = 0 %} {# ビューから取得した件数が0ではない場合のカウント #}
+
+{# 現在アクセスしているタクソノミータームのIDと名前 #}
+{% set tid = taxonomy_term.tid.value %}
+{% set tname = taxonomy_term.label %}
+
+{# 表示を除外するタクソノミータームIDのチェック #}
+{% if tid ~ '' not in exclusion %}
+  {# 除外対象ではない場合 #}
+  {# タクソノミータームの名前 #}
+{#   <h2>{{ tname }}</h2> #}
+
+  {# ラッパー #}
+  <div class="normally-node-list">
+
+    {# 技術者ブログ一覧 #}
+    {% set techlog_list = drupal_view_result('techlog_list', 'block_1', tid) %}
+    {% if techlog_list|length > 0 %}
+      {% set k = k + 1 %}
+      <div class="normally-node-list__techlog">
+        {% for i, techlog_row in techlog_list %}
+          {% set id = techlog_row._entity.nid.value %}
+          {% set title = techlog_row._entity.title.value %}
+          {% set image = techlog_row._entity.field_image.entity.fileuri|image_style('square_300_300') %}
+          {% set url = path('entity.node.canonical', {'node': id}) %}
+          {% set show_contents_list  = techlog_row._entity.field_show_contents_list.value %}
+          {% set post_period = techlog_row._entity.field_post_period.value %}
+          {% set post_period_end = techlog_row._entity.field_post_period.end_value %}
+          {% set created = techlog_row._entity.created.value|date('Y年m月d日') %}
+          {% set changed = techlog_row._entity.changed.value|date('Y年m月d日') %}
+          {% set current_date = now|date('U') %}
+          {% if post_period is not empty %}
+            {% set post_period_value = post_period|date_modify('+9 hours')|date('U')  %}
+          {% else %}
+            {% set post_period_value = null  %}
+          {% endif %}
+          {% if post_period_end is not empty %}
+            {% set post_period_end_value = post_period_end|date_modify('+9 hours')|date('U')  %}
+          {% else %}
+            {% set post_period_end_value = null  %}
+          {% endif %}
+          {# 掲載対象(掲載期間と表示チェックボックス)の判定 #}
+          {% if ((post_period_value <= current_date and post_period_end_value >= current_date) or (post_period_value is empty and post_period_end_value is empty)) and show_contents_list == 1 %}
+            {# 現在時間が掲載期間の範囲に入っている または 両方null #}
+            {# コンテンツを表示するチェックボックスにチェックが入っている #}
+            {% set j = j + 1 %}
+            <a href="{{ url }}">
+              <img src="{{ image }}" alt="">
+              <div class="normally-node-list__techlog__meta">
+                <div class="normally-node-list__techlog__meta__title">
+                  <span>{{ title }}</span>
+                </div>
+                <div class="normally-node-list__techlog__meta__date">
+                  <span class="created">投稿日：{{ created }}</span>
+                  {% if created != changed %}
+                    <span class="changed">更新日：{{ changed }}</span>
+                  {% endif %}
+                </div>
+              </div>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {# 制作事例一覧 #}
+    {% set example_list = drupal_view_result('example_list', 'block_1', tid) %}
+    {% if example_list|length > 0 %}
+      {% set k = k + 1 %}
+      <div class="normally-node-list__example">
+        {% for i, example_row in example_list %}
+          {% set id = example_row._entity.nid.value %}
+          {% set title = example_row._entity.title.value %}
+          {% set image = example_row._entity.field_image.entity.fileuri|image_style('square_300_300') %}
+          {% set url = path('entity.node.canonical', {'node': id}) %}
+          {% set show_contents_list  = example_row._entity.field_show_contents_list.value %}
+          {% set post_period = example_row._entity.field_post_period.value %}
+          {% set post_period_end = example_row._entity.field_post_period.end_value %}
+          {% set current_date = now|date('U') %}
+          {% if post_period is not empty %}
+            {% set post_period_value = post_period|date_modify('+9 hours')|date('U')  %}
+          {% else %}
+            {% set post_period_value = null  %}
+          {% endif %}
+          {% if post_period_end is not empty %}
+            {% set post_period_end_value = post_period_end|date_modify('+9 hours')|date('U')  %}
+          {% else %}
+            {% set post_period_end_value = null  %}
+          {% endif %}
+          {# 掲載対象(掲載期間と表示チェックボックス)の判定 #}
+          {% if ((post_period_value <= current_date and post_period_end_value >= current_date) or (post_period_value is empty and post_period_end_value is empty)) and show_contents_list == 1 %}
+            {# 現在時間が掲載期間の範囲に入っている または 両方null #}
+            {# コンテンツを表示するチェックボックスにチェックが入っている #}
+            {% set j = j + 1 %}
+            <a href="{{ url }}">
+              <img src="{{ image }}" alt="{{ title }}">
+{#               <span>{{ title }}</span> #}
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="normally-node-list__module-link">
+        <a href="/example/module"><span>モジュールはこちら</span></a>
+      </div>
+    {% endif %}
+
+    {# 公開モジュール一覧 #}
+    {% set module_list = drupal_view_result('public_module_list', 'block_1', tid) %}
+    {% if module_list|length > 0 %}
+      {% set k = k + 1 %}
+      <div class="normally-node-list__module">
+        {% for i, module_row in module_list %}
+          {% set id = module_row._entity.nid.value %}
+          {% set title = module_row._entity.title.value %}
+          {% set image = module_row._entity.field_image.entity.fileuri|image_style('square_300_300') %}
+          {% set url = path('entity.node.canonical', {'node': id}) %}
+          {% set show_contents_list  = module_row._entity.field_show_contents_list.value %}
+          {% set post_period = module_row._entity.field_post_period.value %}
+          {% set post_period_end = module_row._entity.field_post_period.end_value %}
+          {% set current_date = now|date('U') %}
+          {% if post_period is not empty %}
+            {% set post_period_value = post_period|date_modify('+9 hours')|date('U')  %}
+          {% else %}
+            {% set post_period_value = null  %}
+          {% endif %}
+          {% if post_period_end is not empty %}
+            {% set post_period_end_value = post_period_end|date_modify('+9 hours')|date('U')  %}
+          {% else %}
+            {% set post_period_end_value = null  %}
+          {% endif %}
+          {# 掲載対象(掲載期間と表示チェックボックス)の判定 #}
+          {% if ((post_period_value <= current_date and post_period_end_value >= current_date) or (post_period_value is empty and post_period_end_value is empty)) and show_contents_list == 1 %}
+            {# 現在時間が掲載期間の範囲に入っている または 両方null #}
+            {# コンテンツを表示するチェックボックスにチェックが入っている #}
+            {% set j = j + 1 %}
+            <a href="{{ url }}">
+              <img src="{{ image }}" alt="{{ title }}">
+{#               <span>{{ title }}</span> #}
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {# 記事一覧 #}
+    {% set article_list = drupal_view_result('article_list', 'block_1', tid) %}
+    {% if article_list|length > 0 %}
+      {% set k = k + 1 %}
+      <div class="normally-node-list__article">
+        {% for i, article_row in article_list %}
+          {% set id = article_row._entity.nid.value %}
+          {% set title = article_row._entity.title.value %}
+          {% set url = path('entity.node.canonical', {'node': id}) %}
+          {% set show_contents_list  = article_row._entity.field_show_contents_list.value %}
+          {% set post_period = article_row._entity.field_post_period.value %}
+          {% set post_period_end = article_row._entity.field_post_period.end_value %}
+          {% set current_date = now|date('U') %}
+          {# 作成日と最終更新日の好きなほうを使う #}
+          {% set created = article_row._entity.created.value|date('Y年m月d日') %} {# 作成日 #}
+          {% set changed = article_row._entity.changed.value|date('Y年m月d日') %} {# 最終更新日 #}
+          {% if post_period is not empty %}
+            {% set post_period_value = post_period|date_modify('+9 hours')|date('U')  %}
+          {% else %}
+            {% set post_period_value = null  %}
+          {% endif %}
+          {% if post_period_end is not empty %}
+            {% set post_period_end_value = post_period_end|date_modify('+9 hours')|date('U')  %}
+          {% else %}
+            {% set post_period_end_value = null  %}
+          {% endif %}
+          {# 掲載対象(掲載期間と表示チェックボックス)の判定 #}
+          {% if ((post_period_value <= current_date and post_period_end_value >= current_date) or (post_period_value is empty and post_period_end_value is empty)) and show_contents_list == 1 %}
+            {# 現在時間が掲載期間の範囲に入っている または 両方null #}
+            {# コンテンツを表示するチェックボックスにチェックが入っている #}
+            {% set j = j + 1 %}
+            <a href="{{ url }}">
+              <span class="date">{{ changed }}</span>
+              <span class="title">{{ title }}</span>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {# 表示するノードが無い場合の表示 #}
+    {% if j == 0 or k == 0 %}
+      <p>表示するコンテンツはありません。</p>
+    {% endif %}
+  </div>
+
+{% endif %}

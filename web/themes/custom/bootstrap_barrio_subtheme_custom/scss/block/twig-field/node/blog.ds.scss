@@ -1,0 +1,158 @@
+@use "../../../style.scss" as st with (
+  $element-type: 'field',
+  $element-name: 'blog', // twigフィールドの名称
+  $element-field-type: 'ds' // フィールドタイプ
+);
+
+/*
+ * ブログ本文
+ */
+div.#{st.$element-type} {
+  &.#{st.$element-type}--name-dynamic-twig-fieldnode-#{st.$element-name} {
+    &.#{st.$element-type}--type-#{st.$element-field-type} {
+
+      div.blog {
+        &__header {
+          &__meta {
+            &__classifications {
+              @include st.padding($l: 1.0rem, $r: 1.0rem);
+              @include st.size($w: fit-content);
+              @include st.margin($l: auto, $b: 1.0rem);
+              a {
+                @include st.padding($t: 0.25rem, $b: 0.25rem, $l: 0.5rem, $r: 0.5rem);
+                @include st.border($w: 2px);
+                @include st.color();
+                @include st.text();
+                &:hover {
+                  @include st.color();
+                  @include st.text();
+                }
+                &:first-child {
+                  @include st.margin($r: 0.5rem);
+                }
+              }
+            }
+            &__post {
+              @include st.padding($l: 1.0rem, $r: 1.0rem);
+              @include st.size($w: fit-content);
+              @include st.margin($l: auto, $b: 1.0rem);
+              span {
+                @include st.pos($p: static);
+              }
+            }
+          }
+          &__header-image {
+            @include st.size($w: 100%, $maxw: 60.0rem);
+            @include st.padding($l: 2.0rem, $r: 2.0rem);
+            @include st.margin($b: 2.0rem);
+            @include st.sp {
+              @include st.size($w: 100%);
+            }
+          }
+        }
+        &__body {
+          @include st.padding($l: 1.0rem, $r: 1.0rem);
+          @include st.margin($b: 5.0rem);
+          @include st.sp {
+            @include st.margin($b: 2.5rem);
+          }
+          h3 {
+            @include st.margin($t: 2.5rem, $b: 2.5rem);
+          }
+          p {
+            @include st.padding($l: 1.0rem, $r: 1.0rem);
+            img {
+              @include st.image($w: auto, $maxw: 50vw, $minw: 30.0rem);
+              @include st.pos($p: static);
+              @include st.margin($l: auto, $r: auto);
+              @include st.sp {
+                @include st.image($w: auto, $maxw: 50vw, $minw: 21.0rem);
+              }
+            }
+          }
+        }
+        &__affiliates {
+          @include st.flex-container();
+          @include st.margin($b: 5.0rem);
+          &__affiliate {
+            @include st.size($w: calc(100% / 4 - 2.0rem));
+            @include st.margin($l: 1.0rem, $r: 1.0rem, $b: 1.0rem);
+            @include st.border();
+            @include st.sp {
+              @include st.size($w: calc(100% / 2 - 1.0rem));
+              @include st.margin($l: 0.5rem, $r: 0.5rem, $b: 1.0rem);
+            }
+            a {
+              @include st.padding($l: 0.5rem, $r: 0.5rem, $t: 0.5rem, $b: 0.5rem);
+              @include st.color();
+              &:hover {
+                @include st.color();
+                @include st.text();
+              }
+            }
+            &__shop-name {
+              @include st.padding($t: 0.25rem, $b: 0.25rem, $l: 0.5rem, $r: 0.5rem);
+              @include st.margin($b: 0.5rem);
+              @include st.border($c: #ff69b4);
+              @include st.color($b: #ffb6c1);
+              @include st.font($w:700);
+            }
+            &__product-name {
+              @include st.size($w: fit-content);
+              @include st.margin($l: auto, $r: auto);
+            }
+          }
+        }
+        &__classification-1 {
+          @include st.padding($l: 1.0rem, $r: 1.0rem);
+          a {
+            @include st.flex-container($w: nowrap);
+            @include st.margin($b: 1.0rem);
+            @include st.color();
+            @include st.text();
+            &:hover {
+              @include st.color();
+              @include st.text();
+            }
+            img {
+              @include st.pos();
+              @include st.image($w: 30%, $h: 30%);
+            }
+          }
+          &__meta {
+            @include st.margin($l: 1.0rem, $b: 1.0rem);
+            @include st.size($w: calc(70% - 1.0rem));
+            &__title {
+              @include st.font($s: 1.5rem, $w: 700);
+              @include st.border-bottom($w: 2px);
+              @include st.pos();
+              @include st.margin($b: 1.0rem);
+              @include st.sp {
+                @include st.font($s: 1.25rem);
+                @include st.margin($b: 0.5rem);
+              }
+              span {
+                @include st.padding($l: 1.0rem, $r: 1.0rem);
+                @include st.pos($d: inline-block, $p: static);
+              }
+            }
+            &__date {
+              @include st.padding($l: 1.0rem, $r: 1.0rem);
+              span {
+                @include st.pos($p: static);
+                @include st.sp {
+                  @include st.font($s: 0.75rem);
+                }
+                &.changed {
+                  @include st.sp {
+                    @include st.pos($d: none);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

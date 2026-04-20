@@ -1,0 +1,15 @@
+@use "../style.scss" as st with (
+  $element-type: 'block',
+  $element-name: 'mobile-menu' // ブロックの名称
+);
+
+/*
+ * モバイルメニュー
+ */
+div##{st.$element-type}-#{st.$element-name} {
+
+  @include st.padding();
+  @include st.margin();
+  @include st.border($w: 0);
+  @include st.pos($z: 3); // ページャーが上に載ってしまうため3にする。ページャーがなければ1でいい。
+}

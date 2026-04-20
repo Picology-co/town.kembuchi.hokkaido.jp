@@ -1,0 +1,72 @@
+@use "../../style.scss" as st with (
+  $element-type: 'node',
+  $element-name: 'public-module', // カスタムブロックの名称
+  $element-view-mode: 'period-control' // ビューモードの名称
+);
+
+/*
+ * 公開モジュール
+ */
+div.#{st.$element-type} {
+  &.#{st.$element-type}--type-#{st.$element-name} {
+    &.#{st.$element-type}--view-mode-#{st.$element-view-mode} {
+
+      // 対象CMS
+      div.target-cms {
+        @include st.margin($b: 2.0rem);
+        @include st.padding($l: 1.0rem, $r: 1.0rem);
+        div {
+          @include st.pos($d: inline-block);
+          @include st.size($w: fit-content);
+          @include st.font($s: 1.25rem, $w: 700);
+          &:nth-child(2) { // CMSのバージョン
+            @include st.margin($l: 1.0rem);
+          }
+        }
+      }
+
+
+      div.field {
+        // 見出し画像
+        &.field--name-field-image {
+          &.field--type-image {
+            &.field--label-hidden {
+              &.field__item {
+                @include st.pos($a: center);
+              }
+            }
+          }
+        }
+        // 追加画像
+        &.field--name-field-image-picture {
+          &.field--type-image {
+            &.field--label-hidden {
+              &.field__items {
+                @include st.margin($t: 5.0rem!important, $b: 5.0rem);
+                @include st.flex-container($j: space-between);
+                @include st.sp {
+                  @include st.pos();
+                }
+                div.field__item {
+                  @include st.size($w: calc(100% / 2 - 1.0rem));
+                  @include st.margin($l: 0.5rem, $r: 0.5rem, $b: 0.5rem);
+                  @include st.border();
+                  @include st.sp {
+                    @include st.margin($l: auto, $r: auto);
+                  }
+                  a {
+                    @include st.size();
+                    img {
+                      @include st.image($w: 100%!important);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

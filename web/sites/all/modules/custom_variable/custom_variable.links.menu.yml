@@ -1,0 +1,5 @@
+custom_variable.settings:
+  route_name: custom_variable.settings
+  title: 'Custom Variable'
+  parent: system.admin_config_development
+  description: 'Set the Custom Variable module values.'

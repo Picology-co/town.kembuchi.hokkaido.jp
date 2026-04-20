@@ -1,0 +1,22 @@
+@use "../../../../style.scss" as st with (
+  $element-type: 'field',
+  $style-group-name: 'template', // データグループの名称
+  $element-field-type: 'ds' // フィールドタイプ
+);
+
+/*
+ * 汎用機能の説明
+ * 利用用途は、複数のユーザーで共通のスタイルを適用すること。
+ */
+div.#{st.$element-type} {
+  &[class*="#{st.$element-type}--name-dynamic-twig-fielduser-"] {
+    &.#{st.$element-type}--type-#{st.$element-field-type} {
+
+      // データグループのスタイルをここに記述
+      div[data-group="#{st.$style-group-name}"] {
+        @include st.pos();
+      }
+
+    }
+  }
+}

@@ -1,0 +1,15 @@
+/*
+ * システムやテーマの設定を上書きする(mediaクエリー関連)
+ */
+
+@media (min-width: 576px) {
+  .container { max-width: 100vw; }
+}
+
+@media (min-width: 560px) {
+  .node .field--type-image {
+    float: none;
+    margin: 0;
+  }
+}
+

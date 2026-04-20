@@ -1,0 +1,13 @@
+template_form:
+  version: 1.x
+  css:
+    theme:
+      scss/template-form.min.css: {}
+  js:
+    js/template-form.js: {}
+  dependencies:
+    - core/drupal
+
+#js-header:
+#  header: true
+#  js:

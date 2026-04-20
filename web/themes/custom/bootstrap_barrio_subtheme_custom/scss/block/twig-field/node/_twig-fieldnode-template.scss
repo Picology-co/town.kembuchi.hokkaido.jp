@@ -1,0 +1,18 @@
+@use "../../../style.scss" as st with (
+  $element-type: 'field',
+  $element-name: 'template', // twigフィールドの名称
+  $element-field-type: 'ds' // フィールドタイプ
+);
+
+/*
+ * 汎用機能の説明
+ */
+div.#{st.$element-type} {
+  &.#{st.$element-type}--name-dynamic-twig-fieldnode-#{st.$element-name} {
+    &.#{st.$element-type}--type-#{st.$element-field-type} {
+
+
+
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@use '../../../style.scss' as st with (
+  $element-type: 'view',
+  $element-view-type: 'eva', // ビューの種類 ※eva以外のviewの場合はこの行を消す
+  $element-name: 'pickup-content', // カスタムブロックの名称
+  $element-display-id: 'entity_view_1' // ディスプレイIDの名称
+);
+
+/*
+ * ピックアップコンテンツをviewsのevaで挿入する
+ */
+div.#{st.$element-type} {
+  &.#{st.$element-type}-#{st.$element-view-type} { // ※eva以外のviewの場合はこの行を消す
+    &.#{st.$element-type}-#{st.$element-name} {
+      &.#{st.$element-type}-display-id-#{st.$element-display-id} {
+
+        @include st.padding($r: 1.0rem, $l: 1.0rem);
+
+      } // ※eva以外のviewの場合はこの行を消す
+    }
+  }
+
+}

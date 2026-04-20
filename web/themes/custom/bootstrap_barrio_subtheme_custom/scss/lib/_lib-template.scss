@@ -1,0 +1,9 @@
+@use "../style.scss" as st with (
+  $element-type: 'div',
+  $element-name: 'template' // エレメントの名称
+);
+
+// 説明
+#{st.$element-type}.#{st.$element-name} {
+
+}

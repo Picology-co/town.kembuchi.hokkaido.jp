@@ -1,0 +1,59 @@
+@use "../../../../style.scss" as st with (
+  $element-type: 'field',
+  $style-group-name: 'common-style', // データグループの名称
+  $element-field-type: 'ds' // フィールドタイプ
+);
+
+/*
+ * タクソノミー配下の各コンテンツに共通のスタイル
+ */
+div.#{st.$element-type} {
+  &[class*="#{st.$element-type}--name-dynamic-twig-fieldtaxonomy-term-"] {
+    &.#{st.$element-type}--type-#{st.$element-field-type} {
+
+      // データグループのスタイルをここに記述
+      div.#{st.$style-group-name} {
+
+        & > * {
+          @include st.margin($b: 10.0rem);
+          &:last-child {
+            @include st.margin($b: 5.0rem); // 上位コンテナのマージンを考慮する
+          }
+          // __detail
+          div[class$="__detail"] {
+            @include st.padding($l: 1.0rem, $r: 1.0rem);
+            table {
+              * {
+                @include st.border($w: 0);
+                tr {
+                  @include st.border-bottom($w: 1px);
+                  @include st.margin($b: 0.5rem);
+                  &.schedule {
+                    td {
+                      @include st.color($c: #ff8c00);
+                    }
+                  }
+                  td {
+                    @include st.size($w: fit-content);
+                    ol {
+                      @include st.margin($l: 1.5rem);
+                    }
+                  }
+                }
+              }
+            }
+            p {
+              &.right {
+                @include st.pos($a: right);
+              }
+            }
+            h4 {
+              @include st.border($w: 0);
+              @include st.padding();
+            }
+          }
+        }
+      }
+    }
+  }
+}

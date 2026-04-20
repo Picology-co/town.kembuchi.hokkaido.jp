@@ -1,0 +1,6 @@
+name: 'Custom Variable'
+type: module
+description: 'This is a custom variable module for use with twig.'
+core_version_requirement: ^10 || ^11
+package: 'Development'
+version: '1.0.0'

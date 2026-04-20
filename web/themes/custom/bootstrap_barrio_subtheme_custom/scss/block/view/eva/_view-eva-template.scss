@@ -1,0 +1,21 @@
+@use '../../../style.scss' as st with (
+  $element-type: 'view',
+  $element-view-type: 'eva', // ビューの種類
+  $element-name: 'template', // カスタムブロックの名称
+  $element-display-id: 'page_1' // ディスプレイIDの名称
+);
+
+/*
+ * ビューの説明
+ */
+div.#{st.$element-type} {
+  &.#{st.$element-type}-#{st.$element-view-type} {
+    &.#{st.$element-type}-#{st.$element-name} {
+      &.#{st.$element-type}-display-id-#{st.$element-display-id} {
+
+
+      }
+    }
+  }
+
+}

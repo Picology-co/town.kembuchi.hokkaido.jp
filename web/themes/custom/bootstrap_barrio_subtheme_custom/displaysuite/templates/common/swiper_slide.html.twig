@@ -1,0 +1,26 @@
+{# スライドショー #}
+{# スライドに使用するのはfield_imageフィールド #}
+{# タイトル、本文、URLも表示することが可能 #}
+{# swiper.jsを利用する #}
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    {# スライド一覧を取得する #}
+    {% set slide = drupal_view_result('swiper_slide', 'default') %}
+    {% if slide|length > 0 %} {# スライドを取得できた場合 #}
+      {% for i, arr in slide %}
+        {% set title = arr._entity.title.value %}
+        {% set image = file_url(arr._entity.field_image.entity.fileuri | image_style('slide_1920_810')) %}
+        {% set body = arr._entity.body.value|render|striptags|trim|lower %}
+        {% set url = arr._entity.field_url.uri %}
+        <div class="swiper-slide">
+          <div class="slide-media"> {# 出力する内容はここで調整する #}
+            <img src="{{ image }}" alt="">
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+  {% if slide|length > 0 %}
+    <div class="swiper-pagination">●</div> {# 現在のページを示す●を非表示にするときはコメントアウトする #}
+  {% endif %}
+</div>

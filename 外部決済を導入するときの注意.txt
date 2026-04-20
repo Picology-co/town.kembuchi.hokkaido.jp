@@ -1,0 +1,26 @@
+設定の
+cookie_samesiteがLaxになっている場合、外部決済ページから戻ってきたときに正常に表示しなくなる。
+Google ChromeではVer80からデフォルトでLaxになる。
+
+cookie_samesite=None
+に設定するためには、
+/web/sites/default/services.ymlに
+
+parameters:
+  session.storage.options:
+    cookie_samesite: None
+    cookie_secure: true
+
+を記述する。
+設定を行ったら、drush crを実行する。
+ディベロッパーツール > アプリケーション > cookieで確認できる。
+https://www.ecbeing.net/contents/detail/235
+
+他に、PHP.iniの
+session.cookie_samesite = None
+session.cookie_secure = true <- samesiteをnoneにした場合、こちらを設定する必要がある
+
+複数個所設定があるため、Laxになっている場合は確認する必要がある。
+まずは、services.ymlを設定する。
+
+ログインしている場合は、いったんログアウトして再ログインすると反映される。

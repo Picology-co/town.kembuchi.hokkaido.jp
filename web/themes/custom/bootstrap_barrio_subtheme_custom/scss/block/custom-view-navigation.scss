@@ -1,0 +1,12 @@
+@use "../style.scss" as st with (
+  $element-type: 'block',
+  $element-name: 'custom-view-navigation' // ブロックの名称
+);
+
+/*
+ * ブロックの説明
+ */
+div##{st.$element-type}-#{st.$element-name} {
+
+  @include st.margin($t: 1.5rem, $r: 2.0rem);
+}

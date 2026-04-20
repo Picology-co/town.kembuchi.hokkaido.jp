@@ -1,0 +1,16 @@
+# 管理画面用
+admin-styles:
+  js:
+    js/fix/edit-field-sitetree-wrapper.js: {}
+  css:
+    theme:
+      scss/fix/edit-label-machine-name-suffix.min.css: {}
+      scss/fix/block-claro-subtheme-content.min.css: {}
+      scss/fix/edit-field-sitetree-wrapper.min.css: {}
+      scss/fix/button--primary.min.css: {}
+      scss/fix/fieldset.min.css: {}
+
+#js-header:
+#  header: true
+#  js:
+

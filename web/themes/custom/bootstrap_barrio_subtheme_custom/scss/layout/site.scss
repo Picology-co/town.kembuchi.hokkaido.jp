@@ -1,0 +1,250 @@
+@use "../style.scss" as st;
+
+/*
+ * リセットCSS
+ */
+* {
+  @include st.margin();
+  @include st.padding();
+  @include st.font($s: 0, $h: 0, $l: 0, $f: st.$default-font);
+}
+
+/*----------サイトの基本レイアウト----------*/
+html {
+  position: relative;
+  overflow-x: hidden;
+  @include st.tablet {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+    // ↓スクロールバーを非表示にする。
+    -ms-overflow-style: none; // IEとEdge
+    scrollbar-width: none;  // Firefox
+    &::-webkit-scrollbar {  // ChromeとSafari
+      display: none;
+    }
+  }
+  @include st.sp {
+		-webkit-overflow-scrolling: touch;
+		overflow-y: scroll;
+    // ↓スクロールバーを非表示にする。
+    -ms-overflow-style: none; // IEとEdge
+    scrollbar-width: none;  // Firefox
+    &::-webkit-scrollbar {  // ChromeとSafari
+      display: none;
+    }
+	}
+}
+
+html, body, header {
+	word-wrap: break-word; // 横幅で自動改行する
+	word-break: break-all;
+	overflow-wrap: break-word;
+	box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  div.dialog-off-canvas-main-canvas {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  @include st.color($b: st.$background-body-color);
+}
+
+// ヘッダーリージョン
+header#header {
+  @include st.pos($z: 1);
+  body.path-frontpage & {
+    transition: .5s;
+    @include st.pos($p: fixed, $t: 0, $z: 1, $tr: translateY(-100%));
+  }
+  body.path-frontpage[open-accessibility] & {
+    transition: .5s;
+    @include st.pos($p: fixed, $t: 0, $z: 1);
+  }
+  @include st.size();
+  @include st.color($b: #ffffff);
+  div.header-wrapper {
+    width: st.$header-width;
+    max-width: 100vw;
+    padding: 0 st.$common-padding;
+    margin: 0 auto;
+    @include st.tablet { width: 100%; }
+    @include st.sp { width: 100%; }
+    @include st.color($b: st.$background-header-color);
+    nav#navbar-top { // セカンダリーメニュー, Top header, Top header formのwrapper
+      width: 100vw;
+      @include st.pos($l: 50%, $tr: translateX(-50%));
+      @include st.sp{ width: 100%; }
+    }
+    nav#navbar-main { // ヘッダー, プライマリーメニュー,  Header formのwrapper
+      @include st.pos($l: 50%, $tr: translateX(-50%));
+      @include st.padding();
+      @include st.size($w: 100vw!important);
+      @include st.sp{ @include st.size($w: 100%!important); }
+    }
+  }
+}
+
+// ハイライトリージョン
+// 注意：max-width, min-widthを絶対指定するとレスポンシブが効かなくなる
+div.highlighted {
+  @include st.pos();
+  > aside.container {
+    width: st.$content-node-width;
+    max-width: 100vw;
+    padding: 0 st.$common-padding;
+    margin: 0 auto;
+    @include st.tablet { width: 100%; }
+    @include st.sp { width: 100%; }
+    body.path-frontpage & {
+      width: st.$content-frontpage-width;
+      /* max-width: st.$content-frontpage-maxwidth; */
+      @include st.tablet { width: 100%; }
+      @include st.sp { width: 100%; }
+    }
+    div[data-drupal-messages] { // システムメッセージ
+      @include st.pos($p: fixed, $l: 50%, $tr: translateX(-50%), $z: 2, $t: auto);
+      @include st.margin($t: 1.0rem);
+    }
+  }
+}
+
+// featured-topリージョン(コンテンツ幅より広く見せたい場合に使用する)
+div.featured-top {
+  > aside.container {
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 st.$common-padding;
+    margin: 0 auto;
+    @include st.pc-featured { width: st.$featured-width; }
+    @include st.tablet { width: 100%; }
+    @include st.sp { width: 100%; }
+    body.path-frontpage & {
+      @include st.pc { width: st.$featured-frontpage-width; }
+    }
+  }
+}
+
+// コンテンツリージョン＋サイドバーリージョン
+div#main-wrapper {
+  div#main {
+    width: st.$content-node-width;
+    max-width: 100vw;
+    padding: 0 st.$common-padding;
+    margin: 0 auto;
+    @include st.tablet {
+      width: 100%;
+      @include st.padding();
+    }
+    @include st.sp {
+      width: 100%;
+      @include st.padding();
+    }
+    body.path-frontpage & {
+      width: st.$content-frontpage-width;
+    }
+    div.content-wrapper {
+      @include st.flex-container($j: space-between); // ここを変更することでコンテンツリージョンとサイドバーリージョンの並びを変更できる。
+      @include st.sp { @include st.flex-container($j: space-between, $d: column); }
+      &:has(div.sidebar-wrapper){
+        main#content {
+          width: 70%;
+          @include st.sp { width: 100%; }
+        }
+      }
+      main#content {  // コンテンツリージョン
+        width: 100%;
+      }
+      div.sidebar-wrapper { // サイドバーリージョン
+        width: st.$sidebar-width;
+        max-width: st.$sidebar-maxwidth;
+        padding-left: st.$common-padding;
+        margin: 0;
+        @include st.sp {
+          width: 100%;
+          max-width: 100vw;
+          padding-left: 0;
+          @include st.flex-container($w: nowrap, $j: space-between);
+        }
+        div#sidebar_first { // SideBar First
+          @include st.sp { width: 100%; max-width: 100vw; margin-right: 0.5rem; } // flex-wrap:nowrapが指定されている状況下で、width: 100%を指定することでうまく幅を均等に調整してくれる。
+          aside.section {
+            div.block {
+              margin: 0;
+            }
+          }
+        }
+        div#sidebar_second { // SideBar Second
+          @include st.sp { width: 100%; max-width: 100vw; margin-left: 0.5rem; } // flex-wrap:nowrapが指定されている状況下で、width: 100%を指定することでうまく幅を均等に調整してくれる。
+          aside.section {
+            div.block {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// featured-bottomリージョン(コンテンツ幅より広く見せたい場合に使用する)
+div.featured-bottom {
+  > aside.container {
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 st.$common-padding;
+    margin: 0 auto;
+    @include st.pc-featured { width: st.$featured-width; }
+    @include st.tablet { width: 100%; }
+    @include st.sp { width: 100%; }
+    body.path-frontpage & {
+      width: 100%;
+      @include st.pc-featured { width: st.$featured-width; }
+      @include st.tablet { width: 100%; }
+      @include st.sp { width: 100%; }
+      }
+  }
+}
+
+// フッターリージョン
+footer.site-footer {
+  @include st.padding();
+  @include st.color($c: st.$footer-color, $b: st.$footer-background-color);
+  div.container {
+    width: st.$footer-width;
+    max-width: 100vw;
+    padding: 0 st.$common-padding;
+    margin: 0 auto;
+    @include st.tablet {
+      width: 100%;
+      @include st.padding();
+    }
+    @include st.sp {
+      width: 100%;
+      @include st.padding();
+    }
+    a { // デフォルトを上書き
+      @include st.color($c: st.$footer-color-link);
+    }
+    div.site-footer__bottom {
+      @include st.margin();
+      @include st.border($w: 0);
+      div.block { // デフォルトを上書き
+        @include st.margin();
+      }
+      div.content { // デフォルトを上書き
+        @include st.padding();
+        a { // デフォルトを上書き
+          &:hover { color: inherit };
+        }
+      }
+      section.region { // デフォルトを上書き
+        @include st.margin();
+      }
+/*       section.region.region-footer-fifth {
+        @include st.padding($b: 2.0rem);
+      } */
+    }
+  }
+}

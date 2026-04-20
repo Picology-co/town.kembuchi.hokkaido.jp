@@ -1,0 +1,22 @@
+@use "../../style.scss" as st with (
+  $element-type: 'block-content',
+  $element-name: 'custom-footer', // カスタムブロックの名称
+  $element-view-mode: 'full' // ビューモードの名称
+);
+
+/*
+ * カスタムフッター
+ */
+div.#{st.$element-type} {
+  &.#{st.$element-type}--type-#{st.$element-name} {
+    &.#{st.$element-type}--view-mode-#{st.$element-view-mode} {
+
+      @include st.margin();
+      @include st.sp {
+        @include st.pos($d: none);
+        @include st.margin();
+      }
+
+    }
+  }
+}

@@ -1,0 +1,106 @@
+@use "../../../style.scss" as st with (
+  $element-type: 'field',
+  $element-name: 'normally-node-list', // twigフィールドの名称
+  $element-field-type: 'ds' // フィールドタイプ
+);
+
+/*
+ * 通常表示をするノード一覧
+ */
+div.#{st.$element-type} {
+  &.#{st.$element-type}--name-dynamic-twig-fieldtaxonomy-term-#{st.$element-name} {
+    &.#{st.$element-type}--type-#{st.$element-field-type} {
+
+      div.normally-node-list {
+        @include st.padding($l: 0.5rem, $r: 0.5rem);
+        &__techlog {
+          a {
+            @include st.margin($b: 0.5rem);
+            @include st.flex-container($w: nowrap);
+            @include st.color();
+            @include st.text();
+            &:hover {
+              @include st.color();
+              @include st.text();
+            }
+            img {
+              @include st.image($w: 30%, $h: 30%);
+              @include st.margin($r: 0.25rem);
+            }
+          }
+          &__meta {
+            @include st.size();
+            @include st.margin($l: 0.5rem);
+            &__title {
+              @include st.font($s: 1.25rem, $w: 700);
+              @include st.margin($b: 0.5rem);
+              @include st.border-bottom($w: 2px);
+              @include st.sp {
+                @include st.font($s: 1.0rem, $w: 700);
+                @include st.margin($b: 0.25rem);
+              }
+              span {
+                @include st.pos($d: inline-block, $p: static);
+                @include st.padding($l: 1.0rem, $r: 1.0rem);
+              }
+            }
+            &__date {
+              @include st.padding($l: 1.0rem, $r: 1.0rem);
+              span {
+                @include st.pos($p: static);
+                &.changed {
+                  @include st.sp {
+                    @include st.pos($d: none);
+                  }
+                }
+              }
+              @include st.sp {
+                @include st.font($s: 0.75rem);
+              }
+            }
+          }
+        }
+        &__example { // 制作事例
+          @include st.flex-container();
+          @include st.padding($b: 5.0rem);
+          @include st.border-bottom($w: 1px);
+          a {
+            @include st.size($w: calc(100% / 4 - 1.0rem));
+            @include st.margin($l: 0.5rem, $r: 0.5rem, $b: 0.5rem);
+          }
+        }
+        &__module-link { // モジュール一覧へのリンク
+          @include st.pos($a: center);
+          @include st.margin($t: 5.0rem);
+          a {
+            @include st.border($w: 2px, $rtl: 100vh, $rtr: 100vh, $rbl: 100vh, $rbr: 100vh, $o: hidden);
+            @include st.color($b: #ffffff);
+            @include st.padding($t: 0.5rem, $b: 0.5rem , $l: 1.5rem, $r: 1.5rem);
+            @include st.text();
+            span {
+              @include st.font($s: 1.5rem, $w: 700);
+            }
+          }
+        }
+        &__module { // 公開モジュール
+          @include st.flex-container($w: nowrap, $a: space-between);
+          a {
+            @include st.size($w: calc(100% / 4 - 1.0rem));
+            @include st.sp {
+              @include st.size($w: calc(100% / 3 - 1.0rem));
+            }
+            @include st.margin($l: 0.5rem, $r: 0.5rem, $b: 0.5rem);
+/*             img {
+              @include st.image($w: 30%);
+              @include st.margin($r: 0.25rem);
+            } */
+          }
+        }
+        &__article { // 記事
+
+        }
+      }
+
+    }
+  }
+}

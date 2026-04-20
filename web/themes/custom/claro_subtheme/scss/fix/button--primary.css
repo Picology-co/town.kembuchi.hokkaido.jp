@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/*
+ * 一般ユーザーでログインすると
+ * ボタンの色がおかしくなることがあるので統一する
+ */
+.button--primary {
+  background-color: var(--button-bg-color--primary) !important;
+  color: var(--button-fg-color--primary) !important;
+}

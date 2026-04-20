@@ -1,0 +1,8 @@
+{# 新着更新後7日間表示するラベル #}
+{% if node.created.value|date_modify('+7 days')|date('U') >= 'now'|date('U') %}
+  <span class="new-label">新着</span>
+{% elseif node.changed.value|date_modify('+7 days')|date('U') >= 'now'|date('U') %}
+  <span class="update-label">更新</span>
+{% else %}
+  <span></span>
+{% endif %}

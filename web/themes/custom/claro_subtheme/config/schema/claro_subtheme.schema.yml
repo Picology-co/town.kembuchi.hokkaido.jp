@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Claro theme.
+
+claro_subtheme.settings:
+  type: theme_settings
+  label: 'Claro subtheme settings'

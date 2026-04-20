@@ -1,0 +1,5 @@
+common_utils.drupal_config:
+  route_name: common_utils.drupal_config
+  title: 'Drupalの設定一覧'
+  parent: system.admin_config_development
+  description: 'Drupalの設定一覧を表示します。'

@@ -1,0 +1,14 @@
+アクセストークンURL　https://www9.picology-co.jp/oauth/token
+
+クライアントID　未設定
+シークレット　未設定
+
+Grant Type　client credentials
+scope API
+
+-----
+APIデータ(JSON)
+http://www9.picology-co.jp/api/json(※カスタムモジュールで設定する。左記のURLは一例)
+post
+
+

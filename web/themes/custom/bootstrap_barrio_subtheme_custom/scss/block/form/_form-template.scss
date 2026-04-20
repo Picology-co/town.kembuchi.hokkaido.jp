@@ -1,0 +1,11 @@
+@use "../../style.scss" as st with (
+  $element-type: 'form',
+  $element-name: 'template' // フォームブロックの名称
+);
+
+/*
+ * フォームブロックの説明
+ */
+#{st.$element-type}.#{st.$element-name} {
+
+}

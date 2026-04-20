@@ -1,0 +1,28 @@
+{# 掲載期間による表示制御 #}
+{# 掲載期間外になっているにもかかわらず、URL直打ちでは表示されてしまうので。特に、ワークフローで制御されていると、直接「掲載」ステータスを変更できない。 #}
+{% set period = node.field_post_period.value %}
+{% set period_end = node.field_post_period.end_value %}
+{% set current_date = now|date('U') %}
+{% set show_contents_list  = node.field_show_contents_list.value %}
+{% if period is not empty %}
+  {% set period_value = period|date_modify('+9 hours')|date('U') %}
+{% else %}
+  {% set period_value = null %}
+{% endif %}
+{% if period_end is not empty %}
+  {% set period_end_value = period_end|date_modify('+9 hours')|date('U') %}
+{% else %}
+  {% set period_end_value = null %}
+{% endif %}
+
+{% if ((period_value <= current_date and period_end_value >= current_date) or (period_value is empty and period_end_value is empty)) and show_contents_list == 1 %}
+  {# 現在時間が掲載期間の範囲に入っている または 両方null #}
+  {% set nid = node.id %}
+  {% set entity = drupal_entity('node', nid, 'period_control') %}
+  {{ entity }}
+{% else %}
+  {# リダイレクトで404に飛ばす #}
+  <script>
+    window.location.href = '/error/1';
+  </script>
+{% endif %}

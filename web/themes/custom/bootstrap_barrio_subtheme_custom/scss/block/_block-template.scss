@@ -1,0 +1,13 @@
+@use "../style.scss" as st with (
+  $element-type: 'block',
+  $element-name: 'template' // ブロックの名称
+);
+
+/*
+ * ブロックの説明
+ */
+div##{st.$element-type}-#{st.$element-name} {
+
+
+
+}

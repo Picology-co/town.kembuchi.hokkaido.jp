@@ -1,0 +1,31 @@
+@use "../../../style.scss" as st with (
+  $element-type: 'field',
+  $element-name: 'screen-reader', // twigフィールドの名称
+  $element-field-type: 'ds' // フィールドタイプ
+);
+
+/*
+ * スクリーンリーダー
+ */
+div.#{st.$element-type} {
+  &.#{st.$element-type}--name-dynamic-twig-fieldnode-#{st.$element-name} {
+    &.#{st.$element-type}--type-#{st.$element-field-type} {
+
+      @include st.margin($t: 2.0rem, $b: 1.0rem);
+      @include st.flex-container($w: nowrap);
+      img[src$='.svg'] {
+        @include st.size($w: auto, $h: 2.0rem);
+      }
+      div {
+        cursor: pointer;
+        &#tts-reader {
+          @include st.margin($r: 0.25rem);
+        }
+        &#tts-stop {
+          @include st.margin($l: 0.25rem);
+        }
+      }
+    }
+  }
+}
+

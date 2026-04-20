@@ -1,0 +1,8 @@
+name: 'Template Event Handling'
+type: module
+description: 'イベント処理を使用するカスタムモジュールのテンプレートです。'
+core_version_requirement: ^10 || ^11 || ^12
+package: 'Examples'
+version: '1.0.0'
+dependencies:
+  - drupal:system

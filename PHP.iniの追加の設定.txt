@@ -1,0 +1,8 @@
+upload_max_filesize = 50M
+post_max_size = 50M
+apc.shm_size = 128M
+*** oauth2で必要
+extension=/home/towntohma/usr/local/php/extension/sodium.so
+*** マルチペイメント決済(外部決済)で必要
+session.cookie_samesite = None
+session.cookie_secure = true

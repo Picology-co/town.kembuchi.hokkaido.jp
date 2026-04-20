@@ -1,0 +1,20 @@
+@use "../../../style.scss" as st with (
+  $element-type: 'field',
+  $element-name: 'forward-button', // twigフィールドの名称
+  $element-field-type: 'ds' // フィールドタイプ
+);
+
+/*
+ * ページトップへ戻るボタン
+ */
+div.#{st.$element-type} {
+  &.#{st.$element-type}--name-dynamic-twig-fieldblock-content-#{st.$element-name} {
+    &.#{st.$element-type}--type-#{st.$element-field-type} {
+
+      div.forward-button {
+        @include st.font($w: 700);
+      }
+
+    }
+  }
+}

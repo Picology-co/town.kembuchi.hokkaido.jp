@@ -1,0 +1,8 @@
+template_form.template_form:
+  path: '/template_form'
+  defaults:
+    _controller: '\Drupal\template_form\Controller\TemplateFormController::renderForm'
+    _title: 'テンプレートフォーム'
+  requirements:
+    _role: 'manager+administrator' # アクセス制限
+    # _access: 'TRUE' # アクセス制限を無しにする場合
