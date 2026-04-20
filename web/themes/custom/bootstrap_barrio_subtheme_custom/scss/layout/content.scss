@@ -25,7 +25,7 @@ h1 {
 h2 {
   @include st.pos($d: inline-block);
   @include st.padding($t: 0.45em, $b: 0.45em, $l: 0.95em, $r: 0.95em);
-  @include st.font($s: 1.36rem);
+  @include st.font($s: 1.36rem, $w: 700);
   @include st.color($b: #d9e8cc);
   @include st.border($rtl: 100vh, $rtr: 100vh, $rbl: 1.0rem, $rbr: 100vh);
   box-shadow: 0 4px 0 #bfd2aa;
@@ -34,14 +34,14 @@ h2 {
 h3 {
   @include st.pos($d: inline-block);
   @include st.padding($t: 0.33em, $b: 0.33em, $l: 0.72em, $r: 0.72em);
-  @include st.font($s: 1.14rem);
+  @include st.font($s: 1.20rem, $w: 700);
   @include st.color($b: #f4e3af);
   @include st.border($rtl: 100vh, $rtr: 100vh, $rbl: 100vh, $rbr: 100vh);
 }
 
 h4 {
   @include st.pos($d: inline-flex, $a: center);
-  @include st.font($s: 0.98rem);
+  @include st.font($s: 1.0rem, $w: 700);
   gap: 0.45em;
   &::before {
     content: "";
@@ -58,6 +58,7 @@ h5 {
   @include st.padding($t: 0.2em, $b: 0.2em, $l: 0.6em, $r: 0.6em);
   @include st.color($b: #f3d7d9);
   @include st.border($rtl: 100vh, $rtr: 100vh, $rbl: 100vh, $rbr: 100vh, $o: hidden);
+  @include st.font($s: 1.0rem);
 }
 
 /*
