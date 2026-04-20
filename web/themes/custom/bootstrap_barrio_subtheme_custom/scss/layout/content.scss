@@ -24,13 +24,15 @@ h1 {
 }
 h2 {
   @include st.pos();
-  @include st.pos($d: inline-block);
+  @include st.pos($d: block);
   @include st.padding($b: 0.35em);
+  @include st.margin($l: 0.5rem);
   &::after {
     content: "";
     @include st.pos($p: relative, $l: 0, $b: 0);
     @include st.size($w: 100%, $h: 6px);
     @include st.color($b: #8ecae6);
+    @include st.margin($l: -0.5rem);
     @include st.border($rtl: 100vh, $rtr: 100vh, $rbl: 100vh, $rbr: 100vh, $o: hidden);
   }
 }

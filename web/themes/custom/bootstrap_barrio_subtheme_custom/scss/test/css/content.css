@@ -231,7 +231,7 @@ h2 {
 }
 h2 {
   position: relative;
-  display: inline-block;
+  display: block;
   top: auto;
   left: auto;
   bottom: auto;
@@ -247,6 +247,12 @@ h2 {
   padding-right: 0;
   padding-bottom: 0.35em;
   padding-left: 0;
+}
+h2 {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0.5rem;
 }
 h2::after {
   content: "";
@@ -278,6 +284,12 @@ h2::after {
   background-color: #8ecae6;
   mix-blend-mode: initial;
   filter: none;
+}
+h2::after {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: -0.5rem;
 }
 h2::after {
   border-width: 1px;
