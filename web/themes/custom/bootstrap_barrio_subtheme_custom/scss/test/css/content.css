@@ -218,18 +218,76 @@ h1 {
 
 h2 {
   position: relative;
+  display: block;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  right: auto;
+  transform: none;
+  z-index: 0;
+  text-align: left;
+  vertical-align: auto;
+  opacity: 1;
+}
+h2 {
+  position: relative;
   display: inline-block;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  right: auto;
+  transform: none;
+  z-index: 0;
+  text-align: left;
+  vertical-align: auto;
+  opacity: 1;
+}
+h2 {
+  padding-top: 0;
+  padding-right: 0;
   padding-bottom: 0.35em;
+  padding-left: 0;
 }
 h2::after {
   content: "";
-  position: absolute;
+}
+h2::after {
+  position: relative;
+  display: block;
+  top: auto;
   left: 0;
   bottom: 0;
+  right: auto;
+  transform: none;
+  z-index: 0;
+  text-align: left;
+  vertical-align: auto;
+  opacity: 1;
+}
+h2::after {
   width: 100%;
+  max-width: none;
+  min-width: none;
   height: 6px;
-  background: #8ecae6;
-  border-radius: 999px;
+  max-height: none;
+  min-height: none;
+  overflow: none;
+}
+h2::after {
+  color: #333333;
+  background-color: #8ecae6;
+  mix-blend-mode: initial;
+  filter: none;
+}
+h2::after {
+  border-width: 1px;
+  border-style: solid;
+  border-top-left-radius: 100vh;
+  border-top-right-radius: 100vh;
+  border-bottom-left-radius: 100vh;
+  border-bottom-right-radius: 100vh;
+  border-color: #333333;
+  overflow: hidden;
 }
 
 h3 {
