@@ -191,7 +191,6 @@ pre[id^=sf-dump] samp {
  * フロントページ
  */
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds p {
-  width: -moz-fit-content;
   width: fit-content;
   max-width: none;
   min-width: none;
@@ -240,8 +239,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   height: 100vh;
   max-height: 100rem;
   min-height: none;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media only screen and (min-width: 796px) and (max-width: 1016px) {
   div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.swiper-container div.swiper-wrapper div.swiper-slide div.slide-media img {
@@ -251,8 +249,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
     height: 100vh;
     max-height: none;
     min-height: none;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 }
 @media only screen and (max-width: 796px) {
@@ -263,8 +260,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
     height: 100vh;
     max-height: none;
     min-height: none;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 }
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.swiper-container div.filter-image {
@@ -299,8 +295,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   height: 100%;
   max-height: none;
   min-height: none;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.swiper-container div.filter-image img.swiper-filter-pc {
   position: relative;
@@ -352,8 +347,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   height: 100%;
   max-height: none;
   min-height: none;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.swiper-container div.filter-image img.swiper-filter-mobile {
   position: relative;

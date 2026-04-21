@@ -71,60 +71,27 @@ div.#{st.$element-type} {
         }
       }
 
-      div.frontpage-content {
-        @include st.margin($b: 10.0rem);
-        &__header {
-          @include st.margin($b: 10.0rem);
-          @include st.pos();
-          &__title {
-            @include st.pos($p: absolute, $t: 50%, $l: 50%, $tr: translate(-50%, -50%));
-            span {
-              @include st.color($c: #ffffff);
-              &.title {
-                @include st.font($s: 3.0rem, $w: 700);
-                @include st.padding($r: 2.0rem);
-                @include st.border-bottom($w: 2px, $c: #ffffff);
-                @include st.sp {
-                  @include st.font($s: 2.0rem, $w: 700);
-                }
-              }
-              &.subtitle {
-                @include st.pos($a: right);
-              }
-            }
+      div.box-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        min-height: 100vh;
+        flex-direction: column;
+        div.box {
+          width: 75px;
+          height: 75px;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &.green {
+              background-color: green;
           }
-        }
-        &__detail {
-          @include st.size($w: fit-content);
-          @include st.margin($l: auto, $r: auto, $b: 3.0rem);
-          &__block {
-              @include st.margin($l: auto, $r: auto);
-              @include st.size($w: fit-content);
-            &__section {
-              @include st.margin($b: 1.0rem);
-              @include st.size($w: fit-content);
-              h2 {
-                @include st.text();
-                @include st.pos($a: center);
-                @include st.margin($b: 1.25rem);
-                @include st.border($w: 0);
-              }
-              h3 {
-                @include st.border($w: 0);
-              }
-            }
+          &.blue {
+              background-color: blue;
           }
-        }
-        &__link {
-          @include st.pos($a: center);
-          a {
-            @include st.border($w: 2px, $rtl: 100vh, $rtr: 100vh, $rbl: 100vh, $rbr: 100vh, $o: hidden);
-            @include st.color($b: #ffffff);
-            @include st.padding($t: 0.5rem, $b: 0.5rem , $l: 1.5rem, $r: 1.5rem);
-            @include st.text();
-            span {
-              @include st.font($s: 1.5rem, $w: 700);
-            }
+          &.purple {
+              background-color: purple;
           }
         }
       }
