@@ -1,242 +1,251 @@
 global-styling:
-  version: VERSION
-  css:
-    component:
-      #######################################
-      # public libraries
-      #######################################
-      css/lib/swiper-bundle-8.4.7.min.css: {}
-      #css/lib/swiper-bundle-9.4.1.min.css: {}
-      #css/lib/swiper-bundle-10.3.1.min.css: {}
-      #css/lib/swiper-bundle-11.1.15.min.css: {}
-      #css/lib/swiper-bundle-11.2.10.min.css: {}
-      css/lib/modaal.min.css: {}
+    version: VERSION
+    css:
+        component:
+            #######################################
+            # public libraries
+            #######################################
+            css/lib/swiper-bundle-8.4.7.min.css: {}
+            #css/lib/swiper-bundle-9.4.1.min.css: {}
+            #css/lib/swiper-bundle-10.3.1.min.css: {}
+            #css/lib/swiper-bundle-11.1.15.min.css: {}
+            #css/lib/swiper-bundle-11.2.10.min.css: {}
+            css/lib/modaal.min.css: {}
 
-      #######################################
-      # External Fonts
-      #######################################
-      /webfont/NotoSansJP.css: {} # Noto Sans JP(ゴシック体)
-      /webfont/IBMPlexMono.css: {} # IBMPlexMono(英字等角ゴシック体)
-      #/webfont/BIZUDGothic.css: {} # BIZ UD Gothic(ゴシック体)
-      #/webfont/BIZUDPGothic.css: {} # BIZ UDP Gothic(ゴシック体)
-      #/webfont/IBMPlexSansJP.css: {} # IBM Plex Sans JP(ゴシック体)
-      #/webfont/SawarabiGothic.css: {} # Sawarabi Gothic(ゴシック体)
-      #/webfont/KosugiMaru.css: {} # Kosugi Maru(丸ゴシック体)
-      #/webfont/BIZUDMincho.css: {} # BIZ UD Mincho(明朝体)
-      #/webfont/BIZUDPMincho.css: {} # BIZ UDP Mincho(明朝体)
-      #/webfont/HinaMincho.css: {} # Hina Mincho(明朝体)
-      #/webfont/SawarabiMincho.css: {} # Sawarabi Mincho(明朝体)
-      #/webfont/KaiseiHarunoUmi.css: {} # Kaisei Haruno Umi(明朝体)
-      #/webfont/HachiMaruPop.css: {} # Machi Maru Pop(ポップ体)
-      #/webfont/RampartOne.css: {} # Rampart One(アート文字)
-      #/webfont/TrainOne.css: {} # Train One(アート文字)
-      #/webfont/AB-ikkyu.css: {} # AB ikkyu(アート文字)
-      #/webfont/AB-j-choki.css: {} # AB choki(アート文字)
-      #/webfont/AB-j-gu.css: {} # AB gu(アート文字)
-      #/webfont/AB-maruhanamaki.css: {} # AB maruhanamaki(アート文字)
-      #/webfont/AB-tegami.css: {} # AB tegami(アート文字)
-      #/webfont/AB-tori.css: {} # AB tori(アート文字)
-      #/webfont/AB-tsubaki.css: {} # AB tsubaki(アート文字)
-      #/webfont/AB-walk.css: {} # AB walk(アート文字)
-      #/webfont/ChiaroStd.css: {} # キアロ(アート文字)
-      #/webfont/Popuram-cute.css: {} # ポップラムキュート(アート文字)
-      #/webfont/TA-nasubi.css: {} # TAなすび(アート文字)
-      #/webfont/TA-shizuku.css: {}  # TAしずく(アート文字)
-      #/webfont/VDL-ADMin.css: {} # VDアドミーン(アート文字)
-      #/webfont/VDL-GigaMaru.css: {} # VDギガ丸(アート文字)
-      #/webfont/VDL-G-Mincho.css: {} # VD G明朝(アート文字)
-      #/webfont/VDL-KuroMincho.css: {} # VD黒明朝(アート文字)
-      #/webfont/VDL-LogoJrBlack.css: {} # VDロゴJRブラック(アート文字)
-      #/webfont/VDL-LogoMaruJr.css: {} # VDロゴ丸JR(アート文字)
-      #/webfont/ReggaeOne.css: {} # Reggae One(アート文字)
-      #/webfont/YuseiMagic.css: {} # Yusei Magic(アート文字)
-      #/webfont/ZenKurenaido.css: {} # Zen Kurenaido(アート文字)
-      #/webfont/AoboshiOne.css: {} # Aoboshi One(アート文字)
-      #/webfont/CherryBombOne.css: {} # Cherry Bomb One(アート文字)
-      #/webfont/ChocolateClassicalSans.css: {} # Chocolate Classical Sans(角ゴシック体)
-      #/webfont/Chokokutai.css: {} # Chokokutai(アート文字)
-      #/webfont/DarumadropOne.css: {} # Darumadrop One(アート文字)
-      #/webfont/DelaGothicOne.css: {} # Dela Gothic One One(ゴシック体)
-      #/webfont/HiMelody.css: {} # Hi Melody One(アート文字)
-      #/webfont/KaiseiDecol.css: {} # Kaisei Decol(アート文字)
-      #/webfont/KaiseiOpti.css: {} # Kaisei Opti(アート文字)
-      #/webfont/KaiseiTokumin.css: {} # Kaisei Tokumin(明朝体)
-      #/webfont/MochiyPopOne.css: {} # Mochiy Pop One(アート文字)
-      #/webfont/MonomaniacOne.css: {} # Monomaniac One(アート文字)
-      #/webfont/NewTegomin.css: {} # New Tegomin(アート文字)
-      #/webfont/PaletteMosaic.css: {} # Palette Mosaic(アート文字)
-      #/webfont/PottaOne.css: {} # Potta One(アート文字)
-      #/webfont/Rock3D.css: {} # Rock3D(アート文字)
-      #/webfont/RocknRollOne.css: {} # Rockn Roll One(アート文字)
-      #/webfont/Shizuru.css: {} # Shizuru(アート文字)
-      #/webfont/SlacksideOne.css: {} # Slackside One(アート文字)
-      #/webfont/Stick.css: {} # Stick(アート文字)
-      #/webfont/Yomogi.css: {} # Yomogi(アート文字)
-      #/webfont/YujiBoku.css: {} # YujiBoku(アート文字)
-      #/webfont/YujiHentaiganaAkari.css: {} # YujiHentaiganaAkari(アート文字)
-      #/webfont/YujiHentaiganaAkebono.css: {} # YujiHentaiganaAkebono(アート文字)
-      #/webfont/YujiMai.css: {} # YujiMai(アート文字)
-      #/webfont/ZenAntiqueSoft.css: {} # Zen Antique Soft(明朝体)
-      #/webfont/KiwiMaru.css: {}
-      #/webfont/KleeOne.css: {}
-      #/webfont/ShipporiAntique.css: {}
-      #/webfont/ShipporiMincho.css: {}
-      #/webfont/YujiSyuku.css: {}
-      #/webfont/ZenAntique.css: {}
-      #/webfont/ZenKakuGothicAntique.css: {}
-      #/webfont/ZenKakuGothicNew.css: {}
-      #/webfont/ZenMaruGothic.css: {}
-      #/webfont/ZenOldMincho.css: {}
+            #######################################
+            # External Fonts
+            #######################################
+            /webfont/NotoSansJP.css: {} # Noto Sans JP(ゴシック体)
+            /webfont/IBMPlexMono.css: {} # IBMPlexMono(英字等角ゴシック体)
+            #/webfont/BIZUDGothic.css: {} # BIZ UD Gothic(ゴシック体)
+            #/webfont/BIZUDPGothic.css: {} # BIZ UDP Gothic(ゴシック体)
+            #/webfont/IBMPlexSansJP.css: {} # IBM Plex Sans JP(ゴシック体)
+            #/webfont/SawarabiGothic.css: {} # Sawarabi Gothic(ゴシック体)
+            #/webfont/KosugiMaru.css: {} # Kosugi Maru(丸ゴシック体)
+            #/webfont/BIZUDMincho.css: {} # BIZ UD Mincho(明朝体)
+            #/webfont/BIZUDPMincho.css: {} # BIZ UDP Mincho(明朝体)
+            #/webfont/HinaMincho.css: {} # Hina Mincho(明朝体)
+            #/webfont/SawarabiMincho.css: {} # Sawarabi Mincho(明朝体)
+            #/webfont/KaiseiHarunoUmi.css: {} # Kaisei Haruno Umi(明朝体)
+            #/webfont/HachiMaruPop.css: {} # Machi Maru Pop(ポップ体)
+            #/webfont/RampartOne.css: {} # Rampart One(アート文字)
+            #/webfont/TrainOne.css: {} # Train One(アート文字)
+            #/webfont/AB-ikkyu.css: {} # AB ikkyu(アート文字)
+            #/webfont/AB-j-choki.css: {} # AB choki(アート文字)
+            #/webfont/AB-j-gu.css: {} # AB gu(アート文字)
+            #/webfont/AB-maruhanamaki.css: {} # AB maruhanamaki(アート文字)
+            #/webfont/AB-tegami.css: {} # AB tegami(アート文字)
+            #/webfont/AB-tori.css: {} # AB tori(アート文字)
+            #/webfont/AB-tsubaki.css: {} # AB tsubaki(アート文字)
+            #/webfont/AB-walk.css: {} # AB walk(アート文字)
+            #/webfont/ChiaroStd.css: {} # キアロ(アート文字)
+            #/webfont/Popuram-cute.css: {} # ポップラムキュート(アート文字)
+            #/webfont/TA-nasubi.css: {} # TAなすび(アート文字)
+            #/webfont/TA-shizuku.css: {}  # TAしずく(アート文字)
+            #/webfont/VDL-ADMin.css: {} # VDアドミーン(アート文字)
+            #/webfont/VDL-GigaMaru.css: {} # VDギガ丸(アート文字)
+            #/webfont/VDL-G-Mincho.css: {} # VD G明朝(アート文字)
+            #/webfont/VDL-KuroMincho.css: {} # VD黒明朝(アート文字)
+            #/webfont/VDL-LogoJrBlack.css: {} # VDロゴJRブラック(アート文字)
+            #/webfont/VDL-LogoMaruJr.css: {} # VDロゴ丸JR(アート文字)
+            #/webfont/ReggaeOne.css: {} # Reggae One(アート文字)
+            #/webfont/YuseiMagic.css: {} # Yusei Magic(アート文字)
+            #/webfont/ZenKurenaido.css: {} # Zen Kurenaido(アート文字)
+            #/webfont/AoboshiOne.css: {} # Aoboshi One(アート文字)
+            #/webfont/CherryBombOne.css: {} # Cherry Bomb One(アート文字)
+            #/webfont/ChocolateClassicalSans.css: {} # Chocolate Classical Sans(角ゴシック体)
+            #/webfont/Chokokutai.css: {} # Chokokutai(アート文字)
+            #/webfont/DarumadropOne.css: {} # Darumadrop One(アート文字)
+            #/webfont/DelaGothicOne.css: {} # Dela Gothic One One(ゴシック体)
+            #/webfont/HiMelody.css: {} # Hi Melody One(アート文字)
+            #/webfont/KaiseiDecol.css: {} # Kaisei Decol(アート文字)
+            #/webfont/KaiseiOpti.css: {} # Kaisei Opti(アート文字)
+            #/webfont/KaiseiTokumin.css: {} # Kaisei Tokumin(明朝体)
+            #/webfont/MochiyPopOne.css: {} # Mochiy Pop One(アート文字)
+            #/webfont/MonomaniacOne.css: {} # Monomaniac One(アート文字)
+            #/webfont/NewTegomin.css: {} # New Tegomin(アート文字)
+            #/webfont/PaletteMosaic.css: {} # Palette Mosaic(アート文字)
+            #/webfont/PottaOne.css: {} # Potta One(アート文字)
+            #/webfont/Rock3D.css: {} # Rock3D(アート文字)
+            #/webfont/RocknRollOne.css: {} # Rockn Roll One(アート文字)
+            #/webfont/Shizuru.css: {} # Shizuru(アート文字)
+            #/webfont/SlacksideOne.css: {} # Slackside One(アート文字)
+            #/webfont/Stick.css: {} # Stick(アート文字)
+            #/webfont/Yomogi.css: {} # Yomogi(アート文字)
+            #/webfont/YujiBoku.css: {} # YujiBoku(アート文字)
+            #/webfont/YujiHentaiganaAkari.css: {} # YujiHentaiganaAkari(アート文字)
+            #/webfont/YujiHentaiganaAkebono.css: {} # YujiHentaiganaAkebono(アート文字)
+            #/webfont/YujiMai.css: {} # YujiMai(アート文字)
+            #/webfont/ZenAntiqueSoft.css: {} # Zen Antique Soft(明朝体)
+            #/webfont/KiwiMaru.css: {}
+            #/webfont/KleeOne.css: {}
+            #/webfont/ShipporiAntique.css: {}
+            #/webfont/ShipporiMincho.css: {}
+            #/webfont/YujiSyuku.css: {}
+            #/webfont/ZenAntique.css: {}
+            #/webfont/ZenKakuGothicAntique.css: {}
+            #/webfont/ZenKakuGothicNew.css: {}
+            #/webfont/ZenMaruGothic.css: {}
+            #/webfont/ZenOldMincho.css: {}
 
-    theme:
-      #scss/block/common
-      scss/block/common/alert-wrapper.min.css: {}
-      scss/block/common/googlemap.min.css: {}
-      scss/block/common/youtube.min.css: {}
-      scss/block/common/switch-fontsize.min.css: {}
-      scss/block/common/switch-darkmode.min.css: {}
+        theme:
+            #scss/block/common
+            scss/block/common/alert-wrapper.min.css: {}
+            scss/block/common/googlemap.min.css: {}
+            scss/block/common/youtube.min.css: {}
+            scss/block/common/switch-fontsize.min.css: {}
+            scss/block/common/switch-darkmode.min.css: {}
 
-      #scss/block/custom-block
-      scss/block/custom-block/forward-button.full.min.css: {}
-      scss/block/custom-block/custom-footer.full.min.css: {}
-      scss/block/custom-block/custom-footer-mobile.full.min.css: {}
-      scss/block/custom-block/mobile-menu.full.min.css: {}
+            #scss/block/custom-block
+            scss/block/custom-block/forward-button.full.min.css: {}
+            scss/block/custom-block/custom-footer.full.min.css: {}
+            scss/block/custom-block/custom-footer-mobile.full.min.css: {}
+            scss/block/custom-block/mobile-menu.full.min.css: {}
 
-      #scss/block/form
-      scss/block/form/custom-search-form.min.css: {}
+            #scss/block/form
+            scss/block/form/custom-search-form.min.css: {}
 
-      #scss/block/node
-      scss/block/node/public-module.period-control.min.css: {}
+            #scss/block/node
+            scss/block/node/public-module.period-control.min.css: {}
 
-      #scss/block/taxonomy-term
+            #scss/block/taxonomy-term
 
-      #scss/block/twig-field/node
-      scss/block/twig-field/node/screen-reader.ds.min.css: {}
-      scss/block/twig-field/node/body-convert-to-hankaku.ds.min.css: {}
-      scss/block/twig-field/node/blog.ds.min.css: {}
-      scss/block/twig-field/node/custom-header-node.ds.min.css: {}
+            #scss/block/twig-field/node
+            scss/block/twig-field/node/screen-reader.ds.min.css: {}
+            scss/block/twig-field/node/body-convert-to-hankaku.ds.min.css: {}
+            scss/block/twig-field/node/blog.ds.min.css: {}
+            scss/block/twig-field/node/custom-header-node.ds.min.css: {}
 
-      #scss/block/twig-field/node/style-group
+            #scss/block/twig-field/node/style-group
 
-      #scss/block/twig-field/taxonomy-term
-      scss/block/twig-field/taxonomy-term/company.ds.min.css: {}
-      scss/block/twig-field/taxonomy-term/normally-node-list.ds.min.css: {}
-      scss/block/twig-field/taxonomy-term/custom-taxonomy-term-label.ds.min.css: {}
-      scss/block/twig-field/taxonomy-term/classification-1.ds.min.css: {}
-      scss/block/twig-field/taxonomy-term/classification-2.ds.min.css: {}
-      scss/block/twig-field/taxonomy-term/custom-header-taxonomy.ds.min.css: {}
+            #scss/block/twig-field/taxonomy-term
+            scss/block/twig-field/taxonomy-term/company.ds.min.css: {}
+            scss/block/twig-field/taxonomy-term/normally-node-list.ds.min.css:
+                {}
+            scss/block/twig-field/taxonomy-term/custom-taxonomy-term-label.ds.min.css:
+                {}
+            scss/block/twig-field/taxonomy-term/classification-1.ds.min.css: {}
+            scss/block/twig-field/taxonomy-term/classification-2.ds.min.css: {}
+            scss/block/twig-field/taxonomy-term/custom-header-taxonomy.ds.min.css:
+                {}
 
-      #scss/block/twig-field/taxonomy-term/style-group
-      scss/block/twig-field/taxonomy-term/style-group/common-style.ds.min.css: {}
+            #scss/block/twig-field/taxonomy-term/style-group
+            scss/block/twig-field/taxonomy-term/style-group/common-style.ds.min.css:
+                {}
 
-      #scss/block/twig-field/block-content
-      scss/block/twig-field/block-content/frontpage.ds.min.css: {}
-      scss/block/twig-field/block-content/custom-footer.ds.min.css: {}
-      scss/block/twig-field/block-content/custom-footer-mobile.ds.min.css: {}
-      scss/block/twig-field/block-content/mobile-menu.ds.min.css: {}
-      scss/block/twig-field/block-content/forward-button.ds.min.css: {}
-      scss/block/twig-field/block-content/custom-header-custom-block.ds.min.css: {}
+            #scss/block/twig-field/block-content
+            scss/block/twig-field/block-content/frontpage.ds.min.css: {}
+            scss/block/twig-field/block-content/custom-footer.ds.min.css: {}
+            scss/block/twig-field/block-content/custom-footer-mobile.ds.min.css:
+                {}
+            scss/block/twig-field/block-content/mobile-menu.ds.min.css: {}
+            scss/block/twig-field/block-content/forward-button.ds.min.css: {}
+            scss/block/twig-field/block-content/custom-header-custom-block.ds.min.css:
+                {}
 
-      #scss/block/twig-field/block-content/style-group
+            #scss/block/twig-field/block-content/style-group
 
-      #scss/block/twig-field/user
+            #scss/block/twig-field/user
 
-      #scss/block/twig-field/user/style-group
+            #scss/block/twig-field/user/style-group
 
-      #scss/block/view
-      scss/block/view/custom-view-navigation.block_1.min.css: {}
-      scss/block/view/news.block_1.min.css: {}
-      scss/block/view/news.page_1.min.css: {}
-      scss/block/view/taxonomy-term.page_1.min.css: {}
-      scss/block/view/sitemap.page_1.min.css: {}
+            #scss/block/view
+            scss/block/view/custom-view-navigation.block_1.min.css: {}
+            scss/block/view/news.block_1.min.css: {}
+            scss/block/view/news.page_1.min.css: {}
+            scss/block/view/taxonomy-term.page_1.min.css: {}
+            scss/block/view/sitemap.page_1.min.css: {}
 
-      #scss/block/view/common
-      scss/block/view/common/nav.pagination-heading.min.css: {}
-      scss/block/view/common/pagerer-container.min.css: {}
+            #scss/block/view/common
+            scss/block/view/common/nav.pagination-heading.min.css: {}
+            scss/block/view/common/pagerer-container.min.css: {}
 
-      #scss/block/view/eva
-      scss/block/view/eva/pickup-content.entity_view_1.min.css: {}
-      scss/block/view/eva/taxonomy-term-list.entity_view_1.min.css: {}
+            #scss/block/view/eva
+            scss/block/view/eva/pickup-content.entity_view_1.min.css: {}
+            scss/block/view/eva/taxonomy-term-list.entity_view_1.min.css: {}
 
-      #scss/block/user
+            #scss/block/user
 
-      #scss/block
-      scss/block/bootstrap-barrio-subtheme-custom-content.min.css: {}
-      scss/block/custom-footer.min.css: {}
-      scss/block/custom-view-navigation.min.css: {}
-      scss/block/forward-button.min.css: {}
-      scss/block/custom-footer-mobile.min.css: {}
-      scss/block/mobile-menu.min.css: {}
+            #scss/block
+            scss/block/bootstrap-barrio-subtheme-custom-content.min.css: {}
+            scss/block/custom-footer.min.css: {}
+            scss/block/custom-view-navigation.min.css: {}
+            scss/block/forward-button.min.css: {}
+            scss/block/custom-footer-mobile.min.css: {}
+            scss/block/mobile-menu.min.css: {}
 
-      #scss/layout
-      scss/layout/content.min.css: {}
-      scss/layout/site.min.css: {}
+            #scss/layout
+            scss/layout/content.min.css: {}
+            scss/layout/site.min.css: {}
 
-      #scss/nav
+            #scss/nav
 
-      #scss/lib
+            #scss/lib
 
-      #scss/lib/jquery.simplePagination.min.css: {} #ページャーを使う時
+            #scss/lib/jquery.simplePagination.min.css: {} #ページャーを使う時
 
 #  dependencies:
 #    - core/jquery #Just to be safe
 
 js-header:
-  header: true
-  js:
-    #js/lib/jquery-3.7.1.min.js: {}
-    js/lib/jquery-4.0.0-rc.1.min.js: {}
+    header: true
+    js:
+        #js/lib/jquery-3.7.1.min.js: {}
+        js/lib/jquery-4.0.0-rc.1.min.js: {}
 
 js-footer:
-  js:
-    js/lib/js.cookie.min.js: {}
-    #js/lib/modaal.min.js: {}
-    js/lib/swiper-bundle-8.4.7.min.js: {}
-    #js/lib/swiper-bundle-9.4.1.min.js: {}
-    #js/lib/swiper-bundle-10.3.1.min.js: {}
-    #js/lib/swiper-bundle-11.1.15.min.js: {}
-    #js/lib/swiper-bundle-11.2.10.min.js: {}
-    js/lib/jquery.touchSwipe-1.6.18.min.js: {} #jqueryでスワイプを有効にする
-    #js/lib/jquery.simplePagination-1.6.min.js: {} #ページャーを実装するときに使用
-    js/lib/gsap-3.15.0.min.js: {} #GSAPアニメーションライブラリ
-    js/add-linktype.js: {}
-    js/exec-swiper.js: {}
-    js/get-filesize.js: {}
-    js/forward-button.js: {}
-    js/screen-reader.js: {}
-    js/switch-fontsize.js: {}
-    js/switch-darkmode.js: {}
-    js/add-imgalt.js: {}
-    js/open-menu.js: {} #jqueryでスワイプ処理を追加するときのサンプルコード
-    js/open-accessibility.js: {} # アクセシビリティメニューの表示を制御する
-    #js/pagination.js: {} #ページャーを実装するときに使用
+    js:
+        js/lib/js.cookie.min.js: {}
+        #js/lib/modaal.min.js: {}
+        js/lib/swiper-bundle-8.4.7.min.js: {}
+        #js/lib/swiper-bundle-9.4.1.min.js: {}
+        #js/lib/swiper-bundle-10.3.1.min.js: {}
+        #js/lib/swiper-bundle-11.1.15.min.js: {}
+        #js/lib/swiper-bundle-11.2.10.min.js: {}
+        js/lib/jquery.touchSwipe-1.6.18.min.js: {} #jqueryでスワイプを有効にする
+        #js/lib/jquery.simplePagination-1.6.min.js: {} #ページャーを実装するときに使用
+        js/lib/gsap-3.15.0.min.js: {} #GSAPアニメーションライブラリ
+        js/add-linktype.js: {}
+        js/exec-swiper.js: {}
+        js/get-filesize.js: {}
+        js/forward-button.js: {}
+        js/screen-reader.js: {}
+        js/switch-fontsize.js: {}
+        js/switch-darkmode.js: {}
+        js/add-imgalt.js: {}
+        js/open-menu.js: {} #jqueryでスワイプ処理を追加するときのサンプルコード
+        js/open-accessibility.js: {} # アクセシビリティメニューの表示を制御する
+        #js/pagination.js: {} #ページャーを実装するときに使用
+        js/frontpage-gsap-animation.js: {}
 
 bootstrap:
-  js:
-    #/libraries/popper.js/dist/umd/popper.min.js: { weight: -19 }
-    #/libraries/bootstrap/dist/js/bootstrap.min.js: { weight: -20 }
-    /libraries/popper.js/dist/umd/popper.min.js: {}
-    /libraries/bootstrap/dist/js/bootstrap.min.js: {}
-  css:
-    component:
-      /libraries/bootstrap/dist/css/bootstrap.min.css: {}
-  dependencies:
-    - core/popperjs
+    js:
+        #/libraries/popper.js/dist/umd/popper.min.js: { weight: -19 }
+        #/libraries/bootstrap/dist/js/bootstrap.min.js: { weight: -20 }
+        /libraries/popper.js/dist/umd/popper.min.js: {}
+        /libraries/bootstrap/dist/js/bootstrap.min.js: {}
+    css:
+        component:
+            /libraries/bootstrap/dist/css/bootstrap.min.css: {}
+    dependencies:
+        - core/popperjs
 
 bootstrap_cdn:
-  js:
-    //cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js: {}
-  css:
-    component:
-      //cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css: {}
-  dependencies:
-    - core/popperjs
+    js:
+        //cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js:
+            {}
+    css:
+        component:
+            //cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css:
+                {}
+    dependencies:
+        - core/popperjs
 color.preview:
-  version: VERSION
-  css:
-    theme:
-      color/preview.css: {}
-  js:
-    color/preview.js: {}
-  dependencies:
-    - color/drupal.color
+    version: VERSION
+    css:
+        theme:
+            color/preview.css: {}
+    js:
+        color/preview.js: {}
+    dependencies:
+        - color/drupal.color
