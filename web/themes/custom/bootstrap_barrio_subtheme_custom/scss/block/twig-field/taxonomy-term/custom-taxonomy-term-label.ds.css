@@ -294,5 +294,5 @@ div.field.field--name-dynamic-twig-fieldtaxonomy-term-custom-taxonomy-term-label
   mix-blend-mode: unset;
   background-attachment: scroll;
   background-origin: border-box;
-  background-image: url("/sites/default/files/image/general/title-background.avif");
+  background-image: url(/sites/default/files/image/general/title-background.avif);
 }

@@ -18,14 +18,18 @@
     font-family: $f;
     font-style: $y;
     font-feature-settings: $ffs;
-    @if $h == none {
+
+    @if $h ==none {
       line-height: calc($s * 1.8);
-    } @else {
+    }
+    @else {
       line-height: $h;
     }
-    @if $l == none {
+
+    @if $l ==none {
       letter-spacing: calc($s * 0.01);
-    } @else {
+    }
+    @else {
       letter-spacing: $l;
     }
   }
@@ -83,7 +87,13 @@
     mix-blend-mode: $mixbm;
     background-attachment: $a;
     background-origin: $o;
-    background-image: if($img == none, none, url('#{$img}'));
+
+    @if $img ==none {
+      background-image: none;
+    }
+    @else {
+      background-image: url(#{$img});
+    }
   }
 }
 
@@ -191,8 +201,9 @@
     -ms-overflow-style: none;
     /*Firefoxへの対応*/
     scrollbar-width: none;
+
     /*Google Chrome、Safariへの対応*/
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
       display: none;
     }
   }
@@ -200,12 +211,21 @@
 
 // リスト
 @mixin list($t: none, $p: outside, $img: none) {
+
   & {
     list-style-type: $t;
     list-style-position: $p;
-    list-style-image: if($img == none, none, url('#{$img}'));
+
+    @if $img ==none {
+      list-style-image: none;
+    }
+    @else {
+      list-style-image: url(#{$img});
+    }
+
     li {
       list-style-type: $t;
     }
+
   }
 }
