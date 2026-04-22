@@ -71,27 +71,12 @@ div.#{st.$element-type} {
         }
       }
 
-      div.box-list {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        min-height: 100vh;
-        flex-direction: column;
-        div.box {
-          width: 75px;
-          height: 75px;
-          border-radius: 12px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          &.green {
-              background-color: green;
-          }
-          &.blue {
-              background-color: blue;
-          }
-          &.purple {
-              background-color: purple;
+      // GSAPアニメーション
+      div.animation {
+        &__step1 {
+          @include st.pos();
+          &__image {
+            @include st.pos($p: absolute);
           }
         }
       }

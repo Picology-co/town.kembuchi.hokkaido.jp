@@ -398,27 +398,29 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
     opacity: 1;
   }
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.box-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  min-height: 100vh;
-  flex-direction: column;
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__step1 {
+  position: relative;
+  display: block;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  right: auto;
+  transform: none;
+  z-index: 0;
+  text-align: left;
+  vertical-align: auto;
+  opacity: 1;
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.box-list div.box {
-  width: 75px;
-  height: 75px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.box-list div.box.green {
-  background-color: green;
-}
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.box-list div.box.blue {
-  background-color: blue;
-}
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.box-list div.box.purple {
-  background-color: purple;
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__step1__image {
+  position: absolute;
+  display: block;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  right: auto;
+  transform: none;
+  z-index: 0;
+  text-align: left;
+  vertical-align: auto;
+  opacity: 1;
 }
