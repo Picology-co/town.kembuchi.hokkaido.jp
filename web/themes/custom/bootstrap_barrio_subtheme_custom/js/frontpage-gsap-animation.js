@@ -2,9 +2,9 @@
 
 // ステップ1
 gsap.from("div.animation__step1__image", {
-    y: -50,
+    y: -1024,
     opacity: 0,
-    duration: 1.2,
+    duration: 3.0,
     ease: "power2.out",
-    stagger: 0.2     // 0.2秒ずつずらして表示
+    stagger: 3.0     // 0.2秒ずつずらして表示
 });
