@@ -1,9 +1,10 @@
 // フロントページのGSAPアニメーション
 
-const tl = gsap.timeline();
-
-gsap.to(".green", { rotation: 360, x: 400, duration: 2 });
-
-gsap.from(".purple", { rotation: -360, x: -200, duration: 3 });
-
-gsap.fromTo(".blue", { x: -100 }, { rotation: 360, x: 800, duration: 5 });
+// ステップ1
+gsap.from("div.animation__step1__image", {
+    y: -50,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power2.out",
+    stagger: 0.2     // 0.2秒ずつずらして表示
+});
