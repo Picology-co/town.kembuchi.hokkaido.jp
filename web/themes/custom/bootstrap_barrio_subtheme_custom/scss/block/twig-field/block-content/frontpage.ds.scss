@@ -75,6 +75,7 @@ div.#{st.$element-type} {
       div.animation {
         &__step1 {
           @include st.pos();
+          @include st.size($w: 100vw, $h: 100vh);
           &__image {
             @include st.pos($p: absolute);
           }

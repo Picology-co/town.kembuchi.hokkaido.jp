@@ -411,6 +411,15 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   vertical-align: auto;
   opacity: 1;
 }
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__step1 {
+  width: 100vw;
+  max-width: none;
+  min-width: none;
+  height: 100vh;
+  max-height: none;
+  min-height: none;
+  overflow: none;
+}
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__step1__image {
   position: absolute;
   display: block;
