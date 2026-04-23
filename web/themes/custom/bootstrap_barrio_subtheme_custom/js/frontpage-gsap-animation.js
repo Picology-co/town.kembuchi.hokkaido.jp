@@ -3,27 +3,10 @@
 const PAGE_W = 280;
 const book = "#book";
 const cover = "#cover";
-const leftBase = ".left-base";
-const leftBaseShadow = ".left-base-shadow";
 const pages = gsap.utils.toArray(".page");
 
 gsap.set(book, {
     x: -PAGE_W / 2
-});
-
-// 修正点:
-// 1ページ目は scaleX ではなく、背を支点にして edge-on に畳んでおく
-gsap.set(leftBase, {
-    rotationY: 89.8,
-    rotationX: 0,
-    z: 0,
-    y: 0,
-    x: 0,
-    transformOrigin: "100% 50%"
-});
-
-gsap.set(leftBaseShadow, {
-    opacity: 0
 });
 
 pages.forEach((page, i) => {
@@ -47,51 +30,6 @@ gsap.set(cover, {
     zIndex: 60,
     transformOrigin: "0% 50%"
 });
-
-function revealLeftBase() {
-    const tl = gsap.timeline();
-
-    tl.to(leftBase, {
-    rotationY: 72,
-    z: 2,
-    duration: 0.16,
-    ease: "sine.out"
-    });
-
-    tl.to(leftBaseShadow, {
-    opacity: 0.10,
-    duration: 0.16,
-    ease: "sine.out"
-    }, "<");
-
-    tl.to(leftBase, {
-    rotationY: 18,
-    z: 6,
-    duration: 0.28,
-    ease: "power2.out"
-    });
-
-    tl.to(leftBaseShadow, {
-    opacity: 0.16,
-    duration: 0.28,
-    ease: "power2.out"
-    }, "<");
-
-    tl.to(leftBase, {
-    rotationY: 0,
-    z: 0,
-    duration: 0.24,
-    ease: "power2.out"
-    });
-
-    tl.to(leftBaseShadow, {
-    opacity: 0,
-    duration: 0.24,
-    ease: "power2.out"
-    }, "<");
-
-    return tl;
-}
 
 function flipCover3D(target, zIndex) {
     const shadowEl = document.querySelector(`${target} .cover-shadow`);
@@ -267,10 +205,6 @@ master.to(book, {
     duration: 1.10,
     ease: "power2.out"
 }, 0);
-
-// 修正点:
-// 1ページ目は横に生やさず、背から回転して現れる
-master.add(revealLeftBase(), 0.10);
 
 master.add(flipCover3D(cover, 100), 0.04);
 
