@@ -438,9 +438,6 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   transform: translateY(170px);
   pointer-events: none;
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view {
-  transform: rotateX(-60deg);
-}
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book {
   position: relative;
   width: var(--spread-w);

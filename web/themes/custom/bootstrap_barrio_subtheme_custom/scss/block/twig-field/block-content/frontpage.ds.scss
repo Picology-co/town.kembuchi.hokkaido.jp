@@ -121,7 +121,6 @@ div.#{st.$element-type} {
             pointer-events: none;
           }
           &__view {
-            transform: rotateX(-60deg);
             &__book {
               position: relative;
               width: var(--spread-w);
