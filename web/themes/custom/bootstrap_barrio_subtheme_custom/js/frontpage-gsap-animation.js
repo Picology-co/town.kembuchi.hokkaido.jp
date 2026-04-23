@@ -118,7 +118,7 @@ function flipCover3D(target, zIndex) {
 
 function flipPage3D(target, zIndex, options = {}) {
     const {
-    liftZ = 20,
+    liftZ = 6,
     liftY = -7,
     tiltX = -4,
     times = [0.16, 0.30, 0.24, 0.10]
