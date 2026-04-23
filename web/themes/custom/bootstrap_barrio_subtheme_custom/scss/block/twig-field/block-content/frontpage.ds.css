@@ -402,7 +402,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   --page-w: 280px;
   --page-h: 390px;
   --book-w: calc(var(--page-w) * 2);
-  --spine-w: 14px;
+  --spine-w: 8px;
   --paper-shadow: rgba(61, 44, 24, 0.10);
   --paper-line: rgba(90, 70, 45, 0.06);
   --cover-main: #8d6a74;
