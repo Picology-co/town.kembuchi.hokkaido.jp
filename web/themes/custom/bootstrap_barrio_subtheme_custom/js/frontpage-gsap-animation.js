@@ -13,7 +13,8 @@ pages.forEach((page, i) => {
     gsap.set(page, {
     rotationY: 0,
     rotationX: 0,
-    z: pages.length - i,
+        /* z: pages.length - i, */
+    z: 0,
     y: 0,
     x: 0,
     zIndex: 20 - i,
@@ -24,6 +25,7 @@ pages.forEach((page, i) => {
 gsap.set(cover, {
     rotationY: 0,
     rotationX: 0,
+    /* z: 18, */
     z: 0,
     y: 0,
     x: 0,
