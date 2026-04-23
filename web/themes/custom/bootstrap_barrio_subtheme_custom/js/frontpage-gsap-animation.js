@@ -121,7 +121,7 @@ function flipPage3D(target, zIndex, options = {}) {
     liftZ = 20,
     liftY = -7,
     tiltX = -4,
-    times = [0.12, 0.22, 0.18, 0.10]
+    times = [0.16, 0.30, 0.24, 0.10]
     } = options;
 
     const shadowEl = document.querySelector(`${target} .page-shadow`);
