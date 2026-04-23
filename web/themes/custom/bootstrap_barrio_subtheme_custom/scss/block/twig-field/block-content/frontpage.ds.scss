@@ -151,6 +151,7 @@ div.#{st.$element-type} {
                 transform: translateZ(1px);
               }
               > div.left-base {
+                display: none;
                 position: absolute;
                 top: 0;
                 width: var(--page-w);

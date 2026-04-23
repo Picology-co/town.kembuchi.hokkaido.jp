@@ -464,6 +464,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   transform: translateZ(1px);
 }
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.left-base {
+  display: none;
   position: absolute;
   top: 0;
   width: var(--page-w);
