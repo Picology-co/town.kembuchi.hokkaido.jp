@@ -148,8 +148,8 @@ function flipPage3D(target, zIndex, options = {}) {
     tl.to(target, {
     rotationY: -82,
     rotationX: tiltX,
-    z: liftZ * 0.35,
-    y: liftY * 0.35,
+    z: liftZ * 0.18,
+    y: liftY * 0.18,
     x: 0,
     duration: times[1],
     ease: "power2.inOut"
