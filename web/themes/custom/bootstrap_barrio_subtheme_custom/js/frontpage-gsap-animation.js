@@ -164,7 +164,7 @@ function flipPage3D(target, zIndex, options = {}) {
     tl.to(target, {
     rotationY: -168,
     rotationX: -0.8,
-    z: 5,
+    z: 0,
     y: -1,
     x: 0,
     duration: times[2],
