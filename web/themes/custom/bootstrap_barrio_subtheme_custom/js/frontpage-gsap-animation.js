@@ -210,7 +210,7 @@ master.add(flipCover3D(cover, 100), 0.04);
 
 master.add(
     flipPage3D(".page-1", 61, {
-    liftZ: 18,
+    liftZ: 0,
     liftY: -6,
     tiltX: -3.5,
     times: [0.16, 0.30, 0.24, 0.10]
@@ -220,7 +220,7 @@ master.add(
 
 master.add(
     flipPage3D(".page-2", 62, {
-    liftZ: 18,
+    liftZ: 0,
     liftY: -6,
     tiltX: -3.5,
     times: [0.16, 0.30, 0.24, 0.10]
@@ -230,7 +230,7 @@ master.add(
 
 master.add(
     flipPage3D(".page-3", 63, {
-    liftZ: 18,
+    liftZ: 0,
     liftY: -6,
     tiltX: -3.5,
     times: [0.16, 0.30, 0.24, 0.10]
@@ -240,7 +240,7 @@ master.add(
 
 master.add(
     flipPage3D(".page-4", 64, {
-    liftZ: 20,
+    liftZ: 0,
     liftY: -7,
     tiltX: -4,
     times: [0.16, 0.30, 0.24, 0.10]
@@ -250,7 +250,7 @@ master.add(
 
 master.add(
     flipPage3D(".page-5", 65, {
-    liftZ: 24,
+    liftZ: 0,
     liftY: -8,
     tiltX: -4.5,
     times: [0.16, 0.30, 0.24, 0.10]
