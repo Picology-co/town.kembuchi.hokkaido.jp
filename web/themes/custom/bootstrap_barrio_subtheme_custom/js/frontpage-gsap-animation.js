@@ -168,8 +168,7 @@ function flipPage3D(target, zIndex, options = {}) {
     y: -1,
     x: 0,
     duration: times[2],
-        /*     ease: "power2.in" */
-    ease: "power1.inOut"
+    ease: "power2.in"
     });
 
     tl.to(shadowEl, {
