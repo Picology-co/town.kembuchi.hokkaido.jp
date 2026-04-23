@@ -13,8 +13,7 @@ pages.forEach((page, i) => {
     gsap.set(page, {
     rotationY: 0,
     rotationX: 0,
-        /* z: pages.length - i, */
-    z: 0,
+    z: pages.length - i,
     y: 0,
     x: 0,
     zIndex: 20 - i,
@@ -25,8 +24,7 @@ pages.forEach((page, i) => {
 gsap.set(cover, {
     rotationY: 0,
     rotationX: 0,
-    /* z: 18, */
-    z: 0,
+    z: 18,
     y: 0,
     x: 0,
     zIndex: 60,
@@ -170,7 +168,8 @@ function flipPage3D(target, zIndex, options = {}) {
     y: -1,
     x: 0,
     duration: times[2],
-    ease: "power2.in"
+        /*     ease: "power2.in" */
+    ease: "power1.inOut"
     });
 
     tl.to(shadowEl, {
