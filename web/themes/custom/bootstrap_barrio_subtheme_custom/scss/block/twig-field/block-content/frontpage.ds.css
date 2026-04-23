@@ -438,13 +438,16 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   transform: translateY(170px);
   pointer-events: none;
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book {
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view {
+  transform: rotateX(-60deg);
+}
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book {
   position: relative;
   width: var(--spread-w);
   height: var(--page-h);
   transform-style: preserve-3d;
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.spine {
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.spine {
   position: absolute;
   top: 0;
   left: calc(var(--page-w) - var(--spine-w) / 2);
@@ -455,7 +458,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   box-shadow: inset 0 0 0 1px rgba(82, 58, 32, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
   z-index: 3;
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.right-base {
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.right-base {
   position: absolute;
   top: 0;
   left: var(--page-w);
@@ -467,14 +470,15 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   overflow: hidden;
   z-index: 1;
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.right-base::before {
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.right-base::before {
   content: "";
   position: absolute;
   inset: 18px 20px 18px 18px;
   border-radius: 4px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.15));
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.page, div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.cover {
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.page,
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.cover {
   position: absolute;
   top: 0;
   left: var(--page-w);
@@ -484,17 +488,24 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   transform-origin: left center;
   backface-visibility: hidden;
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.page > div.face, div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.cover > div.face {
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.page > div.face,
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.cover > div.face {
   position: absolute;
   inset: 0;
   backface-visibility: hidden;
   overflow: hidden;
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.page > div.front, div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.page > div.back, div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.cover > div.front, div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.cover > div.back {
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.page > div.front,
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.page > div.back,
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.cover > div.front,
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.cover > div.back {
   background: linear-gradient(180deg, #fefdfb 0%, #fbfaf7 100%);
   box-shadow: 0 2px 8px var(--paper-shadow), inset 0 0 0 1px rgba(124, 98, 63, 0.07);
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.page > div.front::before, div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.page > div.back::before, div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.cover > div.front::before, div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.cover > div.back::before {
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.page > div.front::before,
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.page > div.back::before,
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.cover > div.front::before,
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.cover > div.back::before {
   content: "";
   position: absolute;
   inset: 18px;
@@ -502,15 +513,17 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   background: repeating-linear-gradient(to bottom, transparent 0 30px, var(--paper-line) 30px 31px);
   opacity: 0.22;
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.page > div.front, div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.cover > div.front {
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.page > div.front,
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.cover > div.front {
   border-radius: 2px 8px 8px 2px;
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.page > div.back, div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.cover > div.back {
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.page > div.back,
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.cover > div.back {
   transform: rotateY(180deg);
   border-radius: 8px 2px 2px 8px;
   box-shadow: 0 2px 8px var(--paper-shadow), inset 16px 0 18px rgba(189, 171, 146, 0.16), inset 0 0 0 1px rgba(124, 98, 63, 0.07);
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.page::after {
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.page::after {
   content: "";
   position: absolute;
   top: 0;
@@ -523,25 +536,25 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   opacity: 0.88;
   pointer-events: none;
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.cover > div.outer {
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.cover > div.outer {
   border-radius: 3px 9px 9px 3px;
   background: linear-gradient(135deg, var(--cover-light) 0%, var(--cover-main) 58%, var(--cover-dark) 100%);
   box-shadow: 0 3px 14px rgba(62, 45, 50, 0.18), inset 0 0 0 1px rgba(255, 255, 255, 0.1), inset -18px 0 24px rgba(42, 28, 32, 0.18);
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.cover > div.outer::before {
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.cover > div.outer::before {
   content: "";
   position: absolute;
   inset: 12px;
   border-radius: 3px 7px 7px 3px;
   border: 1px solid rgba(255, 255, 255, 0.16);
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.cover > div.inner {
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.cover > div.inner {
   transform: rotateY(180deg);
   border-radius: 8px 2px 2px 8px;
   background: linear-gradient(180deg, #fdfbf7 0%, #f8f4ed 100%);
   box-shadow: inset 18px 0 22px rgba(191, 173, 149, 0.16), inset 0 0 0 1px rgba(124, 98, 63, 0.07);
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__book > div.cover::after {
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.cover::after {
   content: "";
   position: absolute;
   top: 0;
