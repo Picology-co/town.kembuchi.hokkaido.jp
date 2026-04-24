@@ -35,7 +35,7 @@ gsap.set(cover, {
 gsap.set(house, {
     rotationX: -90,
     y: 10,
-    opacity: 0
+    opacity: 1
 });
 
 function flipCover3D(target, zIndex) {
@@ -271,7 +271,7 @@ master.add(
         y: 0,
         opacity: 1,
         duration: 0.45,
-        ease: "power2.out"
+        ease: "back.out(1.4)"
     }),
     2.62
 );
