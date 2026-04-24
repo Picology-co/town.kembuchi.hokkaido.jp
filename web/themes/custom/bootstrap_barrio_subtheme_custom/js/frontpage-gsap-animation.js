@@ -266,9 +266,9 @@ master.add(
 );
 
 master.add(
-    gsap.to(house, {
-        rotationX: 60,
-        y: 0,
+    gsap.from(house, {
+        rotationX: 0,
+        y: 60,
         opacity: 1,
         duration: 0.45,
         ease: "power2.out"
