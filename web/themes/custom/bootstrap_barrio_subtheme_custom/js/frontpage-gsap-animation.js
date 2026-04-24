@@ -53,7 +53,7 @@ function flipCover3D(target, zIndex) {
     }, "<");
 
     tl.to(target, {
-    rotationY: -78,
+    rotationY: -90,
     rotationX: 0,
     z: 0,
     y: 0,
