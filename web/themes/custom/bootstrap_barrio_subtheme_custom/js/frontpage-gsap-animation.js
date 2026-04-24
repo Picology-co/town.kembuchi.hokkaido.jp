@@ -41,7 +41,7 @@ function flipCover3D(target, zIndex) {
     rotationY: -4,
     rotationX: 0,
     z: 0,
-    y: -0.5,
+    y: 0,
     duration: 0.12,
     ease: "sine.out"
     });
@@ -56,7 +56,7 @@ function flipCover3D(target, zIndex) {
     rotationY: -28,
     rotationX: 0,
     z: 0,
-    y: -2,
+    y: 0,
     duration: 0.18,
     ease: "power1.out"
     });
@@ -71,7 +71,7 @@ function flipCover3D(target, zIndex) {
     rotationY: -105,
     rotationX: 0,
     z: 0,
-    y: -4,
+    y: 0,
     duration: 0.30,
     ease: "power2.inOut"
     });
@@ -86,7 +86,7 @@ function flipCover3D(target, zIndex) {
     rotationY: -170,
     rotationX: 0,
     z: 0,
-    y: -1,
+    y: 0,
     duration: 0.22,
     ease: "power2.in"
     });
