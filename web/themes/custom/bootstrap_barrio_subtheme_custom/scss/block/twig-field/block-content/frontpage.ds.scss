@@ -221,38 +221,84 @@ div.#{st.$element-type} {
                   overflow: hidden;
                   > div.popup {
                     position: absolute;
-                    left: 50%;
-                    bottom: 90px;
-                    transform-style: preserve-3d;
-                    transform-origin: 50% 100%;
+                    left: 0;
+                    right: 0;
+                    bottom: 54px;
+                    height: 170px;
                     pointer-events: none;
-                    > div.popup-house {
-                      width: 120px;
-                      height: 120px;
-                      margin-left: -60px;
-                      transform: rotateX(-90deg) translateZ(0);
-                      > div.popup-panel {
+                    transform-style: preserve-3d;
+                    overflow: visible;
+                    &__fold {
+                      position: absolute;
+                      left: 50%;
+                      bottom: 0;
+                      width: 150px;
+                      height: 10px;
+                      margin-left: -75px;
+                      border-radius: 999px;
+                      background: linear-gradient(180deg,
+                          rgba(146, 116, 82, 0.28) 0%,
+                          rgba(146, 116, 82, 0.08) 100%);
+                      filter: blur(1px);
+                      transform: translateZ(2px);
+                      opacity: 0;
+                    }
+                    &__shadow {}
+                    &__house {
+                      position: absolute;
+                      left: 50%;
+                      bottom: 8px;
+                      width: 140px;
+                      height: 130px;
+                      margin-left: -70px;
+                      transform-style: preserve-3d;
+                      transform-origin: 50% 100%;
+                      &__roof {
                         position: absolute;
-                        left: 0;
-                        bottom: 0;
-                        width: 120px;
-                        height: 80px;
-                        background: linear-gradient(180deg, #f8d9a8 0%, #efc98f 100%);
-                        border: 2px solid rgba(120, 90, 50, 0.18);
-                        border-radius: 6px;
-                        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-                      }
-                      > div.popup-roof {
-                        position: absolute;
-                        left: 10px;
-                        bottom: 68px;
-                        width: 100px;
-                        height: 50px;
-                        background: #c97b7b;
+                        left: 8px;
+                        bottom: 62px;
+                        width: 124px;
+                        height: 58px;
+                        background: linear-gradient(180deg, #d99292 0%, #c87575 100%);
                         clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-                        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.10);
+                        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.10);
                       }
-                    }                  
+                      &__body {
+                        position: absolute;
+                        left: 18px;
+                        bottom: 0;
+                        width: 104px;
+                        height: 74px;
+                        background: linear-gradient(180deg, #f4ddb6 0%, #ecc78d 100%);
+                        border: 2px solid rgba(122, 90, 52, 0.16);
+                        border-radius: 8px;
+                        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.10);
+                        &__window {
+                          position: absolute;
+                          top: 18px;
+                          width: 22px;
+                          height: 22px;
+                          background: linear-gradient(180deg, #d7effc 0%, #b7dff3 100%);
+                          border: 2px solid rgba(122, 90, 52, 0.12);
+                          border-radius: 6px;
+                          &.left {
+                            left: 18px;
+                          }
+                          &.right {
+                            right: 18px;
+                          }
+                        }
+                        &__door {
+                          position: absolute;
+                          left: 58px;
+                          bottom: 0;
+                          width: 24px;
+                          height: 38px;
+                          background: linear-gradient(180deg, #b48257 0%, #9c6a45 100%);
+                          border-radius: 8px 8px 0 0;
+                        }
+                      }
+                    }
                   }
                 }
                 > div.front {
