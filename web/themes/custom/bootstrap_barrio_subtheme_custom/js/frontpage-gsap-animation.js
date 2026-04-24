@@ -38,10 +38,10 @@ function flipCover3D(target, zIndex) {
     tl.set(target, { zIndex });
 
     tl.to(target, {
-    rotationY: -4,
+    rotationY: -20,
     rotationX: 0,
     z: 0,
-    y: -15,
+    y: 0,
     duration: 0.12,
     ease: "sine.out"
     });
