@@ -118,9 +118,9 @@ function flipCover3D(target, zIndex) {
 
 function flipPage3D(target, zIndex, options = {}) {
     const {
-    liftZ = 0,
-    liftY = 0,
-    tiltX = 0,
+    liftZ = 20,
+    liftY = -7,
+    tiltX = -4,
     times = [0.16, 0.30, 0.24, 0.10]
     } = options;
 
@@ -131,7 +131,7 @@ function flipPage3D(target, zIndex, options = {}) {
 
     tl.to(target, {
     rotationY: -10,
-    rotationX: tiltX * 0.35,
+    rotationX: 0,
     z: liftZ * 0.18,
     y: liftY * 0.18,
     x: 0,
@@ -147,7 +147,7 @@ function flipPage3D(target, zIndex, options = {}) {
 
     tl.to(target, {
     rotationY: -82,
-    rotationX: tiltX,
+    rotationX: 0,
     z: liftZ * 0.18,
     y: liftY * 0.18,
     x: 0,
@@ -163,7 +163,7 @@ function flipPage3D(target, zIndex, options = {}) {
 
     tl.to(target, {
     rotationY: -168,
-    rotationX: -0.8,
+    rotationX: 0,
     z: 5,
     y: -1,
     x: 0,
