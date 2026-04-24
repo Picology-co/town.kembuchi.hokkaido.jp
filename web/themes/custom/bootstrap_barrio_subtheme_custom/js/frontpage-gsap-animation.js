@@ -268,7 +268,7 @@ master.add(
 master.add(
     gsap.from(house, {
         rotationX: 0,
-        y: 60,
+        y: 0,
         opacity: 1,
         duration: 0.45,
         ease: "power2.out"
