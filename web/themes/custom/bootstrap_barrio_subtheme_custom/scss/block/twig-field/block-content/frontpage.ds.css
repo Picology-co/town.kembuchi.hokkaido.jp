@@ -533,13 +533,13 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   transform-origin: 50% 100%;
   pointer-events: none;
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.page > div.face > div.popup-house {
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.page > div.face > div.popup > div.popup-house {
   width: 120px;
   height: 120px;
   margin-left: -60px;
   transform: rotateX(-90deg) translateZ(0);
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.page > div.face > div.popup-house > div.popup-panel {
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.page > div.face > div.popup > div.popup-house > div.popup-panel {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -550,7 +550,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   border-radius: 6px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.page > div.face > div.popup-house > div.popup-roof {
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.page > div.face > div.popup > div.popup-house > div.popup-roof {
   position: absolute;
   left: 10px;
   bottom: 68px;

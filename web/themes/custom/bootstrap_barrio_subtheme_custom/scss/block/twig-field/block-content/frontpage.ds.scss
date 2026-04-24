@@ -226,33 +226,33 @@ div.#{st.$element-type} {
                     transform-style: preserve-3d;
                     transform-origin: 50% 100%;
                     pointer-events: none;
-                  }
-                  > div.popup-house {
-                    width: 120px;
-                    height: 120px;
-                    margin-left: -60px;
-                    transform: rotateX(-90deg) translateZ(0);
-                    > div.popup-panel {
-                      position: absolute;
-                      left: 0;
-                      bottom: 0;
+                    > div.popup-house {
                       width: 120px;
-                      height: 80px;
-                      background: linear-gradient(180deg, #f8d9a8 0%, #efc98f 100%);
-                      border: 2px solid rgba(120, 90, 50, 0.18);
-                      border-radius: 6px;
-                      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-                    }
-                    > div.popup-roof {
-                      position: absolute;
-                      left: 10px;
-                      bottom: 68px;
-                      width: 100px;
-                      height: 50px;
-                      background: #c97b7b;
-                      clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-                      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.10);
-                    }
+                      height: 120px;
+                      margin-left: -60px;
+                      transform: rotateX(-90deg) translateZ(0);
+                      > div.popup-panel {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 120px;
+                        height: 80px;
+                        background: linear-gradient(180deg, #f8d9a8 0%, #efc98f 100%);
+                        border: 2px solid rgba(120, 90, 50, 0.18);
+                        border-radius: 6px;
+                        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+                      }
+                      > div.popup-roof {
+                        position: absolute;
+                        left: 10px;
+                        bottom: 68px;
+                        width: 100px;
+                        height: 50px;
+                        background: #c97b7b;
+                        clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+                        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.10);
+                      }
+                    }                  
                   }
                 }
                 > div.front {
