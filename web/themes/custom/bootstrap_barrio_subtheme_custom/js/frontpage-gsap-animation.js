@@ -41,7 +41,7 @@ function flipCover3D(target, zIndex) {
     rotationY: -4,
     rotationX: 0,
     z: 0,
-    y: 0,
+    y: -15,
     duration: 0.12,
     ease: "sine.out"
     });
