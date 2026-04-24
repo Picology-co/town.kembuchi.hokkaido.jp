@@ -1,5 +1,4 @@
-@use "../../../style.scss" as st with (
-  $element-type: 'field',
+@use "../../../style.scss" as st with ($element-type: 'field',
   $element-name: 'frontpage', // twigフィールドの名称
   $element-field-type: 'ds' // フィールドタイプ
 );
@@ -24,17 +23,21 @@ div.#{st.$element-type} {
       div.swiper-container {
         position: relative;
         @include st.margin($b: 10.0rem);
+
         div.swiper-wrapper {
           div.swiper-slide {
             div.slide-media {
-              img { // メイン画像
+              img {
+                // メイン画像
                 transition-delay: 0s;
                 //transform: scale(1.20);
                 @include st.pos($l: 50%, $tr: translateX(-50%));
                 @include st.image($w: 100vw, $h: 100vh, $maxh: 100.0rem);
+
                 @include st.tablet {
                   @include st.image($w: 100vw, $h: 100vh);
                 }
+
                 @include st.sp {
                   @include st.image($w: 100vw, $h: 100vh);
                 }
@@ -42,27 +45,34 @@ div.#{st.$element-type} {
             }
           }
         }
+
         div.filter-image {
           filter: opacity(0.8) invert(1.0);
           @include st.pos($p: absolute, $t: 50%, $l: 50%, $tr: translate(-50%, -50%), $z: 1);
           @include st.size($w: 100vw, $h: 100%);
+
           img {
             &.swiper-filter-pc {
               @include st.image($w: 100%, $h: 100%);
               @include st.pos();
+
               @include st.tablet {
                 @include st.pos($d: none);
               }
+
               @include st.sp {
                 @include st.pos($d: none);
               }
             }
+
             &.swiper-filter-mobile {
               @include st.image($w: 100%, $h: 100%);
               @include st.pos($d: none);
+
               @include st.tablet {
                 @include st.pos();
               }
+
               @include st.sp {
                 @include st.pos();
               }
@@ -77,18 +87,18 @@ div.#{st.$element-type} {
         --page-h: 390px;
         --book-w: calc(var(--page-w) * 2);
         --spine-w: 4px;
-      
+
         --paper-shadow: rgba(61, 44, 24, 0.10);
         --paper-line: rgba(90, 70, 45, 0.06);
-      
+
         --cover-main: #8d6a74;
         --cover-dark: #6e5159;
         --cover-light: #a78690;
-      
+
         --bg-a: #f5efe8;
         --bg-b: #e8ddcf;
 
-      margin: 0;
+        margin: 0;
         min-height: 100vh;
         display: grid;
         place-items: center;
@@ -98,6 +108,7 @@ div.#{st.$element-type} {
           radial-gradient(circle at 82% 24%, rgba(255, 255, 255, 0.32) 0 9%, transparent 10%),
           linear-gradient(180deg, var(--bg-a) 0%, var(--bg-b) 100%);
         font-family: sans-serif;
+
         &__scene {
           width: min(100vw, 1000px);
           height: min(100vh, 760px);
@@ -107,6 +118,7 @@ div.#{st.$element-type} {
           perspective: 1800px;
           perspective-origin: 50% 38%;
           overflow: hidden;
+
           &__shadow {
             position: absolute;
             width: 540px;
@@ -121,17 +133,20 @@ div.#{st.$element-type} {
             pointer-events: none;
             z-index: 0;
           }
+
           &__view {
             transform: rotateX(60deg);
             position: relative;
             transform-style: preserve-3d;
             z-index: 2;
+
             &__book {
               position: relative;
               width: var(--book-w);
               height: var(--page-h);
               transform-style: preserve-3d;
-              > div.spine {
+
+              >div.spine {
                 position: absolute;
                 top: 0;
                 left: calc(var(--page-w) - (var(--spine-w) / 2));
@@ -150,7 +165,8 @@ div.#{st.$element-type} {
                 z-index: 3;
                 transform: translateZ(1px);
               }
-              > div.right-base {
+
+              >div.right-base {
                 position: absolute;
                 top: 0;
                 width: var(--page-w);
@@ -171,6 +187,7 @@ div.#{st.$element-type} {
                   inset -18px 0 18px rgba(189, 171, 146, 0.16),
                   inset 0 0 0 1px rgba(125, 99, 65, 0.08);
                 transform: translateZ(-1px);
+
                 &::before {
                   content: "";
                   position: absolute;
@@ -183,7 +200,8 @@ div.#{st.$element-type} {
                   opacity: 0.20;
                 }
               }
-              > div.cover {
+
+              >div.cover {
                 position: absolute;
                 top: 0;
                 left: var(--page-w);
@@ -192,20 +210,24 @@ div.#{st.$element-type} {
                 transform-style: preserve-3d;
                 transform-origin: left center;
                 backface-visibility: visible;
-                > div.face {
+
+                >div.face {
                   position: absolute;
                   inset: 0;
                   backface-visibility: hidden;
                   overflow: hidden;
                 }
-                > div.outer {
+
+                >div.outer {
                   transform: translateZ(1.2px);
                 }
-                > div.inner {
+
+                >div.inner {
                   transform: rotateY(180deg) translateZ(1.2px);
                 }
               }
-              > div.page {
+
+              >div.page {
                 position: absolute;
                 top: 0;
                 left: var(--page-w);
@@ -214,108 +236,73 @@ div.#{st.$element-type} {
                 transform-style: preserve-3d;
                 transform-origin: left center;
                 backface-visibility: visible;
-                > div.face {
+
+                >div.face {
                   position: absolute;
                   inset: 0;
                   backface-visibility: hidden;
                   overflow: hidden;
-                  > div.popup {
+
+                  >div.popup {
                     position: absolute;
-                    left: 0;
-                    right: 0;
-                    bottom: 54px;
-                    height: 170px;
-                    pointer-events: none;
+                    left: 50%;
+                    bottom: 90px;
                     transform-style: preserve-3d;
-                    overflow: visible;
-                    &__fold {
-                      position: absolute;
-                      left: 50%;
-                      bottom: 0;
-                      width: 150px;
-                      height: 10px;
-                      margin-left: -75px;
-                      border-radius: 999px;
-                      background: linear-gradient(180deg,
-                        rgba(146, 116, 82, 0.28) 0%,
-                        rgba(146, 116, 82, 0.08) 100%);
-                      filter: blur(1px);
-                      transform: translateZ(2px);
-                      opacity: 0;
-                    }
-                    &__shadow {}
-                    &__house {
-                      position: absolute;
-                      left: 50%;
-                      bottom: 8px;
-                      width: 140px;
-                      height: 130px;
-                      margin-left: -70px;
-                      transform-style: preserve-3d;
-                      transform-origin: 50% 100%;
-                      &__roof {
+                    transform-origin: 50% 100%;
+                    pointer-events: none;
+
+                    >div.popup-house {
+                      width: 120px;
+                      height: 120px;
+                      margin-left: -60px;
+                      transform: rotateX(-90deg) translateZ(0);
+
+                      >div.popup-panel {
                         position: absolute;
-                        left: 8px;
-                        bottom: 62px;
-                        width: 124px;
-                        height: 58px;
-                        background: linear-gradient(180deg, #d99292 0%, #c87575 100%);
-                        clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-                        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.10);
-                      }
-                      &__body {
-                        position: absolute;
-                        left: 18px;
+                        left: 0;
                         bottom: 0;
-                        width: 104px;
-                        height: 74px;
-                        background: linear-gradient(180deg, #f4ddb6 0%, #ecc78d 100%);
-                        border: 2px solid rgba(122, 90, 52, 0.16);
-                        border-radius: 8px;
-                        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.10);
-                        &__window {
-                          position: absolute;
-                          top: 18px;
-                          width: 22px;
-                          height: 22px;
-                          background: linear-gradient(180deg, #d7effc 0%, #b7dff3 100%);
-                          border: 2px solid rgba(122, 90, 52, 0.12);
-                          border-radius: 6px;
-                          &.left {
-                            left: 18px;
-                          }
-                          &.right {
-                            right: 18px;
-                          }
-                        }
-                        &__door {
-                          position: absolute;
-                          left: 58px;
-                          bottom: 0;
-                          width: 24px;
-                          height: 38px;
-                          background: linear-gradient(180deg, #b48257 0%, #9c6a45 100%);
-                          border-radius: 8px 8px 0 0;
-                        }
+                        width: 120px;
+                        height: 80px;
+                        background: linear-gradient(180deg, #f8d9a8 0%, #efc98f 100%);
+                        border: 2px solid rgba(120, 90, 50, 0.18);
+                        border-radius: 6px;
+                        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+                      }
+
+                      >div.popup-roof {
+                        position: absolute;
+                        left: 10px;
+                        bottom: 68px;
+                        width: 100px;
+                        height: 50px;
+                        background: #c97b7b;
+                        clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+                        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.10);
                       }
                     }
                   }
                 }
-                > div.front {
+
+                >div.front {
                   transform: translateZ(1.2px);
                 }
-                > div.back {
+
+                >div.back {
                   transform: rotateY(180deg) translateZ(1.2px);
                 }
-                > div.front, > div.back {
+
+                >div.front,
+                >div.back {
                   background:
                     linear-gradient(180deg, #fefdfb 0%, #fbfaf7 100%);
                   box-shadow:
                     0 2px 8px var(--paper-shadow),
                     inset 0 0 0 1px rgba(124, 98, 63, 0.07);
                 }
-                > div.front {
+
+                >div.front {
                   border-radius: 2px 8px 8px 2px;
+
                   &::before {
                     content: "";
                     position: absolute;
@@ -328,6 +315,7 @@ div.#{st.$element-type} {
                     opacity: 0.22;
                   }
                 }
+
                 >div.back {
                   transform: rotateY(180deg);
                   border-radius: 8px 2px 2px 8px;
@@ -335,6 +323,7 @@ div.#{st.$element-type} {
                     0 2px 8px var(--paper-shadow),
                     inset 16px 0 18px rgba(189, 171, 146, 0.16),
                     inset 0 0 0 1px rgba(124, 98, 63, 0.07);
+
                   &::before {
                     content: "";
                     position: absolute;
@@ -347,7 +336,8 @@ div.#{st.$element-type} {
                     opacity: 0.22;
                   }
                 }
-                > div.page-thickness {
+
+                >div.page-thickness {
                   position: absolute;
                   top: 0;
                   left: -2px;
@@ -360,28 +350,22 @@ div.#{st.$element-type} {
                   opacity: 0.9;
                   pointer-events: none;
                 }
-                > div.page-shadow {
+
+                >div.page-shadow {
                   position: absolute;
                   inset: 0;
                   border-radius: 6px;
                   opacity: 0;
                   pointer-events: none;
                   background: linear-gradient(90deg,
-                    rgba(0, 0, 0, 0.20) 0%,
-                    rgba(0, 0, 0, 0.08) 18%,
-                    rgba(0, 0, 0, 0.00) 48%);
+                      rgba(0, 0, 0, 0.20) 0%,
+                      rgba(0, 0, 0, 0.08) 18%,
+                      rgba(0, 0, 0, 0.00) 48%);
                   transform: translateZ(2px);
                 }
               }
+
               >div.cover {
-                position: absolute;
-                top: 0;
-                left: var(--page-w);
-                width: var(--page-w);
-                height: var(--page-h);
-                transform-style: preserve-3d;
-                transform-origin: left center;
-                backface-visibility: visible;
                 >div.outer {
                   border-radius: 3px 9px 9px 3px;
                   background:
@@ -390,6 +374,7 @@ div.#{st.$element-type} {
                     0 3px 14px rgba(62, 45, 50, 0.18),
                     inset 0 0 0 1px rgba(255, 255, 255, 0.10),
                     inset -18px 0 24px rgba(42, 28, 32, 0.18);
+
                   &::before {
                     content: "";
                     position: absolute;
@@ -398,6 +383,7 @@ div.#{st.$element-type} {
                     border: 1px solid rgba(255, 255, 255, 0.16);
                   }
                 }
+
                 >div.inner {
                   border-radius: 8px 2px 2px 8px;
                   background:
@@ -406,7 +392,8 @@ div.#{st.$element-type} {
                     inset 18px 0 22px rgba(191, 173, 149, 0.16),
                     inset 0 0 0 1px rgba(124, 98, 63, 0.07);
                 }
-                > div.cover-thickness {
+
+                >div.cover-thickness {
                   position: absolute;
                   top: 0;
                   left: -4px;
@@ -419,11 +406,12 @@ div.#{st.$element-type} {
                   opacity: 0.95;
                   pointer-events: none;
                 }
-                > div.cover-shadow {
+
+                >div.cover-shadow {
                   background: linear-gradient(90deg,
-                    rgba(0, 0, 0, 0.24) 0%,
-                    rgba(0, 0, 0, 0.10) 22%,
-                    rgba(0, 0, 0, 0.00) 52%);
+                      rgba(0, 0, 0, 0.24) 0%,
+                      rgba(0, 0, 0, 0.10) 22%,
+                      rgba(0, 0, 0, 0.00) 52%);
                   transform: translateZ(3px);
                 }
               }
