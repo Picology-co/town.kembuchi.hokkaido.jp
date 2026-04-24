@@ -237,8 +237,8 @@ div.#{st.$element-type} {
                       margin-left: -75px;
                       border-radius: 999px;
                       background: linear-gradient(180deg,
-                          rgba(146, 116, 82, 0.28) 0%,
-                          rgba(146, 116, 82, 0.08) 100%);
+                        rgba(146, 116, 82, 0.28) 0%,
+                        rgba(146, 116, 82, 0.08) 100%);
                       filter: blur(1px);
                       transform: translateZ(2px);
                       opacity: 0;
@@ -374,6 +374,14 @@ div.#{st.$element-type} {
                 }
               }
               >div.cover {
+                position: absolute;
+                top: 0;
+                left: var(--page-w);
+                width: var(--page-w);
+                height: var(--page-h);
+                transform-style: preserve-3d;
+                transform-origin: left center;
+                backface-visibility: visible;
                 >div.outer {
                   border-radius: 3px 9px 9px 3px;
                   background:

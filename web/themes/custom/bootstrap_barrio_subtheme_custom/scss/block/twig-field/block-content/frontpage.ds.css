@@ -659,6 +659,16 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.08) 18%, rgba(0, 0, 0, 0) 48%);
   transform: translateZ(2px);
 }
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.cover {
+  position: absolute;
+  top: 0;
+  left: var(--page-w);
+  width: var(--page-w);
+  height: var(--page-h);
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  backface-visibility: visible;
+}
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__view__book > div.cover > div.outer {
   border-radius: 3px 9px 9px 3px;
   background: linear-gradient(135deg, var(--cover-light) 0%, var(--cover-main) 58%, var(--cover-dark) 100%);
