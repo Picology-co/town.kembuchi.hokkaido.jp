@@ -354,8 +354,8 @@ master.to("#popup-ball", {
     scale: 1,
     y: 0,
     z: 64,
-    duration: 0.42,
-    ease: "power4.out"
+    duration: 0.10,
+    ease: "back.out(1.8)"
 }, ">0.08");
 
 master.to(".popup-ball", {
@@ -372,19 +372,19 @@ master.to(".popup-ball-shadow", {
     ease: "power2.out"
 }, "<");
 
-master.to("#popup-ball", {
+/* master.to("#popup-ball", {
     y: -46,
     z: 28,
     duration: 0.18,
-    ease: "sine.in"
-});
+    ease: "power4.out"
+}); */
 
 master.to("#popup-ball", {
     y: -52,
     z: 32,
     scale: 2.0,
     duration: 0.16,
-    ease: "sine.out"
+    ease: "power4.out"
 });
 
 master.to({}, { duration: 1.0 });
