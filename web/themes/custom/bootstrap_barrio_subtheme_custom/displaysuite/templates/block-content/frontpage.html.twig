@@ -31,9 +31,12 @@
 #}
 
 {# GSAPアニメーション #}
-{% set image_01 = 'public://image/gsap_animation/01.png'|file_url %}
-{% set image_02 = 'public://image/gsap_animation/02.png'|file_url %}
-{% set image_03 = 'public://image/gsap_animation/03.png'|file_url %}
+{% set image_01 = 'public://image/gsap_animation/01.avif'|file_url %}
+{% set image_02 = 'public://image/gsap_animation/02.avif'|file_url %}
+{% set image_03 = 'public://image/gsap_animation/03.avif'|file_url %}
+{% set image_04 = 'public://image/gsap_animation/04.avif'|file_url %}
+{% set image_05 = 'public://image/gsap_animation/05.avif'|file_url %}
+
 <div class="animation">
   <div class="animation__scene">
     <div class="animation__scene__shadow"></div>
@@ -44,35 +47,35 @@
         <div class="spine"></div>
 
         <div class="page page-1">
-          <div class="face front"><span>page1表</span></div>
+          <div class="face front"><img src="{{ image_01 }}"></div>
           <div class="face back"><span>page1裏</span></div>
           <div class="page-thickness"></div>
           <div class="page-shadow"></div>
         </div>
 
         <div class="page page-2">
-          <div class="face front"><span>page2表</span></div>
+          <div class="face front"><img src="{{ image_02 }}"></div>
           <div class="face back"><span>page1裏</span></div>
           <div class="page-thickness"></div>
           <div class="page-shadow"></div>
         </div>
 
         <div class="page page-3">
-          <div class="face front"><span>page3表</span></div>
+          <div class="face front"><img src="{{ image_03 }}"></div>
           <div class="face back"><span>page3裏</span></div>
           <div class="page-thickness"></div>
           <div class="page-shadow"></div>
         </div>
 
         <div class="page page-4">
-          <div class="face front"><span>page4表</span></div>
+          <div class="face front"><img src="{{ image_04 }}"></div>
           <div class="face back"><span>page4裏</span></div>
           <div class="page-thickness"></div>
           <div class="page-shadow"></div>
         </div>
 
         <div class="page page-5">
-          <div class="face front"><span>page5表</span></div>
+          <div class="face front"><img src="{{ image_05 }}"></div>
           <div class="face back"><span>page5裏</span></div>
           <div class="page-thickness"></div>
           <div class="page-shadow"></div>
