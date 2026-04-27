@@ -62,19 +62,6 @@ gsap.set(".popup-ball-tail", {
     transformOrigin: "50% 100%"
 });
 
-gsap.set(".popup-ball-burst", {
-    opacity: 0
-});
-
-gsap.set(".popup-ball-burst__particle", {
-    x: 0,
-    y: 0,
-    z: 14,
-    scale: 0.2,
-    opacity: 0,
-    transformOrigin: "50% 50%"
-});
-
 function flipCover3D(target, zIndex) {
     const shadowEl = document.querySelector(`${target} .cover-shadow`);
     const tl = gsap.timeline();
@@ -396,48 +383,5 @@ master.to(".popup-ball-shadow", {
     duration: 0.18,
     ease: "power2.out"
 }, "<");
-
-master.set(".popup-ball-burst", {
-    opacity: 1
-}, "<");
-
-master.set(".popup-ball-burst__particle", {
-    x: 0,
-    y: 0,
-    z: 14,
-    scale: 0.25,
-    opacity: 1
-}, "<");
-
-master.to(".popup-ball-burs__particle", {
-    duration: 0.48,
-    ease: "power3.out",
-    scale: 1,
-    x: (i) => {
-        const radius = 82;
-        const angle = (-90 + i * 60) * Math.PI / 180;
-        return Math.cos(angle) * radius;
-    },
-    y: (i) => {
-        const radius = 82;
-        const angle = (-90 + i * 60) * Math.PI / 180;
-        return Math.sin(angle) * radius;
-    },
-    z: 22,
-    stagger: 0
-});
-
-master.to(".popup-ball-burst__particle", {
-    opacity: 0,
-    scale: 0.45,
-    duration: 0.28,
-    ease: "power1.in"
-}, "-=0.12");
-
-master.to("#popup-ball", {
-    opacity: 0,
-    duration: 0.08,
-    ease: "none"
-}, "<+=0.20");
 
 master.to({}, { duration: 1.0 });

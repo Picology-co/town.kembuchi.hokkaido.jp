@@ -500,29 +500,6 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   transform: translateZ(8px) scaleY(0.2);
   pointer-events: none;
 }
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__popup__ball div.popup-ball-burst {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 0;
-  height: 0;
-  transform-style: preserve-3d;
-  pointer-events: none;
-  opacity: 0;
-}
-div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__popup__ball div.popup-ball-burst__particle {
-  position: absolute;
-  display: inline;
-  left: -8px;
-  top: -8px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 32% 30%, #fffef8 0 16%, #ffe08a 17%, #ffad3d 48%, #ff6a1a 78%, #d94700 100%);
-  box-shadow: 0 0 8px rgba(255, 190, 80, 0.75), 0 0 18px rgba(255, 110, 20, 0.45), inset -3px -4px 6px rgba(100, 36, 0, 0.2);
-  opacity: 0;
-  transform: translate3d(0, 0, 14px) scale(0.2);
-}
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__popup__ball div.popup-ball-shadow {
   position: absolute;
   left: 50%;
