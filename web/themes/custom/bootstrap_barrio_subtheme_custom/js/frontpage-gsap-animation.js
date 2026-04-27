@@ -378,12 +378,12 @@ master.to(".popup-ball-tail", {
 
 master.to(".popup-ball-shadow", {
     opacity: 0.16,
-    scale: 0.9,
+    scale: 2.0,
     duration: 0.18,
     ease: "power2.out"
 }, "<");
 
-master.to("#popup-ball", {
+/* master.to("#popup-ball", {
     y: -250,
     z: 120,
     duration: 0.34,
@@ -401,7 +401,7 @@ master.to(".popup-ball", {
     scale: 0.88,
     duration: 0.34,
     ease: "power2.in"
-}, "<");
+}, "<"); */
 
 /* master.to("#popup-ball", {
     opacity: 0,
