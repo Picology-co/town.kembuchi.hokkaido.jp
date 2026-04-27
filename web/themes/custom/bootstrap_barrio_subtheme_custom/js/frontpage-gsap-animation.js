@@ -306,8 +306,6 @@ master.add(
     2.28
 );
 
-master.to({}, { duration: 1.0 });
-
 master.to([".animation__scene__view", ".animation__scene__shadow"], {
     y: 18,
     duration: 0.55,
@@ -327,3 +325,5 @@ master.to(".animation__scene__shadow", {
     duration: 0.55,
     ease: "power2.inOut"
 }, "<");
+
+master.to({}, { duration: 1.0 });
