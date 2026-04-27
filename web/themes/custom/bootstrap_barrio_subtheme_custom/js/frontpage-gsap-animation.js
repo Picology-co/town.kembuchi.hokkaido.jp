@@ -164,19 +164,6 @@ function flipCover3D(target, zIndex) {
     return tl;
 }
 
-function moveBook3D(target, zIndex) {
-    const t1 = gsap.timeline();
-
-    t1.set(target, { zIndex });
-    
-    t1.to(target, {
-        rotateX: 20,
-        X: 30,
-        duration: time[2],
-        ease: "expo.inOut"
-    });
-}
-
 function flipPage3D(target, zIndex, options = {}) {
     const {
     liftZ = 20,
@@ -319,9 +306,24 @@ master.add(
     2.28
 );
 
-master.add(
-    moveBook3D(".animation__scene__view", "2"),
-    3.48
-)
+master.to([".view", ".shadow"], {
+    y: 18,
+    duration: 0.55,
+    ease: "power2.inOut"
+}, ">-0.05");
+
+master.to(".view", {
+    rotationX: "+=6",
+    duration: 0.55,
+    ease: "power2.inOut"
+}, "<");
+
+master.to(".shadow", {
+    scaleX: 1.06,
+    scaleY: 1.10,
+    opacity: 0.92,
+    duration: 0.55,
+    ease: "power2.inOut"
+}, "<");
 
 master.to({}, { duration: 1.0 });
