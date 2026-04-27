@@ -34,21 +34,32 @@ gsap.set(cover, {
 gsap.set("#popup-ball", {
     y: 0,
     z: 0,
-    scale: 0.25,
+    scale: 0.22,
     opacity: 0,
     transformOrigin: "50% 100%"
 });
 
 gsap.set(".popup-ball", {
-    rotationX: -28,
+    rotationX: 0,
     rotationY: 0,
+    scale: 0.9,
     transformOrigin: "50% 50%"
 });
 
 gsap.set(".popup-ball-shadow", {
     opacity: 0,
-    scale: 0.45,
+    scale: 0.35,
     transformOrigin: "50% 50%"
+});
+
+gsap.set(".popup-ball::after", {
+    opacity: 0
+});
+
+gsap.set(".popup-ball-tail", {
+    opacity: 0,
+    scaleY: 0.2,
+    transformOrigin: "50% 100%"
 });
 
 function flipCover3D(target, zIndex) {
@@ -352,39 +363,56 @@ master.to(".animation__scene__shadow", {
 master.to("#popup-ball", {
     opacity: 1,
     scale: 1,
-    y: 0,
-    z: 64,
-    duration: 0.10,
-    ease: "back.out(1.8)"
+    y: -140,
+    z: 70,
+    duration: 0.34,
+    ease: "power3.out"
 }, ">0.08");
 
-master.to(".popup-ball", {
-    rotationX: 0,
-    rotationY: 160,
-    duration: 0.42,
+master.to(".popup-ball-tail", {
+    opacity: 1,
+    scaleY: 1.35,
+    duration: 0.20,
     ease: "power2.out"
 }, "<");
 
 master.to(".popup-ball-shadow", {
-    opacity: 0.22,
-    scale: 1,
-    duration: 0.42,
+    opacity: 0.16,
+    scale: 0.9,
+    duration: 0.18,
     ease: "power2.out"
 }, "<");
 
-/* master.to("#popup-ball", {
-    y: -46,
-    z: 28,
-    duration: 0.18,
-    ease: "power4.out"
-}); */
+master.to("#popup-ball", {
+    y: -250,
+    z: 120,
+    duration: 0.34,
+    ease: "power2.in"
+});
+
+master.to(".popup-ball-tail", {
+    opacity: 0.45,
+    scaleY: 1.8,
+    duration: 0.34,
+    ease: "power2.in"
+}, "<");
+
+master.to(".popup-ball", {
+    scale: 0.88,
+    duration: 0.34,
+    ease: "power2.in"
+}, "<");
 
 master.to("#popup-ball", {
-    y: -52,
-    z: 32,
-    scale: 2.0,
-    duration: 0.16,
-    ease: "power4.out"
+    opacity: 0,
+    duration: 0.06,
+    ease: "none"
 });
+
+master.to(".popup-ball-tail", {
+    opacity: 0,
+    duration: 0.06,
+    ease: "none"
+}, "<");
 
 master.to({}, { duration: 1.0 });
