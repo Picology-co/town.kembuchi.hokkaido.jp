@@ -353,9 +353,9 @@ master.to("#popup-ball", {
     opacity: 1,
     scale: 1,
     y: 0,
-    z: 40,
+    z: 64,
     duration: 0.42,
-    ease: "back.out(1.8)"
+    ease: "power4.out"
 }, ">0.08");
 
 master.to(".popup-ball", {
