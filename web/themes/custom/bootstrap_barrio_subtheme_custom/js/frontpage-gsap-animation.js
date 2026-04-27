@@ -313,12 +313,14 @@ master.to([".animation__scene__view", ".animation__scene__shadow"], {
 }, ">-0.05");
 
 master.to(".animation__scene__view", {
+    y: 18,
     rotationX: "+=25",
     duration: 0.55,
     ease: "power2.inOut"
 }, "<");
 
 master.to(".animation__scene__shadow", {
+    y: 180,
     rotationX: "+=25",
     scaleX: 1.06,
     scaleY: 1.10,
