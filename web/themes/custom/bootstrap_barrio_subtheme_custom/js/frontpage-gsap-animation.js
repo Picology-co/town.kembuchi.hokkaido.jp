@@ -365,6 +365,7 @@ master.to("#popup-ball", {
     scale: 1,
     y: -140,
     z: 70,
+    scale: 2.0,
     duration: 0.34,
     ease: "power3.out"
 }, ">0.08");
