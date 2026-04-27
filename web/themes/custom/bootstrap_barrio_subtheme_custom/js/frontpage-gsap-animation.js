@@ -31,7 +31,43 @@ gsap.set(cover, {
     transformOrigin: "0% 50%"
 });
 
-gsap.set("#popup-ball", {
+gsap.set("#popup-ball-1", {
+    y: 0,
+    z: 0,
+    scale: 0.22,
+    opacity: 0,
+    transformOrigin: "50% 100%"
+});
+
+gsap.set("#popup-ball-2", {
+    y: 0,
+    z: 0,
+    scale: 0.22,
+    opacity: 0,
+    transformOrigin: "50% 100%"
+});
+gsap.set("#popup-ball-3", {
+    y: 0,
+    z: 0,
+    scale: 0.22,
+    opacity: 0,
+    transformOrigin: "50% 100%"
+});
+gsap.set("#popup-ball-4", {
+    y: 0,
+    z: 0,
+    scale: 0.22,
+    opacity: 0,
+    transformOrigin: "50% 100%"
+});
+gsap.set("#popup-ball-5", {
+    y: 0,
+    z: 0,
+    scale: 0.22,
+    opacity: 0,
+    transformOrigin: "50% 100%"
+});
+gsap.set("#popup-ball-6", {
     y: 0,
     z: 0,
     scale: 0.22,
@@ -360,9 +396,10 @@ master.to(".animation__scene__shadow", {
     ease: "power2.inOut"
 }, "<");
 
-master.to("#popup-ball", {
+master.to("#popup-ball-1", {
     opacity: 1,
     scale: 1,
+    x: -120,
     y: -250,
     z: 70,
     scale: 1.5,
@@ -370,14 +407,139 @@ master.to("#popup-ball", {
     ease: "power3.out"
 }, ">0.08");
 
-master.to(".popup-ball-tail", {
+master.to("#popup-ball-1 .popup-ball-tail", {
     opacity: 1,
     scaleY: 1.35,
     duration: 0.20,
     ease: "power2.out"
 }, "<");
 
-master.to(".popup-ball-shadow", {
+master.to("#popup-ball-1 .popup-ball-shadow", {
+    opacity: 0.16,
+    scale: 2.0,
+    duration: 0.18,
+    ease: "power2.out"
+}, "<");
+
+master.to("#popup-ball-2", {
+    opacity: 1,
+    scale: 1,
+    x: -120,
+    y: -250,
+    z: 0,
+    scale: 1.5,
+    duration: 0.34,
+    ease: "power3.out"
+}, ">0.08");
+
+master.to("#popup-ball-2 .popup-ball-tail", {
+    opacity: 1,
+    scaleY: 1.35,
+    duration: 0.20,
+    ease: "power2.out"
+}, "<");
+
+master.to("#popup-ball-2 .popup-ball-shadow", {
+    opacity: 0.16,
+    scale: 2.0,
+    duration: 0.18,
+    ease: "power2.out"
+}, "<");
+
+master.to("#popup-ball-3", {
+    opacity: 1,
+    scale: 1,
+    x: -120,
+    y: -250,
+    z: 120,
+    scale: 1.5,
+    duration: 0.34,
+    ease: "power3.out"
+}, ">0.08");
+
+master.to("#popup-ball-3 .popup-ball-tail", {
+    opacity: 1,
+    scaleY: 1.35,
+    duration: 0.20,
+    ease: "power2.out"
+}, "<");
+
+master.to("#popup-ball-3 .popup-ball-shadow", {
+    opacity: 0.16,
+    scale: 2.0,
+    duration: 0.18,
+    ease: "power2.out"
+}, "<");
+
+master.to("#popup-ball-4", {
+    opacity: 1,
+    scale: 1,
+    x: -120,
+    y: -150,
+    z: 70,
+    scale: 1.5,
+    duration: 0.34,
+    ease: "power3.out"
+}, ">0.08");
+
+master.to("#popup-ball-4 .popup-ball-tail", {
+    opacity: 1,
+    scaleY: 1.35,
+    duration: 0.20,
+    ease: "power2.out"
+}, "<");
+
+master.to("#popup-ball-4 .popup-ball-shadow", {
+    opacity: 0.16,
+    scale: 2.0,
+    duration: 0.18,
+    ease: "power2.out"
+}, "<");
+
+master.to("#popup-ball-5", {
+    opacity: 1,
+    scale: 1,
+    x: -120,
+    y: -150,
+    z: 0,
+    scale: 1.5,
+    duration: 0.34,
+    ease: "power3.out"
+}, ">0.08");
+
+master.to("#popup-ball-5 .popup-ball-tail", {
+    opacity: 1,
+    scaleY: 1.35,
+    duration: 0.20,
+    ease: "power2.out"
+}, "<");
+
+master.to("#popup-ball-5 .popup-ball-shadow", {
+    opacity: 0.16,
+    scale: 2.0,
+    duration: 0.18,
+    ease: "power2.out"
+}, "<");
+
+master.to("#popup-ball-6", {
+    opacity: 1,
+    scale: 1,
+    x: -120,
+    y: -150,
+    z: 120,
+    scale: 1.5,
+    duration: 0.34,
+    ease: "power3.out"
+}, ">0.08");
+
+master.to("#popup-ball-6 .popup-ball-tail", {
+    opacity: 1,
+    scaleY: 1.35,
+    duration: 0.20,
+    ease: "power2.out"
+}, "<");
+
+master.to("#popup-ball-6 .popup-ball-shadow", {
     opacity: 0.16,
     scale: 2.0,
     duration: 0.18,
