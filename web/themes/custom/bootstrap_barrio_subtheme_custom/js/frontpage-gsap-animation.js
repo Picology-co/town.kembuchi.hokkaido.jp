@@ -38,7 +38,52 @@ function flipCover3D(target, zIndex) {
     tl.set(target, { zIndex });
 
     tl.to(target, {
+    rotationY: -10,
+    rotationX: 0,
+    z: 0,
+    y: 0,
+    duration: 0.12,
+    ease: "sine.out"
+    });
+
+    tl.to(shadowEl, {
+    opacity: 0.06,
+    duration: 0.12,
+    ease: "sine.out"
+    }, "<");
+
+    tl.to(target, {
+    rotationY: -25,
+    rotationX: 0,
+    z: 0,
+    y: 0,
+    duration: 0.12,
+    ease: "sine.out"
+    });
+
+    tl.to(shadowEl, {
+    opacity: 0.06,
+    duration: 0.12,
+    ease: "sine.out"
+    }, "<");
+
+    tl.to(target, {
     rotationY: -50,
+    rotationX: 0,
+    z: 0,
+    y: 0,
+    duration: 0.12,
+    ease: "sine.out"
+    });
+
+    tl.to(shadowEl, {
+    opacity: 0.06,
+    duration: 0.12,
+    ease: "sine.out"
+    }, "<");
+
+    tl.to(target, {
+    rotationY: -75,
     rotationX: 0,
     z: 0,
     y: 0,
