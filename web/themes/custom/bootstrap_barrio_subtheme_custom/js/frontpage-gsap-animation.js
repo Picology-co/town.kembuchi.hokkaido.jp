@@ -382,6 +382,7 @@ master.to("#popup-ball", {
 master.to("#popup-ball", {
     y: -52,
     z: 32,
+    scale: 2.0,
     duration: 0.16,
     ease: "sine.out"
 });
