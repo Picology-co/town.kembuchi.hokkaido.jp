@@ -539,9 +539,9 @@ master.to("#popup-ball-1 .popup-ball-shadow", {
 master.to("#popup-ball-2", {
     opacity: 1,
     scale: 1,
-    x: -120,
-    y: -250,
-    z: 0,
+    x: 0,
+    y: -280,
+    z: 70,
     scale: 1.5,
     duration: 0.34,
     ease: "power3.out"
@@ -564,9 +564,9 @@ master.to("#popup-ball-2 .popup-ball-shadow", {
 master.to("#popup-ball-3", {
     opacity: 1,
     scale: 1,
-    x: -120,
+    x: 120,
     y: -250,
-    z: 120,
+    z: 70,
     scale: 1.5,
     duration: 0.34,
     ease: "power3.out"
@@ -614,9 +614,9 @@ master.to("#popup-ball-4 .popup-ball-shadow", {
 master.to("#popup-ball-5", {
     opacity: 1,
     scale: 1,
-    x: -120,
+    x: 0,
     y: -150,
-    z: 0,
+    z: 70,
     scale: 1.5,
     duration: 0.34,
     ease: "power3.out"
@@ -639,9 +639,9 @@ master.to("#popup-ball-5 .popup-ball-shadow", {
 master.to("#popup-ball-6", {
     opacity: 1,
     scale: 1,
-    x: -120,
+    x: 120,
     y: -150,
-    z: 120,
+    z: 70,
     scale: 1.5,
     duration: 0.34,
     ease: "power3.out"
