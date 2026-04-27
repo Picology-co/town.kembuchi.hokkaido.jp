@@ -75,24 +75,139 @@ gsap.set("#popup-ball-6", {
     transformOrigin: "50% 100%"
 });
 
-gsap.set(".popup-ball", {
+gsap.set("#popup-ball-1 .popup-ball", {
     rotationX: 0,
     rotationY: 0,
     scale: 0.9,
     transformOrigin: "50% 50%"
 });
 
-gsap.set(".popup-ball-shadow", {
+gsap.set("#popup-ball-1 .popup-ball-shadow", {
     opacity: 0,
     scale: 0.35,
     transformOrigin: "50% 50%"
 });
 
-gsap.set(".popup-ball::after", {
+gsap.set("#popup-ball-1 .popup-ball::after", {
     opacity: 0
 });
 
-gsap.set(".popup-ball-tail", {
+gsap.set("#popup-ball-1 .popup-ball-tail", {
+    opacity: 0,
+    scaleY: 0.2,
+    transformOrigin: "50% 100%"
+});
+
+gsap.set("#popup-ball-2 .popup-ball", {
+    rotationX: 0,
+    rotationY: 0,
+    scale: 0.9,
+    transformOrigin: "50% 50%"
+});
+
+gsap.set("#popup-ball-2 .popup-ball-shadow", {
+    opacity: 0,
+    scale: 0.35,
+    transformOrigin: "50% 50%"
+});
+
+gsap.set("#popup-ball-2 .popup-ball::after", {
+    opacity: 0
+});
+
+gsap.set("#popup-ball-2 .popup-ball-tail", {
+    opacity: 0,
+    scaleY: 0.2,
+    transformOrigin: "50% 100%"
+});
+
+gsap.set("#popup-ball-3 .popup-ball", {
+    rotationX: 0,
+    rotationY: 0,
+    scale: 0.9,
+    transformOrigin: "50% 50%"
+});
+
+gsap.set("#popup-ball-3 .popup-ball-shadow", {
+    opacity: 0,
+    scale: 0.35,
+    transformOrigin: "50% 50%"
+});
+
+gsap.set("#popup-ball-3 .popup-ball::after", {
+    opacity: 0
+});
+
+gsap.set("#popup-ball-3 .popup-ball-tail", {
+    opacity: 0,
+    scaleY: 0.2,
+    transformOrigin: "50% 100%"
+});
+
+gsap.set("#popup-ball-4 .popup-ball", {
+    rotationX: 0,
+    rotationY: 0,
+    scale: 0.9,
+    transformOrigin: "50% 50%"
+});
+
+gsap.set("#popup-ball-4 .popup-ball-shadow", {
+    opacity: 0,
+    scale: 0.35,
+    transformOrigin: "50% 50%"
+});
+
+gsap.set("#popup-ball-4 .popup-ball::after", {
+    opacity: 0
+});
+
+gsap.set("#popup-ball-4 .popup-ball-tail", {
+    opacity: 0,
+    scaleY: 0.2,
+    transformOrigin: "50% 100%"
+});
+
+gsap.set("#popup-ball-5 .popup-ball", {
+    rotationX: 0,
+    rotationY: 0,
+    scale: 0.9,
+    transformOrigin: "50% 50%"
+});
+
+gsap.set("#popup-ball-5 .popup-ball-shadow", {
+    opacity: 0,
+    scale: 0.35,
+    transformOrigin: "50% 50%"
+});
+
+gsap.set("#popup-ball-5 .popup-ball::after", {
+    opacity: 0
+});
+
+gsap.set("#popup-ball-5 .popup-ball-tail", {
+    opacity: 0,
+    scaleY: 0.2,
+    transformOrigin: "50% 100%"
+});
+
+gsap.set("#popup-ball-6 .popup-ball", {
+    rotationX: 0,
+    rotationY: 0,
+    scale: 0.9,
+    transformOrigin: "50% 50%"
+});
+
+gsap.set("#popup-ball-6 .popup-ball-shadow", {
+    opacity: 0,
+    scale: 0.35,
+    transformOrigin: "50% 50%"
+});
+
+gsap.set("#popup-ball-6 .popup-ball::after", {
+    opacity: 0
+});
+
+gsap.set("#popup-ball-6 .popup-ball-tail", {
     opacity: 0,
     scaleY: 0.2,
     transformOrigin: "50% 100%"
