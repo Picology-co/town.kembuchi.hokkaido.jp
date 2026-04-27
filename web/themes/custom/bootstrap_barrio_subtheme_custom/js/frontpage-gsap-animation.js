@@ -364,7 +364,7 @@ master.to("#popup-ball", {
     opacity: 1,
     scale: 1,
     y: -140,
-    z: 70,
+    z: 60,
     scale: 2.0,
     duration: 0.34,
     ease: "power3.out"
