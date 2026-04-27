@@ -39,7 +39,8 @@ function flipCover3D(target, zIndex) {
 
     tl.to(target, {
     rotationY: -10,
-    rotationX: 0,
+        rotationX: 0,
+    x: -10,
     z: 0,
     y: 0,
     duration: 0.12,
@@ -55,6 +56,7 @@ function flipCover3D(target, zIndex) {
     tl.to(target, {
     rotationY: -25,
     rotationX: 0,
+    x: -10,
     z: 0,
     y: 0,
     duration: 0.12,
