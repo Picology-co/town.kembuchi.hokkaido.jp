@@ -41,7 +41,7 @@ function flipCover3D(target, zIndex) {
     rotationY: -10,
         rotationX: 0,
     x: 0,
-    z: -10,
+    z: 10,
     y: 0,
     duration: 0.12,
     ease: "sine.out"
@@ -57,7 +57,7 @@ function flipCover3D(target, zIndex) {
     rotationY: -25,
     rotationX: 0,
     x: 0,
-    z: -10,
+    z: 10,
     y: 0,
     duration: 0.12,
     ease: "sine.out"
@@ -73,7 +73,7 @@ function flipCover3D(target, zIndex) {
     rotationY: -50,
     rotationX: 0,
     x: 0,
-    z: -10,
+    z: 10,
     y: 0,
     duration: 0.12,
     ease: "sine.out"
