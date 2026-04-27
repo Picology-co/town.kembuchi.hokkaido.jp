@@ -403,7 +403,7 @@ master.to(".popup-ball", {
     ease: "power2.in"
 }, "<");
 
-master.to("#popup-ball", {
+/* master.to("#popup-ball", {
     opacity: 0,
     duration: 0.06,
     ease: "none"
@@ -413,6 +413,6 @@ master.to(".popup-ball-tail", {
     opacity: 0,
     duration: 0.06,
     ease: "none"
-}, "<");
+}, "<"); */
 
 master.to({}, { duration: 1.0 });
