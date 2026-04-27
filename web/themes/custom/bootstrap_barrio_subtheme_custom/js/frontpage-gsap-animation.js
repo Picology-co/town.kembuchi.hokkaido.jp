@@ -589,7 +589,7 @@ master.to("#popup-ball-3 .popup-ball-shadow", {
 master.to("#popup-ball-4", {
     opacity: 1,
     scale: 1,
-    x: 150,
+    x: -120,
     y: -150,
     z: 70,
     scale: 1.5,
