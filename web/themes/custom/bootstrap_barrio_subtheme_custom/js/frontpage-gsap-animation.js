@@ -40,9 +40,9 @@ function flipCover3D(target, zIndex) {
     tl.to(target, {
     rotationY: -10,
         rotationX: 0,
-    x: -10,
+    x: 0,
     z: 0,
-    y: 0,
+    y: -10,
     duration: 0.12,
     ease: "sine.out"
     });
@@ -56,9 +56,9 @@ function flipCover3D(target, zIndex) {
     tl.to(target, {
     rotationY: -25,
     rotationX: 0,
-    x: -10,
+    x: 0,
     z: 0,
-    y: 0,
+    y: -10,
     duration: 0.12,
     ease: "sine.out"
     });
@@ -72,8 +72,9 @@ function flipCover3D(target, zIndex) {
     tl.to(target, {
     rotationY: -50,
     rotationX: 0,
+    x: 0,
     z: 0,
-    y: 0,
+    y: -10,
     duration: 0.12,
     ease: "sine.out"
     });
