@@ -36,6 +36,7 @@
 {% set image_03 = 'public://image/gsap_animation/03.avif'|file_url %}
 {% set image_04 = 'public://image/gsap_animation/04.avif'|file_url %}
 {% set image_05 = 'public://image/gsap_animation/05.avif'|file_url %}
+{% set image_rb = 'public://image/gsap_animation/rb.avif'|file_url %}
 
 <div class="animation">
   <div class="animation__scene">
@@ -43,7 +44,7 @@
 
     <div class="animation__scene__view">
       <div class="animation__scene__view__book" id="book">
-        <div class="right-base"></div>
+        <div class="right-base"><img src="{{ image_rb }}"></div>
         <div class="spine"></div>
 
         <div class="page page-1">
