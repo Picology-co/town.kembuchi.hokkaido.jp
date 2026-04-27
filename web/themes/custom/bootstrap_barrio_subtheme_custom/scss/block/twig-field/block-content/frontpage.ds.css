@@ -446,7 +446,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__popup__ball {
   position: absolute;
   left: 50%;
-  bottom: 12px;
+  bottom: -160px;
   width: 72px;
   height: 72px;
   margin-left: -36px;
