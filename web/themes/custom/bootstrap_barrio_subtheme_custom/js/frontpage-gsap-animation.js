@@ -352,7 +352,7 @@ master.to(".animation__scene__shadow", {
 master.to("#popup-ball", {
     opacity: 1,
     scale: 1,
-    y: -58,
+    y: 0,
     z: 40,
     duration: 0.42,
     ease: "back.out(1.8)"
