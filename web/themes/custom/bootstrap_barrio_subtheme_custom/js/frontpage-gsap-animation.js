@@ -171,7 +171,7 @@ function moveBook3D(target, zIndex) {
     
     t1.to(target, {
         rotateX: 20,
-        X = 30,
+        X: 30,
         duration: time[2],
         ease: "expo.inOut"
     });
