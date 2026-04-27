@@ -315,7 +315,7 @@ master.to([".animation__scene__view", ".animation__scene__shadow"], {
 }, ">-0.05");
 
 master.to(".animation__scene__view", {
-    rotationX: "+=6",
+    rotationX: "+=9",
     duration: 0.55,
     ease: "power2.inOut"
 }, "<");
