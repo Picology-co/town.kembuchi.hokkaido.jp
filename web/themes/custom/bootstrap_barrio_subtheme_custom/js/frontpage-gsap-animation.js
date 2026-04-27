@@ -306,6 +306,8 @@ master.add(
     2.28
 );
 
+master.to({}, { duration: 1.0 });
+
 master.to([".view", ".shadow"], {
     y: 18,
     duration: 0.55,
@@ -325,5 +327,3 @@ master.to(".shadow", {
     duration: 0.55,
     ease: "power2.inOut"
 }, "<");
-
-master.to({}, { duration: 1.0 });
