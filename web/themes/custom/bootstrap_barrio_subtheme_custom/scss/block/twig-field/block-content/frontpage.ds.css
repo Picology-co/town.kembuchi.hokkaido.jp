@@ -440,6 +440,9 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   z-index: 0;
   transform-origin: 50% 50%;
 }
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__popup {
+  position: absolute;
+}
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__popup__ball {
   position: absolute;
   left: 50%;

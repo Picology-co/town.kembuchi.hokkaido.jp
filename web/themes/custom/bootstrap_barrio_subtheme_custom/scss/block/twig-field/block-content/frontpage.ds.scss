@@ -135,6 +135,7 @@ div.#{st.$element-type} {
             transform-origin: 50% 50%;
           }
           &__popup {
+            position: absolute;
             &__ball {
               position: absolute;
               left: 50%;
