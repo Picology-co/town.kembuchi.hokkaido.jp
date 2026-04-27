@@ -308,19 +308,19 @@ master.add(
 
 master.to({}, { duration: 1.0 });
 
-master.to([".view", ".shadow"], {
+master.to([".animation__scene__view", ".animation__scene__shadow"], {
     y: 18,
     duration: 0.55,
     ease: "power2.inOut"
 }, ">-0.05");
 
-master.to(".view", {
+master.to(".animation__scene__view", {
     rotationX: "+=6",
     duration: 0.55,
     ease: "power2.inOut"
 }, "<");
 
-master.to(".shadow", {
+master.to(".animation__scene__shadow", {
     scaleX: 1.06,
     scaleY: 1.10,
     opacity: 0.92,
