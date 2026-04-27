@@ -589,7 +589,7 @@ master.to("#popup-ball-3 .popup-ball-shadow", {
 master.to("#popup-ball-4", {
     opacity: 1,
     scale: 1,
-    x: -120,
+    x: 150,
     y: -150,
     z: 70,
     scale: 1.5,
@@ -614,7 +614,7 @@ master.to("#popup-ball-4 .popup-ball-shadow", {
 master.to("#popup-ball-5", {
     opacity: 1,
     scale: 1,
-    x: 0,
+    x: 90,
     y: -50,
     z: 100,
     scale: 1.5,
@@ -639,7 +639,7 @@ master.to("#popup-ball-5 .popup-ball-shadow", {
 master.to("#popup-ball-6", {
     opacity: 1,
     scale: 1,
-    x: 120,
+    x: 150,
     y: -150,
     z: 70,
     scale: 1.5,
