@@ -31,6 +31,26 @@ gsap.set(cover, {
     transformOrigin: "0% 50%"
 });
 
+gsap.set("#popup-ball", {
+    y: 0,
+    z: 0,
+    scale: 0.25,
+    opacity: 0,
+    transformOrigin: "50% 100%"
+});
+
+gsap.set(".popup-ball", {
+    rotationX: -28,
+    rotationY: 0,
+    transformOrigin: "50% 50%"
+});
+
+gsap.set(".popup-ball-shadow", {
+    opacity: 0,
+    scale: 0.45,
+    transformOrigin: "50% 50%"
+});
+
 function flipCover3D(target, zIndex) {
     const shadowEl = document.querySelector(`${target} .cover-shadow`);
     const tl = gsap.timeline();
@@ -328,5 +348,42 @@ master.to(".animation__scene__shadow", {
     duration: 0.55,
     ease: "power2.inOut"
 }, "<");
+
+master.to("#popup-ball", {
+    opacity: 1,
+    scale: 1,
+    y: -58,
+    z: 40,
+    duration: 0.42,
+    ease: "back.out(1.8)"
+}, ">0.08");
+
+master.to(".popup-ball", {
+    rotationX: 0,
+    rotationY: 160,
+    duration: 0.42,
+    ease: "power2.out"
+}, "<");
+
+master.to(".popup-ball-shadow", {
+    opacity: 0.22,
+    scale: 1,
+    duration: 0.42,
+    ease: "power2.out"
+}, "<");
+
+master.to("#popup-ball", {
+    y: -46,
+    z: 28,
+    duration: 0.18,
+    ease: "sine.in"
+});
+
+master.to("#popup-ball", {
+    y: -52,
+    z: 32,
+    duration: 0.16,
+    ease: "sine.out"
+});
 
 master.to({}, { duration: 1.0 });
