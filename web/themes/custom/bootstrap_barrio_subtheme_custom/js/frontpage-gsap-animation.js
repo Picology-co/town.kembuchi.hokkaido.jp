@@ -98,7 +98,7 @@ function flipCover3D(target, zIndex) {
     }, "<");
 
     tl.to(target, {
-    rotationY: -178,
+    rotationY: -177,
     rotationX: 0,
     z: 0,
     y: 0,
@@ -178,7 +178,7 @@ function flipPage3D(target, zIndex, options = {}) {
     }, "<");
 
     tl.to(target, {
-    rotationY: -178,
+    rotationY: -177,
     rotationX: 0,
     z: 0,
     y: 0,
