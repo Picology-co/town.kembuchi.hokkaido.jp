@@ -512,6 +512,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
 }
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__popup__ball div.popup-ball-burst__particle {
   position: absolute;
+  display: inline;
   left: -8px;
   top: -8px;
   width: 16px;

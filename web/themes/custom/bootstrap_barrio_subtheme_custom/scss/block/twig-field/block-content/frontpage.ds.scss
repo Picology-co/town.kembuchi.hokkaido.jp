@@ -218,6 +218,7 @@ div.#{st.$element-type} {
                 opacity: 0;
                 &__particle {
                   position: absolute;
+                  display: inline;
                   left: -8px;
                   top: -8px;
                   width: 16px;
