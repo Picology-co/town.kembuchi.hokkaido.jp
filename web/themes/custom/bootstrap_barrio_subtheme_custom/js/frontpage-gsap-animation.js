@@ -4,7 +4,6 @@ const PAGE_W = 280;
 const book = "#book";
 const cover = "#cover";
 const pages = gsap.utils.toArray(".page");
-const house = "#popup-house";
 
 gsap.set(book, {
     x: -PAGE_W / 2
@@ -30,12 +29,6 @@ gsap.set(cover, {
     x: 0,
     zIndex: 60,
     transformOrigin: "0% 50%"
-});
-
-gsap.set(house, {
-    rotationX: -90,
-    y: 10,
-    opacity: 1
 });
 
 function flipCover3D(target, zIndex) {
@@ -263,17 +256,6 @@ master.add(
     times: [0.16, 0.30, 0.24, 0.10]
     }),
     2.28
-);
-
-master.add(
-    gsap.from(house, {
-        rotationX: 0,
-        y: 0,
-        opacity: 1,
-        duration: 0.45,
-        ease: "back.out(1.4)"
-    }),
-    2.62
 );
 
 master.to({}, { duration: 1.0 });
