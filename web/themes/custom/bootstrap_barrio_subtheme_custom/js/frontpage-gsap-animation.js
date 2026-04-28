@@ -443,13 +443,13 @@ function raisePopupBackground(target) {
         ease: "none"
     });
 
-    tl.to(target, {
+/*     tl.to(target, {
         rotationX: -42,
         y: 8,
         z: 8,
         duration: 0.22,
         ease: "power2.out"
-    }, "<");
+    }, "<"); */
 
     tl.to(target, {
         rotationX: 0,
