@@ -213,6 +213,14 @@ gsap.set("#popup-ball-6 .popup-ball-tail", {
     transformOrigin: "50% 100%"
 });
 
+gsap.set("#popup-background", {
+    rotationX: -88,
+    y: 16,
+    z: 2,
+    opacity: 0,
+    transformOrigin: "50% 100%"
+});
+
 function flipCover3D(target, zIndex) {
     const shadowEl = document.querySelector(`${target} .cover-shadow`);
     const tl = gsap.timeline();
@@ -426,6 +434,34 @@ function flipPage3D(target, zIndex, options = {}) {
     return tl;
 }
 
+function raisePopupBackground(target) {
+    const tl = gsap.timeline();
+
+    tl.to(target, {
+        opacity: 1,
+        duration: 0.12,
+        ease: "none"
+    });
+
+    tl.to(target, {
+        rotationX: -42,
+        y: 8,
+        z: 8,
+        duration: 0.22,
+        ease: "power2.out"
+    }, "<");
+
+    tl.to(target, {
+        rotationX: 0,
+        y: 0,
+        z: 12,
+        duration: 0.34,
+        ease: "back.out(1.25)"
+    });
+
+    return tl;
+}
+
 const master = gsap.timeline({
     defaults: { overwrite: "auto" }
 });
@@ -510,6 +546,8 @@ master.to(".animation__scene__shadow", {
     duration: 0.55,
     ease: "power2.inOut"
 }, "<");
+
+master.add(raisePopupBackground("#popup-background"), 2.56);
 
 master.to("#popup-ball-1", {
     opacity: 1,

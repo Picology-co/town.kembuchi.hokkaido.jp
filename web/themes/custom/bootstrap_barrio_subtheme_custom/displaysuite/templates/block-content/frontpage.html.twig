@@ -37,6 +37,7 @@
 {% set image_04 = 'public://image/gsap_animation/04.avif'|file_url %}
 {% set image_05 = 'public://image/gsap_animation/05.avif'|file_url %}
 {% set image_rb = 'public://image/gsap_animation/rb.avif'|file_url %}
+{% set image_back = 'public://image/gsap_animation/back.avif'|file_url %}
 
 <div class="animation">
   <div class="animation__scene">
@@ -122,6 +123,10 @@
         <div class="popup-ball-tail"></div>
         <div class="popup-ball-shadow"></div>
       </div>
+    </div>
+
+    <div class="animation__scene__background" id="popup-background">
+      <img src="{{ image_back }}">
     </div>
 
   </div>
