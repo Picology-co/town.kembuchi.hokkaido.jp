@@ -487,15 +487,13 @@ div.#{st.$element-type} {
             position: absolute;
             left: 50%;
             top: 50%;
-            width: fit-content;
+            width: 50%;
+            height: auto;
             z-index: 20;
             transform: translate(-50%, -50%) translateY(24px) scale(0.94);
             opacity: 0;
             pointer-events: none;
             filter: drop-shadow(0 10px 18px rgba(60, 44, 24, 0.18));
-            img {
-              width: 50%;
-            }
           }
         }
       }
