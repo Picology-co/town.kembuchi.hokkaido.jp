@@ -705,7 +705,7 @@ master.to("#popup-ball-6 .popup-ball-shadow", {
     ease: "power2.out"
 }, "<");
 
-master.to(".ending-logo", {
+master.to("#animation-logo", {
     opacity: 1,
     y: 0,
     scale: 1,
@@ -713,7 +713,7 @@ master.to(".ending-logo", {
     ease: "power2.out"
 }, ">0.25");
 
-master.to(".ending-logo", {
+master.to("#animation-logo", {
     y: -4,
     duration: 1.4,
     ease: "sine.inOut",
