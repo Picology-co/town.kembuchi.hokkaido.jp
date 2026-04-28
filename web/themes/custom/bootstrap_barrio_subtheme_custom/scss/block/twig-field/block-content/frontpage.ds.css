@@ -714,3 +714,6 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   pointer-events: none;
   filter: drop-shadow(0 10px 18px rgba(60, 44, 24, 0.18));
 }
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__logo img {
+  width: 50%;
+}
