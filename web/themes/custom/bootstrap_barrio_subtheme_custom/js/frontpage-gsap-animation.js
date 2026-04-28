@@ -221,6 +221,12 @@ gsap.set("#popup-background", {
     transformOrigin: "50% 100%"
 });
 
+gsap.set("#animation-logo", {
+    opacity: 0,
+    y: 24,
+    scale: 0.94
+});
+
 function flipCover3D(target, zIndex) {
     const shadowEl = document.querySelector(`${target} .cover-shadow`);
     const tl = gsap.timeline();
@@ -698,5 +704,21 @@ master.to("#popup-ball-6 .popup-ball-shadow", {
     duration: 0.18,
     ease: "power2.out"
 }, "<");
+
+master.to(".ending-logo", {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    duration: 0.9,
+    ease: "power2.out"
+}, ">0.25");
+
+master.to(".ending-logo", {
+    y: -4,
+    duration: 1.4,
+    ease: "sine.inOut",
+    repeat: -1,
+    yoyo: true
+});
 
 master.to({}, { duration: 1.0 });
