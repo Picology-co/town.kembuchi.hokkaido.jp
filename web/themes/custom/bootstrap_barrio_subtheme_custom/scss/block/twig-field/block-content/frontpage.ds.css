@@ -708,7 +708,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 100px;
+  width: 200px;
   height: auto;
   z-index: 20;
   transform: translate(-50%, -50%) translateY(24px) scale(0.94);
