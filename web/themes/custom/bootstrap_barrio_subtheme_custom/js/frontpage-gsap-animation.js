@@ -547,8 +547,6 @@ master.to(".animation__scene__shadow", {
     ease: "power2.inOut"
 }, "<");
 
-master.add(raisePopupBackground("#popup-background"), 2.56);
-
 master.to("#popup-ball-1", {
     opacity: 1,
     scale: 1,
