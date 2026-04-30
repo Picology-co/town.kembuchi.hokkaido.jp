@@ -110,8 +110,8 @@ div.#{st.$element-type} {
         font-family: sans-serif;
 
         &__scene {
-          width: min(100vw, 1000px);
-          height: min(100vh, 760px);
+          width: 100vw;
+          height: 100vh;
           position: relative;
           display: grid;
           place-items: center;

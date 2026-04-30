@@ -435,8 +435,8 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   font-family: sans-serif;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene {
-  width: min(100vw, 1000px);
-  height: min(100vh, 760px);
+  width: 100vw;
+  height: 100vh;
   position: relative;
   display: grid;
   place-items: center;
