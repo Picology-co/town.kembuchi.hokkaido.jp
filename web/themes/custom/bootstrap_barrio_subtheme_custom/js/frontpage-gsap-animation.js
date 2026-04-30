@@ -461,7 +461,7 @@ function raisePopupBackground(target) {
         rotationX: 0,
         y: 29,
         z: 12,
-        duration: 1.00,
+        duration: 1.50,
         ease: "back.out(1.25)"
     });
 
