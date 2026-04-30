@@ -428,6 +428,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   --bg-b: #e8ddcf;
   margin: 0;
   min-height: 100vh;
+  min-width: 100vw;
   display: grid;
   place-items: center;
   overflow: hidden;
