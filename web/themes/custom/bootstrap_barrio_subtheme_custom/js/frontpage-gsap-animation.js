@@ -461,7 +461,7 @@ function raisePopupBackground(target) {
         rotationX: 0,
         y: 29,
         z: 12,
-        duration: 2.50,
+        duration: 1.00,
         ease: "back.out(1.25)"
     });
 
@@ -553,7 +553,7 @@ master.to(".animation__scene__shadow", {
     ease: "power2.inOut"
 }, "<");
 
-master.add(raisePopupBackground("#popup-background"), 3.50);
+master.add(raisePopupBackground("#popup-background"), 3.30);
 
 master.to("#popup-ball-1", {
     opacity: 1,
