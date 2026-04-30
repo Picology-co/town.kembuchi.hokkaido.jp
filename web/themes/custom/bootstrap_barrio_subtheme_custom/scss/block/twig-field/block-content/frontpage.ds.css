@@ -447,13 +447,13 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   overflow: hidden;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation {
-  position: absolute;
+  position: relative;
   display: block;
   top: 50%;
-  left: 50%;
+  left: auto;
   bottom: auto;
   right: auto;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   transform-origin: 50% 50% 0;
   transform-style: flat;
   z-index: 0;
@@ -466,8 +466,8 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   font-family: sans-serif;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene {
-  width: min(100vw, 1000px);
-  height: min(100vh, 760px);
+  width: 100vw;
+  height: 100vh;
   position: relative;
   display: grid;
   place-items: center;
