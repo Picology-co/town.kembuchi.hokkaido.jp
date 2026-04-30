@@ -190,6 +190,21 @@ pre[id^=sf-dump] samp {
 /*
  * フロントページ
  */
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds {
+  position: relative;
+  display: block;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  right: auto;
+  transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
+  z-index: 0;
+  text-align: left;
+  vertical-align: auto;
+  opacity: 1;
+}
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds p {
   width: -moz-fit-content;
   width: fit-content;
@@ -429,9 +444,24 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   margin: 0;
   min-height: 100vh;
   min-width: 100vw;
-  display: grid;
-  place-items: center;
   overflow: hidden;
+}
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  bottom: auto;
+  right: auto;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
+  z-index: 0;
+  text-align: left;
+  vertical-align: auto;
+  opacity: 1;
+}
+div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation {
   background: radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.75) 0 11%, transparent 12%), radial-gradient(circle at 82% 24%, rgba(255, 255, 255, 0.32) 0 9%, transparent 10%), linear-gradient(180deg, var(--bg-a) 0%, var(--bg-b) 100%);
   font-family: sans-serif;
 }

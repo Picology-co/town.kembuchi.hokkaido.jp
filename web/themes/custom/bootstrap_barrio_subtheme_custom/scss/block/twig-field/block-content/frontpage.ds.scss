@@ -10,6 +10,8 @@ div.#{st.$element-type} {
   &.#{st.$element-type}--name-dynamic-twig-fieldblock-content-#{st.$element-name} {
     &.#{st.$element-type}--type-#{st.$element-field-type} {
 
+      @include st.pos();
+
       // 共通
       p {
         @include st.size($w: fit-content);
@@ -101,9 +103,8 @@ div.#{st.$element-type} {
         margin: 0;
         min-height: 100vh;
         min-width: 100vw;
-        display: grid;
-        place-items: center;
         overflow: hidden;
+        @include st.pos($p: absolute, $l: 50%, $t: 50%, $tr: translate(-50%, -50%));
         background:
           radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.75) 0 11%, transparent 12%),
           radial-gradient(circle at 82% 24%, rgba(255, 255, 255, 0.32) 0 9%, transparent 10%),
