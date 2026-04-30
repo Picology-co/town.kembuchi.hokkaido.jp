@@ -553,7 +553,7 @@ master.to(".animation__scene__shadow", {
     ease: "power2.inOut"
 }, "<");
 
-master.add(raisePopupBackground("#popup-background"), 3.30);
+master.add(raisePopupBackground("#popup-background"), 3.00);
 
 master.to("#popup-ball-1", {
     opacity: 1,
