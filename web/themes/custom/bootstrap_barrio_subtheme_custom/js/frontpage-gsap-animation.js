@@ -459,8 +459,8 @@ function raisePopupBackground(target) {
 
     tl.to(target, {
         rotationX: 0,
-        y: 32,
-        z: 12,
+        y: 29,
+        z: 0,
         duration: 1.00,
         ease: "back.out(1.25)"
     });
