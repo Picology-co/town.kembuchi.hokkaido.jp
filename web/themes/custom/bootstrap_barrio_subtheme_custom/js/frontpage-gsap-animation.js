@@ -458,7 +458,7 @@ function raisePopupBackground(target) {
     }, "<"); */
 
     tl.to(target, {
-        //rotationX: 0,
+        rotationX: 0,
         y: 29,
         z: 12,
         duration: 1.00,
