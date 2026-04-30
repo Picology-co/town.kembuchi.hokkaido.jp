@@ -298,6 +298,8 @@ div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__heade
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: left;
   vertical-align: auto;
@@ -385,6 +387,8 @@ div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__body 
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: left;
   vertical-align: auto;
@@ -608,6 +612,8 @@ div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__class
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: left;
   vertical-align: auto;
@@ -660,6 +666,8 @@ div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__class
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: left;
   vertical-align: auto;
@@ -702,6 +710,8 @@ div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__class
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: left;
   vertical-align: auto;
@@ -721,6 +731,8 @@ div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__class
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: left;
   vertical-align: auto;
@@ -746,6 +758,8 @@ div.field.field--name-dynamic-twig-fieldnode-blog.field--type-ds div.blog__class
     bottom: auto;
     right: auto;
     transform: none;
+    transform-origin: 50% 50% 0;
+    transform-style: flat;
     z-index: 0;
     text-align: left;
     vertical-align: auto;

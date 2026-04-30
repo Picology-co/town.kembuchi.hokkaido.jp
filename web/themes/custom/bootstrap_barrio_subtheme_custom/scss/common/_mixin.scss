@@ -10,6 +10,15 @@
   }
 }
 
+// gridコンテナ
+@mixin grid-container($j: center, $p: center) {
+  & {
+    display: grid;
+    justify-content: $j;
+    place-items: $p;
+  }
+}
+
 // フォント
 @mixin font($s: 1.0rem, $w: 500, $h: none, $l: none, $f: inherit, $y: normal, $ffs: 'palt') {
   & {
@@ -98,7 +107,7 @@
 }
 
 // 配置
-@mixin pos($d: block, $p: relative, $t: auto, $l: auto, $b: auto, $r: auto, $tr: none, $z: 0, $a: left, $v: auto, $o: 1) {
+@mixin pos($d: block, $p: relative, $t: auto, $l: auto, $b: auto, $r: auto, $tr: none, $tro: 50% 50% 0, $trs: flat, $z: 0, $a: left, $v: auto, $o: 1) {
   & {
     position: $p;
     display: $d;
@@ -107,6 +116,8 @@
     bottom: $b;
     right: $r;
     transform: $tr;
+    transform-origin: $tro;
+    transform-style: $trs;
     z-index: $z;
     text-align: $a;
     vertical-align: $v;

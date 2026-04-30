@@ -259,6 +259,8 @@ div.field[class*=field--name-dynamic-twig-fieldtaxonomy-term-].field--type-ds di
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: right;
   vertical-align: auto;

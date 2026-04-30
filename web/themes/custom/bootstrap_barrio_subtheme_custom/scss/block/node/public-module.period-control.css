@@ -210,6 +210,8 @@ div.node.node--type-public-module.node--view-mode-period-control div.target-cms 
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: left;
   vertical-align: auto;
@@ -248,6 +250,8 @@ div.node.node--type-public-module.node--view-mode-period-control div.field.field
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: center;
   vertical-align: auto;
@@ -276,6 +280,8 @@ div.node.node--type-public-module.node--view-mode-period-control div.field.field
     bottom: auto;
     right: auto;
     transform: none;
+    transform-origin: 50% 50% 0;
+    transform-style: flat;
     z-index: 0;
     text-align: left;
     vertical-align: auto;

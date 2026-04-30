@@ -264,6 +264,8 @@ div.view.view-news.view-display-id-block_1 div.view-content div.item-list ul li 
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: left;
   vertical-align: top;
@@ -289,6 +291,8 @@ div.view.view-news.view-display-id-block_1 div.view-footer {
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: right;
   vertical-align: auto;
@@ -302,6 +306,8 @@ div.view.view-news.view-display-id-block_1 div.view-footer p {
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: left;
   vertical-align: auto;
@@ -349,6 +355,8 @@ div.view.view-news.view-display-id-block_1 div.view-footer p a {
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: center;
   vertical-align: auto;

@@ -269,6 +269,8 @@ header#header {
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 1;
   text-align: left;
   vertical-align: auto;
@@ -285,6 +287,8 @@ body.path-frontpage header#header {
   bottom: auto;
   right: auto;
   transform: translateY(-100%);
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 1;
   text-align: left;
   vertical-align: auto;
@@ -301,6 +305,8 @@ body.path-frontpage[open-accessibility] header#header {
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 1;
   text-align: left;
   vertical-align: auto;
@@ -354,6 +360,8 @@ header#header div.header-wrapper nav#navbar-top {
   bottom: auto;
   right: auto;
   transform: translateX(-50%);
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: left;
   vertical-align: auto;
@@ -372,6 +380,8 @@ header#header div.header-wrapper nav#navbar-main {
   bottom: auto;
   right: auto;
   transform: translateX(-50%);
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: left;
   vertical-align: auto;
@@ -412,6 +422,8 @@ div.highlighted {
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: left;
   vertical-align: auto;
@@ -455,6 +467,8 @@ div.highlighted > aside.container div[data-drupal-messages] {
   bottom: auto;
   right: auto;
   transform: translateX(-50%);
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 2;
   text-align: left;
   vertical-align: auto;

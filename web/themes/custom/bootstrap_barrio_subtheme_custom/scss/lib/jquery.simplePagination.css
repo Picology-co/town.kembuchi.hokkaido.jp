@@ -252,6 +252,8 @@ div#pagination-container ul li span, div#pagination-container ul li a {
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: left;
   vertical-align: auto;

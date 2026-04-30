@@ -198,6 +198,8 @@ div.switch-darkmode {
   bottom: auto;
   right: auto;
   transform: translateX(-50%);
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: center;
   vertical-align: auto;
@@ -263,6 +265,8 @@ div.switch-darkmode section input#darkmode-controller {
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 5;
   text-align: left;
   vertical-align: auto;
@@ -285,6 +289,8 @@ div.switch-darkmode section input#darkmode-controller:checked + label.darkmode-l
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: -1;
   text-align: center;
   vertical-align: auto;
@@ -298,6 +304,8 @@ div.switch-darkmode section label.darkmode-label {
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: left;
   vertical-align: auto;
@@ -311,6 +319,8 @@ div.switch-darkmode section label.darkmode-label small {
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: left;
   vertical-align: auto;
@@ -334,6 +344,8 @@ div.switch-darkmode section label.darkmode-label::after {
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: -1;
   text-align: center;
   vertical-align: auto;

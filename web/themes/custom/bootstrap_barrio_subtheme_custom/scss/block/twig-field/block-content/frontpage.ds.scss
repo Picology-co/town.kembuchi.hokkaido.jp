@@ -83,10 +83,10 @@ div.#{st.$element-type} {
 
       // GSAPアニメーション
       div.animation {
-        --page-w: 280px;
-        --page-h: 390px;
+        --page-w: 17.5rem;
+        --page-h: 24.375rem;
         --book-w: calc(var(--page-w) * 2);
-        --spine-w: 4px;
+        --spine-w: 0.25rem;
 
         --paper-shadow: rgba(61, 44, 24, 0.10);
         --paper-line: rgba(90, 70, 45, 0.06);
@@ -98,252 +98,181 @@ div.#{st.$element-type} {
         --bg-a: #f5efe8;
         --bg-b: #e8ddcf;
 
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        overflow: hidden;
+        @include st.grid-container();
+        @include st.margin();
+        @include st.size($minh: 100vh);
+        @include st.border($w: 0, $o: hidden);
+        @include st.font();
         background:
           radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.75) 0 11%, transparent 12%),
           radial-gradient(circle at 82% 24%, rgba(255, 255, 255, 0.32) 0 9%, transparent 10%),
           linear-gradient(180deg, var(--bg-a) 0%, var(--bg-b) 100%);
-        font-family: sans-serif;
 
         &__scene {
-          width: min(100vw, 1000px);
-          height: min(100vh, 760px);
-          position: relative;
-          display: grid;
-          place-items: center;
-          perspective: 1800px;
+          @include st.grid-container();
+          @include st.size($w: 100vw, $h: 100vh);
+          @include st.border($w: 0, $o: hidden);
+          perspective: 112.5rem;
           perspective-origin: 50% 38%;
-          overflow: hidden;
 
           &__shadow {
-            position: absolute;
-            width: 540px;
-            height: 130px;
-            border-radius: 50%;
+            @include st.pos($p: absolute, $tr: translateY(10.0rem));
+            @include st.size($w: 33.75rem, $h: 8.125rem);
+            @include st.border($w: 0, $rtl: 50%, $rtr: 50%, $rbl: 50%, $rbr: 50%, $o: hidden);
             background: radial-gradient(ellipse at center,
                 rgba(60, 44, 24, 0.22) 0%,
                 rgba(60, 44, 24, 0.10) 45%,
                 rgba(60, 44, 24, 0.00) 75%);
             filter: blur(18px);
-            transform: translateY(180px);
             pointer-events: none;
-            z-index: 0;
-            transform-origin: 50% 50%;
           }
           &__popup {
-            position: absolute;
-            transform-origin: 50% 50%;
-            z-index: 2;
+            @include st.pos($p: absolute, $z: 2);
             &__ball {
-              position: absolute;
-              left: 50%;
-              bottom: -160px;
-              width: 72px;
-              height: 72px;
-              margin-left: -36px;
-              transform-style: preserve-3d;
+              @include st.pos($p: absolute, $l: 50%, $b: -10.0rem, $trs: preserve-3d);
+              @include st.size($w: 4.5rem, $h: 4.5rem);
+              @include st.margin($l: -2.25rem);
+              @include st.border($w: 0, $o: visible);
               pointer-events: none;
-              overflow: visible;
 
               div.popup-ball {
-                position: absolute;
-                inset: 0;
-                border-radius: 50%;
+                @include st.pos($p: absolute, $tr: translateX(1.25rem), $trs: preserve-3d, $t: 0, $b: 0, $l: 0, $r: 0);
+                @include st.border($w: 0, $rtl: 50%, $rtr: 50%, $rbl: 50%, $rbr: 50%);
                 background:
                   radial-gradient(circle at 35% 35%, #fffef7 0 14%, #ffe7a8 15%, #ffb347 42%, #ff7a1a 72%, #d94a00 100%);
                 box-shadow:
                   0 0 10px rgba(255, 180, 70, 0.55),
                   0 0 24px rgba(255, 120, 20, 0.35),
                   inset -8px -10px 14px rgba(120, 45, 0, 0.18);
-                transform-style: preserve-3d;
-                transform: translateZ(20px);
-
                 &::before {
                   content: "";
-                  position: absolute;
-                  inset: 10px;
-                  border-radius: 50%;
-                  border: 2px solid rgba(255, 255, 255, 0.22);
-                  transform: translateZ(2px);
+                  @include st.pos($p: absolute, $t: 0.625rem, $b: 0.625rem, $l: 0.625rem, $r: 0.625rem, $tr: translateZ(2px));
+                  @include st.border($w: 2px, $rtl: 50%, $rtr: 50%, $rbl: 50%, $rbr: 50%, $c: rgba(255, 255, 255, 0.22));
                 }
-                
                 &::after {
                   content: "";
-                  position: absolute;
-                  left: 50%;
-                  bottom: -30px;
-                  width: 10px;
-                  height: 34px;
-                  margin-left: -5px;
-                  border-radius: 999px;
+                  @include st.pos($p: absolute, $l: 50%, $b: -1.875rem, $o: 0, $tro: 50% 0%);
+                  @include st.size($w: 0.625rem, $h: 2.125rem);
+                  @include st.margin($l: -0.3125rem);
+                  @include st.border($w: 0, $rtl: 100vh, $rtr: 100vh, $rbl: 100vh, $rbr: 100vh);
                   background: linear-gradient(180deg,
                       rgba(255, 220, 140, 0.95) 0%,
                       rgba(255, 140, 40, 0.70) 45%,
                       rgba(255, 90, 0, 0.00) 100%);
                   filter: blur(1px);
-                  opacity: 0;
-                  transform-origin: 50% 0%;
                 }
               }
 
               div.popup-ball-tail {
-                position: absolute;
-                left: 50%;
-                bottom: 6px;
-                width: 10px;
-                height: 38px;
-                margin-left: -5px;
-                border-radius: 999px;
+                @include st.pos($p: absolute, $l: 50%, $b:0.375rem, $o: 0, $tro: 50% 100%, $tr: translateZ(0.5rem) scaleY(0.2));
+                @include st.margin($l: -0.3125rem);
+                @include st.border($w: 0, $rtl: 100vh, $rtr: 100vh, $rbl: 100vh, $rbr: 100vh);
+                @include st.size($w: 0.625rem, $h: 2.375rem);                
                 background: linear-gradient(180deg,
                   rgba(255, 230, 160, 0.95) 0%,
                   rgba(255, 150, 50, 0.72) 40%,
                   rgba(255, 90, 0, 0.00) 100%);
                 filter: blur(1px);
-                opacity: 0;
-                transform-origin: 50% 100%;
-                transform: translateZ(8px) scaleY(0.2);
                 pointer-events: none;
               }
 
               div.popup-ball-shadow {
-                position: absolute;
-                left: 50%;
-                bottom: -8px;
-                width: 78px;
-                height: 18px;
-                margin-left: -39px;
-                border-radius: 50%;
+                @include st.pos($p: absolute, $l: 50%, $b: -0.5rem, $o: 0, $tr: translateZ(1px));
+                @include st.size($w: 4.875rem, $h: 1.125rem);
+                @include st.margin($l: -2.4375rem);
+                @include st.border($w: 0, $rtl: 50%, $rtr: 50%, $rbl: 50%, $rbr: 50%);
                 background: radial-gradient(ellipse at center,
                     rgba(0, 0, 0, 0.18) 0%,
                     rgba(0, 0, 0, 0.08) 55%,
                     rgba(0, 0, 0, 0.00) 78%);
                 filter: blur(4px);
-                opacity: 0;
-                transform: translateZ(1px);
               }
             }
           }
           &__view {
-            transform: rotateX(60deg);
-            position: relative;
-            transform-style: preserve-3d;
-            z-index: 2;
-            transform-origin: 50% 85%;
-
+            @include st.pos($tr: rotateX(60deg), $trs: preserve-3d, $z: 2, $tro: 50% 85%);
             &__book {
-              position: relative;
-              width: var(--book-w);
-              height: var(--page-h);
-              transform-style: preserve-3d;
+              @include st.pos($trs: preserve-3d);
+              @include st.size($w: var(--book-w), $h: var(--page-h));
 
               >div.spine {
-                position: absolute;
-                top: 0;
-                left: calc(var(--page-w) - (var(--spine-w) / 2));
-                width: var(--spine-w);
-                height: 100%;
-                border-radius: 10px;
+                @include st.pos($p: absolute, $t: 0, $l: calc(var(--page-w) - (var(--spine-w) / 2)), $z: 3, $tr: translateZ(1px));
+                @include st.size($w: var(--spine-w), $h: 100%);
+                @include st.border($w: 0, $rtl: 0.625rem, $rtr: 0.625rem, $rbl: 0.625rem, $rbr: 0.625rem);
                 background: linear-gradient(90deg,
-                    #8b6c4f 0%,
-                    #b69877 20%,
-                    #d9c4ab 48%,
-                    #b69877 76%,
-                    #836448 100%);
+                  #8b6c4f 0%,
+                  #b69877 20%,
+                  #d9c4ab 48%,
+                  #b69877 76%,
+                  #836448 100%);
                 box-shadow:
                   inset 0 0 0 1px rgba(82, 58, 32, 0.12),
                   0 2px 8px rgba(0, 0, 0, 0.08);
-                z-index: 3;
-                transform: translateZ(1px);
               }
 
               >div.right-base {
-                position: absolute;
-                top: 0;
-                width: var(--page-w);
-                height: var(--page-h);
-                overflow: hidden;
-                z-index: 1;
+                @include st.pos($p: absolute, $t: 0, $z: 1, $l: var(--page-w), $trs: preserve-3d, $tr: translateX(-1px));
+                @include st.size($w: var(--page-w), $h: var(--page-h));
+                @include st.border($w: 0, $rtl: 0.125rem, $rtr: 0.5rem, $rbl: 0.125rem, $rbr: 0.5rem, $o: hidden);
+                backface-visibility: hidden;
                 background:
                   linear-gradient(180deg, #fefdfb 0%, #fbfaf7 100%);
                 box-shadow:
                   0 2px 10px var(--paper-shadow),
                   inset 0 0 0 1px rgba(125, 99, 65, 0.08);
-                transform-style: preserve-3d;
-                backface-visibility: hidden;
-                left: var(--page-w);
-                border-radius: 2px 8px 8px 2px;
                 box-shadow:
                   0 2px 10px var(--paper-shadow),
                   inset -18px 0 18px rgba(189, 171, 146, 0.16),
                   inset 0 0 0 1px rgba(125, 99, 65, 0.08);
-                transform: translateZ(-1px);
 
                 &::before {
                   content: "";
-                  position: absolute;
-                  inset: 18px;
-                  border-radius: 4px;
+                  @include st.pos($p: absolute, $t: 1.125rem, $b: 1.125rem, $l: 1.125rem, $r: 1.125rem, $o: 0.20);
+                  @include st.border($w: 0, $rtl: 0.25rem, $rtr: 0.25rem, $rbl: 0.25rem, $rbr: 0.25rem);
                   background:
                     repeating-linear-gradient(to bottom,
                       transparent 0 30px,
                       var(--paper-line) 30px 31px);
-                  opacity: 0.20;
                 }
               }
 
               >div.cover {
-                position: absolute;
-                top: 0;
-                left: var(--page-w);
-                width: var(--page-w);
-                height: var(--page-h);
-                transform-style: preserve-3d;
-                transform-origin: left center;
+                @include st.pos($p: absolute, $t: 0, $l: var(--page-w), $trs: preserve-3d, $tro: left center);
+                @include st.size($w: var(--page-w), $h: var(--page-h));
                 backface-visibility: visible;
 
                 >div.face {
-                  position: absolute;
-                  inset: 0;
+                  @include st.pos($p: absolute, $t: 0, $b: 0, $l: 0, $r: 0);
+                  @include st.border($w: 0, $o: hidden);
                   backface-visibility: hidden;
-                  overflow: hidden;
                 }
 
                 >div.outer {
-                  transform: translateZ(1.2px);
+                  @include st.pos($tr: translateZ(1.2px));
                 }
 
                 >div.inner {
-                  transform: rotateY(180deg) translateZ(1.2px);
+                  @include st.pos($tr: rotateY(180deg) translateZ(1.2px));
                 }
               }
 
               >div.page {
-                position: absolute;
-                top: 0;
-                left: var(--page-w);
-                width: var(--page-w);
-                height: var(--page-h);
-                transform-style: preserve-3d;
-                transform-origin: left center;
+                @include st.pos($p: absolute, $t: 0, $l: var(--page-w), $trs: preserve-3d, $tro: left center);
+                @include st.size($w: var(--page-w), $h: var(--page-h));
                 backface-visibility: visible;
 
                 >div.face {
-                  position: absolute;
-                  inset: 0;
+                  @include st.pos($p: absolute, $t: 0, $b: 0, $l: 0, $r: 0);
+                  @include st.border($w: 0, $o: hidden);
                   backface-visibility: hidden;
-                  overflow: hidden;
                 }
 
                 >div.front {
-                  transform: translateZ(1.2px);
+                  @include st.pos($tr: translateZ(1.2rem));
                 }
 
                 >div.back {
-                  transform: rotateY(180deg) translateZ(1.2px);
+                  @include st.pos($tr: rotateY(180deg) translateZ(1.2px));
                 }
 
                 >div.front,
@@ -356,24 +285,22 @@ div.#{st.$element-type} {
                 }
 
                 >div.front {
-                  border-radius: 2px 8px 8px 2px;
+                  @include st.border($w: 0, $rtl: 0.125rem, $rtr: 0.5rem, $rbl: 0.125rem, $rbr: 0.5rem);
 
                   &::before {
                     content: "";
-                    position: absolute;
-                    inset: 18px;
-                    border-radius: 4px;
+                    @include st.pos($p: absolute, $t: 1.125rem, $b: 1.125rem, $l: 1.125rem, $r: 1.125rem, $o: 0.22);
+                    @include st.border($w: 0, $rtl: 0.25rem, $rtr: 0.25rem, $rbl: 0.25rem, $rbr: 0.25rem);
                     background:
                       repeating-linear-gradient(to bottom,
                         transparent 0 30px,
                         var(--paper-line) 30px 31px);
-                    opacity: 0.22;
                   }
                 }
 
                 >div.back {
-                  transform: rotateY(180deg);
-                  border-radius: 8px 2px 2px 8px;
+                  @include st.pos($tr:  rotateY(180deg));
+                  @include st.border($w: 0, $rtl: 0.5rem, $rtr: 0.125rem, $rbl: 0.5rem, $rbr: 0.125rem);
                   box-shadow:
                     0 2px 8px var(--paper-shadow),
                     inset 16px 0 18px rgba(189, 171, 146, 0.16),
@@ -381,48 +308,37 @@ div.#{st.$element-type} {
 
                   &::before {
                     content: "";
-                    position: absolute;
-                    inset: 18px;
-                    border-radius: 4px;
+                    @include st.pos($p: absolute, $t: 1.125rem, $b: 1.125rem, $l: 1.125rem, $r: 1.125rem, $o: 0.22);
+                    @include st.border($w: 0, $rtl: 0.25rem, $rtr: 0.25rem, $rbl: 0.25rem, $rbr: 0.25rem);
                     background:
                       repeating-linear-gradient(to bottom,
                         transparent 0 30px,
                         var(--paper-line) 30px 31px);
-                    opacity: 0.22;
                   }
                 }
 
                 >div.page-thickness {
-                  position: absolute;
-                  top: 0;
-                  left: -2px;
-                  width: 6px;
-                  height: 100%;
+                  @include st.pos($p: absolute, $t: 0, $l: -0.125rem, $o: 0.9, $tr: rotateY(90deg) translateZ(1px), $tro: left center);
+                  @include st.border($w: 0, $rtl: 0.125rem, $rbl: 0.125rem);
+                  @include st.size($w: 0.375rem, $h: 100%);
                   background: linear-gradient(180deg, #eee3d2 0%, #e2d3bd 100%);
-                  border-radius: 2px 0 0 2px;
-                  transform: rotateY(90deg) translateZ(1px);
-                  transform-origin: left center;
-                  opacity: 0.9;
                   pointer-events: none;
                 }
 
                 >div.page-shadow {
-                  position: absolute;
-                  inset: 0;
-                  border-radius: 6px;
-                  opacity: 0;
-                  pointer-events: none;
+                  @include st.pos($p: absolute, $t: 0, $b: 0, $l: 0, $r: 0, $o: 0, $tr: translateZ(2px));
+                  @include st.border($w: 0, $rtl: 0.375rem, $rtr: 0.375rem, $rbl: 0.375rem, $rbr: 0.375rem);
                   background: linear-gradient(90deg,
                       rgba(0, 0, 0, 0.20) 0%,
                       rgba(0, 0, 0, 0.08) 18%,
                       rgba(0, 0, 0, 0.00) 48%);
-                  transform: translateZ(2px);
+                  pointer-events: none;
                 }
               }
 
               >div.cover {
                 >div.outer {
-                  border-radius: 3px 9px 9px 3px;
+                  @include st.border($w: 0, $rtl: 0.1875rem, $rtr: 0.5625rem, $rbl: 0.1875rem, $rbr: 0.5625rem);
                   background:
                     linear-gradient(135deg, var(--cover-light) 0%, var(--cover-main) 58%, var(--cover-dark) 100%);
                   box-shadow:
@@ -432,15 +348,13 @@ div.#{st.$element-type} {
 
                   &::before {
                     content: "";
-                    position: absolute;
-                    inset: 12px;
-                    border-radius: 3px 7px 7px 3px;
-                    border: 1px solid rgba(255, 255, 255, 0.16);
+                    @include st.pos($p: absolute, $t: 0.75rem, $b: 0.75rem, $l: 0.75rem, $r: 0.75rem);
+                    @include st.border($w: 1px, $rtl: 0.1875rem, $rtr: 0.4375rem, $rbl: 0.1875rem, $rbr: 0.4375rem, $c: rgba(255, 255, 255, 0.16));
                   }
                 }
 
                 >div.inner {
-                  border-radius: 8px 2px 2px 8px;
+                  @include st.border($w: 0, $rtl: 0.5rem, $rtr: 0.125rem, $rbl: 0.5rem, $rbr: 0.125rem);
                   background:
                     linear-gradient(180deg, #fdfbf7 0%, #f8f4ed 100%);
                   box-shadow:
@@ -449,49 +363,32 @@ div.#{st.$element-type} {
                 }
 
                 >div.cover-thickness {
-                  position: absolute;
-                  top: 0;
-                  left: -4px;
-                  width: 8px;
-                  height: 100%;
+                  @include st.pos($p: absolute, $t: 0, $l: -0.25rem, $o: 0.95, $tr: rotateY(90deg) translateZ(2px), $tro: left center);
+                  @include st.size($w: 0.5rem, $h: 100%);
+                  @include st.border($w: 0, $rtl: 0.1875rem, $rtr: 0.1875rem);
                   background: linear-gradient(180deg, #70555d 0%, #62484f 100%);
-                  border-radius: 3px 0 0 3px;
-                  transform: rotateY(90deg) translateZ(2px);
-                  transform-origin: left center;
-                  opacity: 0.95;
                   pointer-events: none;
                 }
 
                 >div.cover-shadow {
+                  @include st.pos($tr: translateZ(3px));
                   background: linear-gradient(90deg,
-                      rgba(0, 0, 0, 0.24) 0%,
-                      rgba(0, 0, 0, 0.10) 22%,
-                      rgba(0, 0, 0, 0.00) 52%);
-                  transform: translateZ(3px);
+                    rgba(0, 0, 0, 0.24) 0%,
+                    rgba(0, 0, 0, 0.10) 22%,
+                    rgba(0, 0, 0, 0.00) 52%);
                 }
               }
             }
           }
           &__background {
-            position: absolute;
-            bottom: 244px;
-            width: 470px;
-            overflow: hidden;
-            transform-style: preserve-3d;
-            transform-origin: 50% 100%;
+            @include st.pos($p:absolute, $b: 15.25rem, $z: 1, $tr: rotateX(260deg), $trs: preserve-3d, $tro: 50% 100%);
+            @include st.border($w: 0, $o: hidden);
+            @include st.size($w: 29.375rem);
             pointer-events: none;
-            z-index: 1;
-            transform: rotateX(260deg);
           }
           &__logo {
-            position: absolute;
-            left: 50%;
-            top: 160px;
-            width: 200px;
-            height: auto;
-            z-index: 1;
-            transform: translate(-50%, -50%) translateY(24px) scale(0.94);
-            opacity: 0;
+            @include st.pos($p: absolute, $l: 50%, $t: 10.0rem, $z: 1, $tr: translate(-50%, -50%) translateY(24px) scale(0.94), $o: 0);
+            @include st.size($w: 12.5rem);
             pointer-events: none;
             filter: drop-shadow(0 10px 18px rgba(60, 44, 24, 0.18));
           }

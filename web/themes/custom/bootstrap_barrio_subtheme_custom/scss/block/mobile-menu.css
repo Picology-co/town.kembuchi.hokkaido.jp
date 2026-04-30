@@ -220,6 +220,8 @@ div#block-mobile-menu {
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 3;
   text-align: left;
   vertical-align: auto;

@@ -198,6 +198,8 @@ div.block-content.block-content--type-mobile-menu.block-content--view-mode-full 
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: left;
   vertical-align: auto;
@@ -212,6 +214,8 @@ div.block-content.block-content--type-mobile-menu.block-content--view-mode-full 
     bottom: auto;
     right: auto;
     transform: none;
+    transform-origin: 50% 50% 0;
+    transform-style: flat;
     z-index: 0;
     text-align: left;
     vertical-align: auto;

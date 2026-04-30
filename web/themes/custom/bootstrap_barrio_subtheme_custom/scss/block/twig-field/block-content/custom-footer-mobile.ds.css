@@ -198,6 +198,8 @@ div.field.field--name-dynamic-twig-fieldblock-content-custom-footer-mobile.field
   bottom: auto;
   right: auto;
   transform: none;
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: left;
   vertical-align: auto;
@@ -226,6 +228,8 @@ div.field.field--name-dynamic-twig-fieldblock-content-custom-footer-mobile.field
   bottom: auto;
   right: auto;
   transform: translate(-50%, -50%);
+  transform-origin: 50% 50% 0;
+  transform-style: flat;
   z-index: 0;
   text-align: left;
   vertical-align: auto;
