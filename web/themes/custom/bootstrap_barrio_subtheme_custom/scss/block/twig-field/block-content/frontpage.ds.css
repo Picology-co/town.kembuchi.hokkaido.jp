@@ -748,7 +748,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   transform-origin: 50% 100%;
   pointer-events: none;
   z-index: 1;
-  transform: rotateX(260deg) translateY(29px);
+  transform: rotateX(260deg) translateY(32px);
 }
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation__scene__logo {
   position: absolute;
