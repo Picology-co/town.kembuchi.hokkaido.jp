@@ -450,7 +450,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   position: relative;
   display: block;
   top: 50%;
-  left: auto;
+  left: 50%;
   bottom: auto;
   right: auto;
   transform: translateX(-50%);
