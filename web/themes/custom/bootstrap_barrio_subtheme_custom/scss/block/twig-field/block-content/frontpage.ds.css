@@ -226,11 +226,11 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.swiper-container {
   position: relative;
   display: block;
-  top: 50%;
+  top: auto;
   left: 50%;
   bottom: auto;
   right: auto;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   transform-origin: 50% 50% 0;
   transform-style: flat;
   z-index: 0;

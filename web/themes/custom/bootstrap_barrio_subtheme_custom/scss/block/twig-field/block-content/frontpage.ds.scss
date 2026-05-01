@@ -23,7 +23,7 @@ div.#{st.$element-type} {
 
       // スライダー
       div.swiper-container {
-        @include st.pos($p: relative, $l: 50%, $t: 50%, $tr: translate(-50%, -50%));
+        @include st.pos($p: relative, $l: 50%, $tr: translateX(-50%));
 /*         @include st.margin($b: 10.0rem); */
 
         div.swiper-wrapper {
