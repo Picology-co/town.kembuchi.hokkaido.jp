@@ -224,7 +224,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   width: 100%;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.swiper-container {
-  position: absolute;
+  position: relative;
   display: block;
   top: 50%;
   left: 50%;
