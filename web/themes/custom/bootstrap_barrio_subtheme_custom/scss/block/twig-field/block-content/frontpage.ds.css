@@ -465,7 +465,7 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   transform: translateX(-50%);
   transform-origin: 50% 50% 0;
   transform-style: flat;
-  z-index: 0;
+  z-index: 1;
   text-align: left;
   vertical-align: auto;
   opacity: 1;
