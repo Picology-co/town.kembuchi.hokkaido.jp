@@ -717,7 +717,7 @@ master.to("#animation-logo", {
     y: -4,
     duration: 1.4,
     ease: "sine.inOut",
-    repeat: 1,
+    repeat: -1,
     yoyo: true
 });
 
