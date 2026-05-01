@@ -708,6 +708,7 @@ master.to("#popup-ball-6 .popup-ball-shadow", {
 master.to("#animation-logo", {
     opacity: 1,
     y: 0,
+    x: 50,
     scale: 1,
     duration: 0.9,
     ease: "power2.out"
@@ -715,6 +716,7 @@ master.to("#animation-logo", {
 
 master.to("#animation-logo", {
     y: -4,
+    x: 50,
     duration: 1.4,
     ease: "sine.inOut",
     repeat: 0,
