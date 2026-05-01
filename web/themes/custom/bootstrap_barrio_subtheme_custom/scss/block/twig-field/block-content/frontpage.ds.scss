@@ -23,8 +23,9 @@ div.#{st.$element-type} {
 
       // スライダー
       div.swiper-container {
-        position: relative;
-        @include st.margin($b: 10.0rem);
+        position: absolute;
+        @include st.pos($p: absolute, $l: 50%, $t: 50%, $tr: translate(-50%, -50%));
+/*         @include st.margin($b: 10.0rem); */
 
         div.swiper-wrapper {
           div.swiper-slide {
@@ -105,10 +106,10 @@ div.#{st.$element-type} {
         min-width: 100vw;
         overflow: hidden;
         @include st.pos($t: 50%, $l: 50%, $tr: translateX(-50%));
-        background:
+/*         background:
           radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.75) 0 11%, transparent 12%),
           radial-gradient(circle at 82% 24%, rgba(255, 255, 255, 0.32) 0 9%, transparent 10%),
-          linear-gradient(180deg, var(--bg-a) 0%, var(--bg-b) 100%);
+          linear-gradient(180deg, var(--bg-a) 0%, var(--bg-b) 100%); */
         font-family: sans-serif;
 
         &__scene {

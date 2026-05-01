@@ -1,8 +1,6 @@
 {# フロントページ #}
 
 {# スライド #}
-{# {% set swiper_filter_pc = 'public://image/frontpage/swiper-filter-pc.webp'|file_url %}
-{% set swiper_filter_mobile = 'public://image/frontpage/swiper-filter-mobile.avif'|file_url %}
 <div id="p1" class="swiper-container">
   <div class="swiper-wrapper">
     {% set slide = drupal_view_result('swiper_slide', 'default') %}
@@ -20,15 +18,8 @@
       {% endfor %}
     {% endif %}
   </div>
-  {% if slide|length > 0 %}
-    <div class="swiper-pagination">●</div>
-  {% endif %}
-  <div class="filter-image">
-    <img class="swiper-filter-pc" src="{{ swiper_filter_pc }}" alt="">
-    <img class="swiper-filter-mobile" src="{{ swiper_filter_mobile }}" alt="">
-  </div>
 </div>
-#}
+
 
 {# GSAPアニメーション #}
 {% set image_01 = 'public://image/gsap_animation/01.avif'|file_url %}
