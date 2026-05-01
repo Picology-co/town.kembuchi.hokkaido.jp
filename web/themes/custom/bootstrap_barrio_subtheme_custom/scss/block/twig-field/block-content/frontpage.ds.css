@@ -456,13 +456,13 @@ div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds d
   overflow: hidden;
 }
 div.field.field--name-dynamic-twig-fieldblock-content-frontpage.field--type-ds div.animation {
-  position: relative;
+  position: absolute;
   display: block;
   top: 50%;
   left: 50%;
   bottom: auto;
   right: auto;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   transform-origin: 50% 50% 0;
   transform-style: flat;
   z-index: 1;
